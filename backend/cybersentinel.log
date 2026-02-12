@@ -1,0 +1,431 @@
+2026-02-12 08:00:09,342 - [INFO] - CyberSentinel - (main.py:64) - Starting FastAPI server...
+2026-02-12 08:00:09,350 - [INFO] - CyberSentinel - (main.py:20) - Starting up CyberSentinel backend...
+2026-02-12 08:00:09,388 - [INFO] - CyberSentinel - (db_connect.py:29) - Initializing database and creating tables...
+2026-02-12 08:00:09,427 - [INFO] - CyberSentinel - (db_connect.py:33) - Database tables created successfully.
+2026-02-12 08:00:09,428 - [INFO] - CyberSentinel - (queue_manager.py:62) - Task queue initialized.
+2026-02-12 08:00:09,521 - [INFO] - CyberSentinel - (main.py:72) - Starting background worker...
+2026-02-12 08:00:09,522 - [INFO] - CyberSentinel - (queue_manager.py:62) - Task queue initialized.
+2026-02-12 08:00:09,522 - [INFO] - CyberSentinel - (worker.py:86) - Worker loop started. Waiting for tasks...
+2026-02-12 08:01:18,108 - [INFO] - CyberSentinel - (main.py:24) - Shutting down CyberSentinel backend...
+2026-02-12 08:01:18,108 - [INFO] - CyberSentinel - (db_connect.py:39) - Closing database connection.
+2026-02-12 08:01:20,301 - [INFO] - CyberSentinel - (main.py:64) - Starting FastAPI server...
+2026-02-12 08:01:20,308 - [INFO] - CyberSentinel - (main.py:20) - Starting up CyberSentinel backend...
+2026-02-12 08:01:20,339 - [INFO] - CyberSentinel - (db_connect.py:29) - Initializing database and creating tables...
+2026-02-12 08:01:20,344 - [INFO] - CyberSentinel - (db_connect.py:33) - Database tables created successfully.
+2026-02-12 08:01:20,345 - [INFO] - CyberSentinel - (queue_manager.py:62) - Task queue initialized.
+2026-02-12 08:01:20,460 - [INFO] - CyberSentinel - (main.py:72) - Starting background worker...
+2026-02-12 08:01:20,460 - [INFO] - CyberSentinel - (queue_manager.py:62) - Task queue initialized.
+2026-02-12 08:01:20,460 - [INFO] - CyberSentinel - (worker.py:86) - Worker loop started. Waiting for tasks...
+2026-02-12 08:02:12,040 - [INFO] - CyberSentinel - (main.py:24) - Shutting down CyberSentinel backend...
+2026-02-12 08:02:12,041 - [INFO] - CyberSentinel - (db_connect.py:39) - Closing database connection.
+2026-02-12 08:03:03,937 - [INFO] - CyberSentinel - (main.py:64) - Starting FastAPI server...
+2026-02-12 08:03:03,945 - [INFO] - CyberSentinel - (main.py:20) - Starting up CyberSentinel backend...
+2026-02-12 08:03:03,975 - [INFO] - CyberSentinel - (db_connect.py:29) - Initializing database and creating tables...
+2026-02-12 08:03:03,981 - [INFO] - CyberSentinel - (db_connect.py:33) - Database tables created successfully.
+2026-02-12 08:03:03,982 - [INFO] - CyberSentinel - (queue_manager.py:62) - Task queue initialized.
+2026-02-12 08:03:04,053 - [INFO] - CyberSentinel - (main.py:72) - Starting background worker...
+2026-02-12 08:03:04,053 - [INFO] - CyberSentinel - (queue_manager.py:62) - Task queue initialized.
+2026-02-12 08:03:04,053 - [INFO] - CyberSentinel - (worker.py:86) - Worker loop started. Waiting for tasks...
+2026-02-12 08:03:35,243 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 08:03:41,253 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 08:04:35,235 - [INFO] - CyberSentinel - (target_parser.py:55) - Resolved atlas.picoctf.net to 18.217.83.136
+2026-02-12 08:04:49,161 - [INFO] - CyberSentinel - (target_parser.py:55) - Resolved atlas.picoctf.net to 18.217.83.136
+2026-02-12 08:04:50,696 - [INFO] - CyberSentinel - (target_parser.py:55) - Resolved atlas.picoctf.net to 18.217.83.136
+2026-02-12 08:05:00,086 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 08:05:06,097 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 08:05:13,575 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 08:05:19,586 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 08:05:25,597 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 08:05:31,607 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 08:05:37,618 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 08:05:43,629 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 08:05:49,640 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 08:05:55,651 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 08:06:01,662 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 08:06:07,674 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 08:06:13,685 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 08:06:19,696 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 08:06:25,706 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 08:06:31,718 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 08:06:37,728 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 08:06:43,740 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 08:06:49,751 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 08:06:55,759 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 08:07:01,770 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 08:07:07,781 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 08:07:13,792 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 08:07:19,813 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 08:07:25,825 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 08:07:31,837 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 08:07:37,848 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 08:08:12,196 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 08:08:20,307 - [INFO] - CyberSentinel - (target_parser.py:55) - Resolved nl3b.online to 89.116.22.196
+2026-02-12 08:08:22,969 - [INFO] - CyberSentinel - (target_parser.py:55) - Resolved nl3b.online to 89.116.22.196
+2026-02-12 08:08:27,167 - [INFO] - CyberSentinel - (target_parser.py:55) - Resolved nl3b.online to 89.116.22.196
+2026-02-12 08:08:28,089 - [INFO] - CyberSentinel - (target_parser.py:55) - Resolved nl3b.online to 89.116.22.196
+2026-02-12 08:12:55,442 - [INFO] - CyberSentinel - (main.py:24) - Shutting down CyberSentinel backend...
+2026-02-12 08:12:55,442 - [INFO] - CyberSentinel - (db_connect.py:39) - Closing database connection.
+2026-02-12 08:23:46,472 - [INFO] - CyberSentinel - (main.py:64) - Starting FastAPI server...
+2026-02-12 08:23:46,480 - [INFO] - CyberSentinel - (main.py:20) - Starting up CyberSentinel backend...
+2026-02-12 08:23:46,502 - [INFO] - CyberSentinel - (db_connect.py:29) - Initializing database and creating tables...
+2026-02-12 08:23:46,508 - [INFO] - CyberSentinel - (db_connect.py:33) - Database tables created successfully.
+2026-02-12 08:23:46,509 - [INFO] - CyberSentinel - (queue_manager.py:62) - Task queue initialized.
+2026-02-12 08:23:46,668 - [INFO] - CyberSentinel - (main.py:72) - Starting background worker...
+2026-02-12 08:23:46,669 - [INFO] - CyberSentinel - (queue_manager.py:62) - Task queue initialized.
+2026-02-12 08:23:46,669 - [INFO] - CyberSentinel - (worker.py:86) - Worker loop started. Waiting for tasks...
+2026-02-12 08:24:01,330 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 08:24:07,337 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 08:24:14,282 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 08:24:43,784 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 08:24:49,793 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 08:24:55,799 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 08:25:31,680 - [INFO] - CyberSentinel - (target_parser.py:55) - Resolved nl3b.online to 89.116.22.196
+2026-02-12 08:25:43,572 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 08:26:04,551 - [INFO] - CyberSentinel - (target_parser.py:55) - Resolved nl3b.online to 89.116.22.196
+2026-02-12 08:26:49,936 - [INFO] - CyberSentinel - (main.py:24) - Shutting down CyberSentinel backend...
+2026-02-12 08:26:49,936 - [INFO] - CyberSentinel - (db_connect.py:39) - Closing database connection.
+2026-02-12 08:30:13,738 - [INFO] - CyberSentinel - (main.py:64) - Starting FastAPI server...
+2026-02-12 08:30:13,747 - [INFO] - CyberSentinel - (main.py:20) - Starting up CyberSentinel backend...
+2026-02-12 08:30:13,773 - [INFO] - CyberSentinel - (db_connect.py:29) - Initializing database and creating tables...
+2026-02-12 08:30:13,779 - [INFO] - CyberSentinel - (db_connect.py:33) - Database tables created successfully.
+2026-02-12 08:30:13,780 - [INFO] - CyberSentinel - (queue_manager.py:62) - Task queue initialized.
+2026-02-12 08:30:13,983 - [INFO] - CyberSentinel - (main.py:72) - Starting background worker...
+2026-02-12 08:30:13,983 - [INFO] - CyberSentinel - (queue_manager.py:62) - Task queue initialized.
+2026-02-12 08:30:13,984 - [INFO] - CyberSentinel - (worker.py:86) - Worker loop started. Waiting for tasks...
+2026-02-12 08:30:23,956 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 08:30:29,971 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 08:30:40,920 - [INFO] - CyberSentinel - (target_parser.py:56) - Resolved nl3b.online to 89.116.22.196
+2026-02-12 08:30:40,925 - [INFO] - CyberSentinel - (target_parser.py:56) - Resolved nl3b.online to 89.116.22.196
+2026-02-12 08:30:40,926 - [INFO] - CyberSentinel - (decision_engine.py:16) - Building tool pipeline for https://nl3b.online/ with mode 'defensive' and depth 'normal'
+2026-02-12 08:30:40,926 - [INFO] - CyberSentinel - (decision_engine.py:26) - Tool pipeline built: ['nmap_scan', 'ssl_scan', 'header_analysis', 'vulnerability_analysis']
+2026-02-12 08:30:40,943 - [ERROR] - CyberSentinel - (queue_manager.py:20) - Failed to enqueue task: 'task_id'
+2026-02-12 08:30:40,943 - [INFO] - CyberSentinel - (routes_scan.py:74) - Scan 183bffb0-366a-41be-9f6e-fbea59c13d68 for target 'https://nl3b.online/' has been queued.
+2026-02-12 08:30:44,021 - [ERROR] - CyberSentinel - (queue_manager.py:35) - Failed to dequeue task: 'task_id'
+2026-02-12 08:30:53,778 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 08:30:59,790 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 08:31:05,805 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 08:31:14,558 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 08:31:20,568 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 08:31:48,641 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 08:31:54,652 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 08:32:00,665 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 08:32:06,677 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 08:32:12,688 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 08:33:21,282 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 08:33:31,642 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 08:33:37,655 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 08:33:43,669 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 08:33:49,681 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 08:33:55,692 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 08:34:04,041 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 08:35:16,997 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 08:35:23,801 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 08:36:59,539 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 08:37:05,554 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 08:37:11,566 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 08:37:31,936 - [INFO] - CyberSentinel - (main.py:24) - Shutting down CyberSentinel backend...
+2026-02-12 08:37:31,936 - [INFO] - CyberSentinel - (db_connect.py:39) - Closing database connection.
+2026-02-12 08:37:56,562 - [INFO] - CyberSentinel - (main.py:64) - Starting FastAPI server...
+2026-02-12 08:37:56,570 - [INFO] - CyberSentinel - (main.py:20) - Starting up CyberSentinel backend...
+2026-02-12 08:37:56,595 - [INFO] - CyberSentinel - (db_connect.py:29) - Initializing database and creating tables...
+2026-02-12 08:37:56,603 - [INFO] - CyberSentinel - (db_connect.py:33) - Database tables created successfully.
+2026-02-12 08:37:56,604 - [INFO] - CyberSentinel - (queue_manager.py:62) - Task queue initialized.
+2026-02-12 08:37:56,661 - [INFO] - CyberSentinel - (main.py:72) - Starting background worker...
+2026-02-12 08:37:56,662 - [INFO] - CyberSentinel - (queue_manager.py:62) - Task queue initialized.
+2026-02-12 08:37:56,662 - [INFO] - CyberSentinel - (worker.py:86) - Worker loop started. Waiting for tasks...
+2026-02-12 08:38:06,095 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 08:38:36,276 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 08:39:03,776 - [INFO] - CyberSentinel - (main.py:24) - Shutting down CyberSentinel backend...
+2026-02-12 08:39:03,777 - [INFO] - CyberSentinel - (db_connect.py:39) - Closing database connection.
+2026-02-12 08:56:44,874 - [INFO] - CyberSentinel - (main.py:64) - Starting FastAPI server...
+2026-02-12 08:56:44,882 - [INFO] - CyberSentinel - (main.py:20) - Starting up CyberSentinel backend...
+2026-02-12 08:56:44,906 - [INFO] - CyberSentinel - (db_connect.py:29) - Initializing database and creating tables...
+2026-02-12 08:56:44,913 - [INFO] - CyberSentinel - (db_connect.py:33) - Database tables created successfully.
+2026-02-12 08:56:44,914 - [INFO] - CyberSentinel - (queue_manager.py:62) - Task queue initialized.
+2026-02-12 08:56:45,087 - [INFO] - CyberSentinel - (main.py:72) - Starting background worker...
+2026-02-12 08:56:45,088 - [INFO] - CyberSentinel - (queue_manager.py:62) - Task queue initialized.
+2026-02-12 08:56:45,088 - [INFO] - CyberSentinel - (worker.py:86) - Worker loop started. Waiting for tasks...
+2026-02-12 09:15:49,812 - [INFO] - CyberSentinel - (main.py:72) - Starting background worker...
+2026-02-12 09:15:49,813 - [INFO] - CyberSentinel - (queue_manager.py:62) - Task queue initialized.
+2026-02-12 09:15:49,813 - [INFO] - CyberSentinel - (worker.py:86) - Worker loop started. Waiting for tasks...
+2026-02-12 09:15:49,822 - [INFO] - CyberSentinel - (main.py:64) - Starting FastAPI server...
+2026-02-12 09:15:49,834 - [INFO] - CyberSentinel - (main.py:20) - Starting up CyberSentinel backend...
+2026-02-12 09:15:49,871 - [INFO] - CyberSentinel - (db_connect.py:29) - Initializing database and creating tables...
+2026-02-12 09:15:49,889 - [INFO] - CyberSentinel - (db_connect.py:33) - Database tables created successfully.
+2026-02-12 09:15:49,890 - [INFO] - CyberSentinel - (queue_manager.py:62) - Task queue initialized.
+2026-02-12 09:15:59,099 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 09:16:15,525 - [INFO] - CyberSentinel - (target_parser.py:56) - Resolved nl3b.online to 89.116.22.196
+2026-02-12 09:16:15,531 - [INFO] - CyberSentinel - (target_parser.py:56) - Resolved nl3b.online to 89.116.22.196
+2026-02-12 09:16:15,531 - [INFO] - CyberSentinel - (decision_engine.py:16) - Building tool pipeline for https://nl3b.online/ with mode 'defensive' and depth 'deep'
+2026-02-12 09:16:15,531 - [INFO] - CyberSentinel - (decision_engine.py:26) - Tool pipeline built: ['nmap_scan', 'ssl_scan', 'header_analysis', 'vulnerability_analysis']
+2026-02-12 09:16:15,558 - [ERROR] - CyberSentinel - (queue_manager.py:20) - Failed to enqueue task: 'task_id'
+2026-02-12 09:16:15,558 - [INFO] - CyberSentinel - (routes_scan.py:74) - Scan d75db9b4-4418-4cd2-a641-900b20e99ed1 for target 'https://nl3b.online/' has been queued.
+2026-02-12 09:16:19,845 - [ERROR] - CyberSentinel - (queue_manager.py:35) - Failed to dequeue task: 'task_id'
+2026-02-12 09:16:31,689 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 09:16:37,703 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 09:17:31,809 - [INFO] - CyberSentinel - (main.py:24) - Shutting down CyberSentinel backend...
+2026-02-12 09:17:31,809 - [INFO] - CyberSentinel - (db_connect.py:39) - Closing database connection.
+2026-02-12 09:23:28,945 - [INFO] - CyberSentinel - (main.py:64) - Starting FastAPI server...
+2026-02-12 09:23:28,953 - [INFO] - CyberSentinel - (main.py:20) - Starting up CyberSentinel backend...
+2026-02-12 09:23:28,976 - [INFO] - CyberSentinel - (db_connect.py:29) - Initializing database and creating tables...
+2026-02-12 09:23:28,982 - [INFO] - CyberSentinel - (db_connect.py:33) - Database tables created successfully.
+2026-02-12 09:23:28,982 - [INFO] - CyberSentinel - (queue_manager.py:62) - Task queue initialized.
+2026-02-12 09:23:29,138 - [INFO] - CyberSentinel - (main.py:72) - Starting background worker...
+2026-02-12 09:23:29,138 - [INFO] - CyberSentinel - (queue_manager.py:62) - Task queue initialized.
+2026-02-12 09:23:29,138 - [INFO] - CyberSentinel - (worker.py:86) - Worker loop started. Waiting for tasks...
+2026-02-12 09:23:40,126 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 09:23:48,515 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 09:24:39,389 - [INFO] - CyberSentinel - (target_parser.py:56) - Resolved hiuc.bis.edu.iq to 172.66.40.230
+2026-02-12 09:24:39,395 - [INFO] - CyberSentinel - (target_parser.py:56) - Resolved hiuc.bis.edu.iq to 172.66.43.26
+2026-02-12 09:24:39,395 - [INFO] - CyberSentinel - (decision_engine.py:16) - Building tool pipeline for https://hiuc.bis.edu.iq/student/login?to=/student with mode 'defensive' and depth 'deep'
+2026-02-12 09:24:39,395 - [INFO] - CyberSentinel - (decision_engine.py:26) - Tool pipeline built: ['nmap_scan', 'ssl_scan', 'header_analysis', 'vulnerability_analysis']
+2026-02-12 09:24:39,413 - [ERROR] - CyberSentinel - (queue_manager.py:20) - Failed to enqueue task: KeyError: 'task_id'
+2026-02-12 09:24:39,413 - [INFO] - CyberSentinel - (routes_scan.py:74) - Scan 083dc26e-6e57-4544-b1ee-dd37e4105243 for target 'https://hiuc.bis.edu.iq/student/login?to=/student' has been queued.
+2026-02-12 09:24:44,218 - [ERROR] - CyberSentinel - (queue_manager.py:35) - Failed to dequeue task: KeyError: 'task_id'
+2026-02-12 09:30:20,029 - [INFO] - CyberSentinel - (main.py:24) - Shutting down CyberSentinel backend...
+2026-02-12 09:30:20,029 - [INFO] - CyberSentinel - (db_connect.py:39) - Closing database connection.
+2026-02-12 09:37:07,758 - [INFO] - CyberSentinel - (main.py:64) - Starting FastAPI server...
+2026-02-12 09:37:07,766 - [INFO] - CyberSentinel - (main.py:20) - Starting up CyberSentinel backend...
+2026-02-12 09:37:07,790 - [INFO] - CyberSentinel - (db_connect.py:29) - Initializing database and creating tables...
+2026-02-12 09:37:07,796 - [INFO] - CyberSentinel - (db_connect.py:33) - Database tables created successfully.
+2026-02-12 09:37:07,957 - [INFO] - CyberSentinel - (main.py:72) - Starting background worker...
+2026-02-12 09:40:01,573 - [INFO] - CyberSentinel - (main.py:64) - Starting FastAPI server...
+2026-02-12 09:40:01,581 - [INFO] - CyberSentinel - (main.py:20) - Starting up CyberSentinel backend...
+2026-02-12 09:40:01,604 - [INFO] - CyberSentinel - (db_connect.py:29) - Initializing database and creating tables...
+2026-02-12 09:40:01,611 - [INFO] - CyberSentinel - (db_connect.py:33) - Database tables created successfully.
+2026-02-12 09:40:01,809 - [INFO] - CyberSentinel - (main.py:72) - Starting background worker...
+2026-02-12 09:43:57,499 - [INFO] - CyberSentinel - (main.py:64) - Starting FastAPI server...
+2026-02-12 09:43:57,507 - [INFO] - CyberSentinel - (main.py:20) - Starting up CyberSentinel backend...
+2026-02-12 09:43:57,530 - [INFO] - CyberSentinel - (db_connect.py:29) - Initializing database and creating tables...
+2026-02-12 09:43:57,537 - [INFO] - CyberSentinel - (db_connect.py:33) - Database tables created successfully.
+2026-02-12 09:43:57,706 - [INFO] - CyberSentinel - (main.py:72) - Starting background worker...
+2026-02-12 09:46:34,361 - [INFO] - CyberSentinel - (main.py:64) - Starting FastAPI server...
+2026-02-12 09:46:34,369 - [INFO] - CyberSentinel - (main.py:20) - Starting up CyberSentinel backend...
+2026-02-12 09:46:34,398 - [INFO] - CyberSentinel - (db_connect.py:29) - Initializing database and creating tables...
+2026-02-12 09:46:34,404 - [INFO] - CyberSentinel - (db_connect.py:33) - Database tables created successfully.
+2026-02-12 09:46:34,527 - [INFO] - CyberSentinel - (main.py:72) - Starting background worker...
+2026-02-12 09:52:20,817 - [INFO] - CyberSentinel - (main.py:64) - Starting FastAPI server...
+2026-02-12 09:52:20,825 - [INFO] - CyberSentinel - (main.py:20) - Starting up CyberSentinel backend...
+2026-02-12 09:52:20,852 - [INFO] - CyberSentinel - (db_connect.py:29) - Initializing database and creating tables...
+2026-02-12 09:52:20,859 - [INFO] - CyberSentinel - (db_connect.py:33) - Database tables created successfully.
+2026-02-12 09:52:21,184 - [INFO] - CyberSentinel - (main.py:72) - Starting background worker...
+2026-02-12 09:54:26,610 - [INFO] - CyberSentinel - (main.py:64) - Starting FastAPI server...
+2026-02-12 09:54:26,617 - [INFO] - CyberSentinel - (main.py:20) - Starting up CyberSentinel backend...
+2026-02-12 09:54:26,644 - [INFO] - CyberSentinel - (db_connect.py:29) - Initializing database and creating tables...
+2026-02-12 09:54:26,650 - [INFO] - CyberSentinel - (db_connect.py:33) - Database tables created successfully.
+2026-02-12 09:54:26,651 - [ERROR] - CyberSentinel - (queue_manager.py:24) - Failed to connect to Redis: TypeError: object bool can't be used in 'await' expression
+2026-02-12 09:54:26,651 - [INFO] - CyberSentinel - (queue_manager.py:87) - Task queue initialized.
+2026-02-12 09:54:26,832 - [INFO] - CyberSentinel - (main.py:72) - Starting background worker...
+2026-02-12 09:54:26,833 - [ERROR] - CyberSentinel - (queue_manager.py:24) - Failed to connect to Redis: TypeError: object bool can't be used in 'await' expression
+2026-02-12 09:54:26,833 - [INFO] - CyberSentinel - (queue_manager.py:87) - Task queue initialized.
+2026-02-12 09:54:26,833 - [INFO] - CyberSentinel - (worker.py:86) - Worker loop started. Waiting for tasks...
+2026-02-12 09:54:26,833 - [ERROR] - CyberSentinel - (queue_manager.py:46) - Attempted to dequeue task but Redis client is not connected.
+2026-02-12 09:54:31,839 - [ERROR] - CyberSentinel - (queue_manager.py:46) - Attempted to dequeue task but Redis client is not connected.
+2026-02-12 09:54:36,845 - [ERROR] - CyberSentinel - (queue_manager.py:46) - Attempted to dequeue task but Redis client is not connected.
+2026-02-12 09:54:41,850 - [ERROR] - CyberSentinel - (queue_manager.py:46) - Attempted to dequeue task but Redis client is not connected.
+2026-02-12 09:54:46,854 - [ERROR] - CyberSentinel - (queue_manager.py:46) - Attempted to dequeue task but Redis client is not connected.
+2026-02-12 09:54:51,860 - [ERROR] - CyberSentinel - (queue_manager.py:46) - Attempted to dequeue task but Redis client is not connected.
+2026-02-12 09:54:54,902 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 09:54:56,862 - [ERROR] - CyberSentinel - (queue_manager.py:46) - Attempted to dequeue task but Redis client is not connected.
+2026-02-12 09:55:00,916 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 09:55:01,866 - [ERROR] - CyberSentinel - (queue_manager.py:46) - Attempted to dequeue task but Redis client is not connected.
+2026-02-12 09:55:06,871 - [ERROR] - CyberSentinel - (queue_manager.py:46) - Attempted to dequeue task but Redis client is not connected.
+2026-02-12 09:55:07,287 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 09:55:11,874 - [ERROR] - CyberSentinel - (queue_manager.py:46) - Attempted to dequeue task but Redis client is not connected.
+2026-02-12 09:55:16,878 - [ERROR] - CyberSentinel - (queue_manager.py:46) - Attempted to dequeue task but Redis client is not connected.
+2026-02-12 09:55:21,882 - [ERROR] - CyberSentinel - (queue_manager.py:46) - Attempted to dequeue task but Redis client is not connected.
+2026-02-12 09:55:26,886 - [ERROR] - CyberSentinel - (queue_manager.py:46) - Attempted to dequeue task but Redis client is not connected.
+2026-02-12 09:55:31,891 - [ERROR] - CyberSentinel - (queue_manager.py:46) - Attempted to dequeue task but Redis client is not connected.
+2026-02-12 09:55:36,179 - [INFO] - CyberSentinel - (main.py:24) - Shutting down CyberSentinel backend...
+2026-02-12 09:55:36,179 - [INFO] - CyberSentinel - (db_connect.py:39) - Closing database connection.
+2026-02-12 09:58:28,173 - [INFO] - CyberSentinel - (main.py:64) - Starting FastAPI server...
+2026-02-12 09:58:28,180 - [INFO] - CyberSentinel - (main.py:20) - Starting up CyberSentinel backend...
+2026-02-12 09:58:28,206 - [INFO] - CyberSentinel - (db_connect.py:29) - Initializing database and creating tables...
+2026-02-12 09:58:28,212 - [INFO] - CyberSentinel - (db_connect.py:33) - Database tables created successfully.
+2026-02-12 09:58:28,214 - [INFO] - CyberSentinel - (queue_manager.py:22) - Redis client connected successfully.
+2026-02-12 09:58:28,214 - [INFO] - CyberSentinel - (queue_manager.py:87) - Task queue initialized.
+2026-02-12 09:58:28,412 - [INFO] - CyberSentinel - (main.py:72) - Starting background worker...
+2026-02-12 09:58:28,432 - [INFO] - CyberSentinel - (queue_manager.py:22) - Redis client connected successfully.
+2026-02-12 09:58:28,432 - [INFO] - CyberSentinel - (queue_manager.py:87) - Task queue initialized.
+2026-02-12 09:58:28,433 - [INFO] - CyberSentinel - (worker.py:86) - Worker loop started. Waiting for tasks...
+2026-02-12 09:58:36,330 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 09:59:00,249 - [INFO] - CyberSentinel - (target_parser.py:56) - Resolved nl3b.online to 89.116.22.196
+2026-02-12 09:59:00,255 - [INFO] - CyberSentinel - (target_parser.py:56) - Resolved nl3b.online to 89.116.22.196
+2026-02-12 09:59:00,255 - [INFO] - CyberSentinel - (decision_engine.py:16) - Building tool pipeline for https://nl3b.online/ with mode 'defensive' and depth 'deep'
+2026-02-12 09:59:00,255 - [INFO] - CyberSentinel - (decision_engine.py:26) - Tool pipeline built: ['nmap_scan', 'ssl_scan', 'header_analysis', 'vulnerability_analysis']
+2026-02-12 09:59:00,285 - [ERROR] - CyberSentinel - (queue_manager.py:38) - Failed to enqueue task: KeyError: 'task_id'
+2026-02-12 09:59:00,285 - [INFO] - CyberSentinel - (routes_scan.py:74) - Scan 5bb2b4d9-44ab-42b5-aaa5-37679134e791 for target 'https://nl3b.online/' has been queued.
+2026-02-12 09:59:03,465 - [ERROR] - CyberSentinel - (queue_manager.py:56) - Failed to dequeue task: NameError: name 'json' is not defined
+2026-02-12 10:04:09,293 - [INFO] - CyberSentinel - (main.py:24) - Shutting down CyberSentinel backend...
+2026-02-12 10:04:09,293 - [INFO] - CyberSentinel - (db_connect.py:39) - Closing database connection.
+2026-02-12 10:04:34,348 - [INFO] - CyberSentinel - (main.py:64) - Starting FastAPI server...
+2026-02-12 10:04:34,355 - [INFO] - CyberSentinel - (main.py:20) - Starting up CyberSentinel backend...
+2026-02-12 10:04:34,385 - [INFO] - CyberSentinel - (db_connect.py:29) - Initializing database and creating tables...
+2026-02-12 10:04:34,396 - [INFO] - CyberSentinel - (db_connect.py:33) - Database tables created successfully.
+2026-02-12 10:04:34,398 - [INFO] - CyberSentinel - (queue_manager.py:23) - Redis client connected successfully.
+2026-02-12 10:04:34,398 - [INFO] - CyberSentinel - (queue_manager.py:88) - Task queue initialized.
+2026-02-12 10:04:34,558 - [INFO] - CyberSentinel - (main.py:72) - Starting background worker...
+2026-02-12 10:04:34,576 - [INFO] - CyberSentinel - (queue_manager.py:23) - Redis client connected successfully.
+2026-02-12 10:04:34,576 - [INFO] - CyberSentinel - (queue_manager.py:88) - Task queue initialized.
+2026-02-12 10:04:34,576 - [INFO] - CyberSentinel - (worker.py:86) - Worker loop started. Waiting for tasks...
+2026-02-12 10:04:44,481 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:04:54,755 - [INFO] - CyberSentinel - (target_parser.py:56) - Resolved nl3b.online to 89.116.22.196
+2026-02-12 10:04:54,760 - [INFO] - CyberSentinel - (target_parser.py:56) - Resolved nl3b.online to 89.116.22.196
+2026-02-12 10:04:54,761 - [INFO] - CyberSentinel - (decision_engine.py:16) - Building tool pipeline for https://nl3b.online/ with mode 'defensive' and depth 'deep'
+2026-02-12 10:04:54,761 - [INFO] - CyberSentinel - (decision_engine.py:26) - Tool pipeline built: ['nmap_scan', 'ssl_scan', 'header_analysis', 'vulnerability_analysis']
+2026-02-12 10:04:54,779 - [INFO] - CyberSentinel - (queue_manager.py:37) - Enqueued task: 66c4989b-e3ce-4d01-85cb-39e287cb9cf0
+2026-02-12 10:04:54,779 - [INFO] - CyberSentinel - (routes_scan.py:74) - Scan 66c4989b-e3ce-4d01-85cb-39e287cb9cf0 for target 'https://nl3b.online/' has been queued.
+2026-02-12 10:04:59,599 - [ERROR] - CyberSentinel - (queue_manager.py:57) - Failed to dequeue task: KeyError: 'task_id'
+2026-02-12 10:09:41,083 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:09:47,094 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:09:53,106 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:09:59,120 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:10:05,131 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:10:11,153 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:10:17,163 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:10:23,174 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:10:29,186 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:10:35,198 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:10:41,210 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:10:47,222 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:10:53,234 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:10:59,245 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:11:05,257 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:11:11,268 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:11:17,280 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:11:23,291 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:11:29,303 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:11:35,314 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:11:41,325 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:11:47,343 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:11:53,353 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:11:58,824 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:12:04,839 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:12:10,852 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:12:16,867 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:12:22,876 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:12:28,887 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:12:34,900 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:12:40,912 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:12:46,923 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:12:52,931 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:12:58,940 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:13:04,950 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:13:10,960 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:13:16,971 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:13:22,980 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:13:28,990 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:13:35,000 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:13:41,011 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:13:47,022 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:13:53,104 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:13:59,119 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:14:05,134 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:14:11,147 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:14:17,157 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:14:23,167 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:14:29,181 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:14:35,195 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:14:41,202 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:14:47,214 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:14:53,226 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:14:59,238 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:15:05,248 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:15:11,261 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:15:17,270 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:15:23,282 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:15:29,294 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:15:35,304 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:15:41,315 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:15:47,328 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:15:53,339 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:15:59,352 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:16:05,365 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:16:11,376 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:16:17,389 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:16:23,400 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:16:29,413 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:16:35,427 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:16:41,439 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:16:47,450 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:16:53,461 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:16:59,474 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:17:05,488 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:17:11,500 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:17:17,513 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:17:23,528 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:17:29,543 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:17:35,555 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:17:41,567 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:17:47,578 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:17:53,592 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:17:59,603 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:18:05,615 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:18:11,627 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:18:17,641 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:18:23,652 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:18:29,665 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:18:35,677 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:18:41,690 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:18:47,703 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:18:53,716 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:18:59,727 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:19:05,741 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:19:11,753 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:19:17,765 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:19:23,779 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:19:29,791 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:19:35,804 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:19:41,814 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:20:14,202 - [INFO] - CyberSentinel - (main.py:64) - Starting FastAPI server...
+2026-02-12 10:20:14,209 - [INFO] - CyberSentinel - (main.py:20) - Starting up CyberSentinel backend...
+2026-02-12 10:20:14,237 - [INFO] - CyberSentinel - (db_connect.py:29) - Initializing database and creating tables...
+2026-02-12 10:20:14,243 - [INFO] - CyberSentinel - (db_connect.py:33) - Database tables created successfully.
+2026-02-12 10:20:14,245 - [INFO] - CyberSentinel - (queue_manager.py:23) - Redis client connected successfully.
+2026-02-12 10:20:14,245 - [INFO] - CyberSentinel - (queue_manager.py:88) - Task queue initialized.
+2026-02-12 10:20:14,397 - [INFO] - CyberSentinel - (main.py:72) - Starting background worker...
+2026-02-12 10:20:14,415 - [INFO] - CyberSentinel - (queue_manager.py:23) - Redis client connected successfully.
+2026-02-12 10:20:14,415 - [INFO] - CyberSentinel - (queue_manager.py:88) - Task queue initialized.
+2026-02-12 10:20:14,415 - [INFO] - CyberSentinel - (worker.py:125) - Worker loop started. Waiting for tasks...
+2026-02-12 10:20:14,884 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:20:20,896 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:20:26,909 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:20:32,920 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:20:42,669 - [INFO] - CyberSentinel - (target_parser.py:56) - Resolved nl3b.online to 89.116.22.196
+2026-02-12 10:20:42,674 - [INFO] - CyberSentinel - (target_parser.py:56) - Resolved nl3b.online to 89.116.22.196
+2026-02-12 10:20:42,675 - [INFO] - CyberSentinel - (decision_engine.py:16) - Building tool pipeline for https://nl3b.online/ with mode 'defensive' and depth 'deep'
+2026-02-12 10:20:42,675 - [INFO] - CyberSentinel - (decision_engine.py:26) - Tool pipeline built: ['nmap_scan', 'ssl_scan', 'header_analysis', 'vulnerability_analysis']
+2026-02-12 10:20:42,689 - [INFO] - CyberSentinel - (queue_manager.py:37) - Enqueued task: 9624a22c-3f48-4154-9e16-506bab0cdb6c
+2026-02-12 10:20:42,690 - [INFO] - CyberSentinel - (routes_scan.py:74) - Scan 9624a22c-3f48-4154-9e16-506bab0cdb6c for target 'https://nl3b.online/' has been queued.
+2026-02-12 10:20:44,451 - [INFO] - CyberSentinel - (queue_manager.py:53) - Dequeued task: 9624a22c-3f48-4154-9e16-506bab0cdb6c
+2026-02-12 10:20:44,451 - [INFO] - CyberSentinel - (worker.py:28) - [9624a22c-3f48-4154-9e16-506bab0cdb6c] Starting processing for target: https://nl3b.online/, db_id: 6
+2026-02-12 10:20:44,496 - [INFO] - CyberSentinel - (worker.py:36) - [9624a22c-3f48-4154-9e16-506bab0cdb6c] Scan record found. Current status: queued
+2026-02-12 10:20:44,515 - [INFO] - CyberSentinel - (tool_controller.py:34) - [9624a22c-3f48-4154-9e16-506bab0cdb6c] Starting tool pipeline execution.
+2026-02-12 10:20:44,519 - [INFO] - CyberSentinel - (tool_controller.py:46) - [9624a22c-3f48-4154-9e16-506bab0cdb6c] Running tool: nmap_scan with params: {'options': '-sV -T4', 'target': '89.116.22.196'}
+2026-02-12 10:20:44,519 - [INFO] - CyberSentinel - (subprocess_stream.py:18) - Starting streamed command: nmap -sV -T4 89.116.22.196
+2026-02-12 10:20:59,421 - [INFO] - CyberSentinel - (nmap_scanner.py:16) - Starting Nmap scan on 89.116.22.196 with options '-sV -T4'
+2026-02-12 10:21:14,631 - [INFO] - CyberSentinel - (nmap_scanner.py:60) - Nmap scan finished for 89.116.22.196. Found 2 open ports.
+2026-02-12 10:21:14,632 - [INFO] - CyberSentinel - (tool_controller.py:46) - [9624a22c-3f48-4154-9e16-506bab0cdb6c] Running tool: ssl_scan with params: {'target': 'nl3b.online'}
+2026-02-12 10:21:14,632 - [INFO] - CyberSentinel - (subprocess_stream.py:18) - Starting streamed command: sslscan --no-colour nl3b.online
+2026-02-12 10:21:47,729 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:21:51,809 - [INFO] - CyberSentinel - (ssl_scanner.py:16) - Starting SSL scan on nl3b.online
+2026-02-12 10:21:53,740 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:21:59,754 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:22:05,767 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 10:22:27,432 - [INFO] - CyberSentinel - (ssl_scanner.py:65) - SSL scan finished for nl3b.online.
+2026-02-12 10:22:27,433 - [INFO] - CyberSentinel - (tool_controller.py:46) - [9624a22c-3f48-4154-9e16-506bab0cdb6c] Running tool: header_analysis with params: {'url': 'https://nl3b.online/'}
+2026-02-12 10:22:27,433 - [INFO] - CyberSentinel - (header_analyzer.py:31) - Starting header analysis for https://nl3b.online/
+2026-02-12 10:22:28,249 - [INFO] - CyberSentinel - (header_analyzer.py:62) - Header analysis finished for https://nl3b.online/.
+2026-02-12 10:22:28,250 - [INFO] - CyberSentinel - (tool_controller.py:46) - [9624a22c-3f48-4154-9e16-506bab0cdb6c] Running tool: vulnerability_analysis with params: {'target': 'https://nl3b.online/'}
+2026-02-12 10:22:28,250 - [INFO] - CyberSentinel - (vuln_analyzer.py:25) - Starting vulnerability analysis based on service versions.
+2026-02-12 10:22:28,250 - [INFO] - CyberSentinel - (vuln_analyzer.py:51) - Vulnerability analysis finished. Found 0 potential issues.
+2026-02-12 10:22:28,250 - [INFO] - CyberSentinel - (tool_controller.py:69) - [9624a22c-3f48-4154-9e16-506bab0cdb6c] Tool pipeline execution finished.
+2026-02-12 10:22:28,250 - [INFO] - CyberSentinel - (worker.py:47) - [9624a22c-3f48-4154-9e16-506bab0cdb6c] Tool pipeline completed. Results count: 4
+2026-02-12 10:22:28,250 - [INFO] - CyberSentinel - (worker.py:66) - [9624a22c-3f48-4154-9e16-506bab0cdb6c] Risk assessment complete. Score: 100 (Critical)
+2026-02-12 10:22:28,251 - [INFO] - CyberSentinel - (worker.py:86) - [9624a22c-3f48-4154-9e16-506bab0cdb6c] Scan results saved to database.
+2026-02-12 10:22:28,252 - [INFO] - CyberSentinel - (json_exporter.py:18) - Generating JSON report for scan ID: 9624a22c-3f48-4154-9e16-506bab0cdb6c
+2026-02-12 10:22:28,252 - [INFO] - CyberSentinel - (pdf_generator.py:116) - Generating PDF report for scan ID: 9624a22c-3f48-4154-9e16-506bab0cdb6c
+2026-02-12 10:22:28,525 - [INFO] - CyberSentinel - (worker.py:110) - [9624a22c-3f48-4154-9e16-506bab0cdb6c] Reports generated and saved.
+2026-02-12 10:22:28,533 - [INFO] - CyberSentinel - (worker.py:117) - [9624a22c-3f48-4154-9e16-506bab0cdb6c] Scan processing finished and results saved.
+2026-02-12 10:36:27,216 - [INFO] - CyberSentinel - (main.py:24) - Shutting down CyberSentinel backend...
+2026-02-12 10:36:27,216 - [INFO] - CyberSentinel - (db_connect.py:39) - Closing database connection.

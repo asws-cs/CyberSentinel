@@ -1,0 +1,261 @@
+CYBERSENTINEL – ENTERPRISE CYBERSECURITY COMMAND PLATFORM
+FULL PROJECT GENERATION + INTERNAL SYSTEM LOGIC
+(GEMINI CLI – STRICT EXECUTION MODE)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ROLE
+Act as:
+Senior Cybersecurity Engineer
+Full-Stack Software Architect
+DevOps Engineer
+Secure Product Designer
+System Orchestration Specialist
+AI-Assisted Security Engineer
+
+You MUST build a FULL commercial-grade cybersecurity command platform.
+NOT a script. NOT partial output. NOT simplified.
+A COMPLETE MODULAR PRODUCT ONLY.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+MANDATORY EXECUTION RULES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+- Generate ALL folders and files exactly as defined.
+- Do NOT skip any file.
+- Do NOT merge modules.
+- Do NOT rename folders.
+- Respect structure strictly.
+- Modular clean architecture required.
+- Async backend required.
+- Security-first coding.
+- Logging and validation mandatory.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PLATFORM CORE FEATURES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Dual Mode System:
+1. Defensive Security Scanner
+2. Controlled Penetration Testing Layer
+
+Live Tool Streaming
+Adaptive Decision Engine
+Risk Intelligence Engine
+PDF + JSON Reports
+Interactive Dashboard
+Legal & Ethical Enforcement
+Queue Management
+Resource Monitoring
+Live Console Control
+Tool Controller Panel
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+INTERNAL SYSTEM ARCHITECTURE & LOGIC
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+TARGET PARSER
+- Normalize URL / Domain / IP
+- Detect Local vs Public
+- Validate Input
+- DNS Resolution
+
+DECISION ENGINE
+- Determine Scan Depth
+- Select Tools Intelligently
+- Avoid Full Scan by Default
+- Context-Aware Invocation
+
+LIVE TOOL ORCHESTRATION
+- Subprocess Streaming (Popen + stdout)
+- Pause / Resume / Kill
+- Task Queue
+- Priority Scheduling
+- Concurrent Limits
+- Timeout Control
+
+DEFENSIVE SCANNER ENGINE
+- Port Scanning (Nmap)
+- SSL/TLS Inspection
+- WHOIS Lookup
+- Header Analysis
+- Passive Vulnerability Detection
+
+CONTROLLED OFFENSIVE LAYER
+- SQL Injection Pattern Testing
+- Reflected XSS Safe Payloads
+- Directory Discovery
+- Subdomain Enumeration
+- Nikto Informational Scan
+- Require User Confirmation
+- Legal Disclaimer Enforcement
+
+RISK ENGINE
+- Weighted Risk Score
+- Port Exposure
+- Header Misconfig
+- Vulnerability Risk
+- SSL Weakness
+Severity Levels:
+0-30 Low
+31-60 Medium
+61-80 High
+81-100 Critical
+
+REPORT GENERATOR
+- Executive Summary
+- Technical Findings
+- Defensive Results
+- Offensive Results
+- Recommendations
+- Timestamp
+- PDF + JSON Export
+
+DASHBOARD BEHAVIOR
+- Mode Toggle
+- Live Console
+- Tool Controller
+- Charts
+- Risk Gauge
+- Logs Viewer
+- Dark Mode
+- Kill Switch
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+MANDATORY PROJECT STRUCTURE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+cybersentinel/
+│
+├── backend/
+│   ├── main.py
+│   ├── config.py
+│   ├── requirements.txt
+│
+│   ├── api/
+│   │   ├── routes_scan.py
+│   │   ├── routes_reports.py
+│   │   └── routes_tools.py
+│
+│   ├── core/
+│   │   ├── target_parser.py
+│   │   ├── decision_engine.py
+│   │   ├── risk_engine.py
+│   │   └── queue_manager.py
+│
+│   ├── scanners/
+│   │   ├── nmap_scanner.py
+│   │   ├── ssl_scanner.py
+│   │   ├── header_analyzer.py
+│   │   └── vuln_analyzer.py
+│
+│   ├── offensive/
+│   │   ├── sql_tester.py
+│   │   ├── dir_discovery.py
+│   │   └── xss_tester.py
+│
+│   ├── tools/
+│   │   ├── tool_controller.py
+│   │   ├── subprocess_stream.py
+│   │   └── live_output.py
+│
+│   ├── reports/
+│   │   ├── pdf_generator.py
+│   │   └── json_exporter.py
+│
+│   ├── database/
+│   │   ├── models.py
+│   │   └── db_connect.py
+│
+│   ├── security/
+│   │   ├── legal_guard.py
+│   │   └── rate_limiter.py
+│
+│   ├── monitoring/
+│   │   └── resource_monitor.py
+│
+│   └── utils/
+│       ├── logger.py
+│       ├── validators.py
+│       └── helpers.py
+│
+├── frontend/
+│   ├── src/
+│   │   ├── pages/
+│   │   │   ├── Dashboard.jsx
+│   │   │   ├── Scan.jsx
+│   │   │   └── Reports.jsx
+│   │   │
+│   │   ├── components/
+│   │   │   ├── LiveConsole.jsx
+│   │   │   ├── ToolController.jsx
+│   │   │   ├── RiskGauge.jsx
+│   │   │   └── Charts.jsx
+│   │   │
+│   │   └── services/
+│   │       └── api.js
+│   │
+│   └── package.json
+│
+├── scripts/
+│   ├── install_tools.sh
+│   └── setup_env.sh
+│
+├── docs/
+│   ├── architecture.md
+│   └── api_docs.md
+│
+├── .env
+├── docker-compose.yml
+├── README.md
+└── LICENSE
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+EXTERNAL TOOL INTEGRATIONS
+━━━━━━━━━━━━━━━━M━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+nmap
+sslscan
+nikto
+whois
+dig
+nslookup
+dirsearch
+gobuster
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PYTHON LIBRARIES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+fastapi
+requests
+httpx
+beautifulsoup4
+python-nmap
+python-whois
+reportlab
+weasyprint
+matplotlib
+plotly
+psycopg2
+redis
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+QUALITY ENFORCEMENT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Input Validation
+Logging
+Error Handling
+Rate Limiting
+Legal Disclaimer
+Queue System
+Resource Monitoring
+Async IO
+Secure Coding Practices
+Unit Tests
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+FINAL EXPECTATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Generate a FULL enterprise-grade cybersecurity command platform
+with ALL folders, ALL modules, ALL UI components,
+ALL security layers, ALL engines implemented.
+
+NO PARTIAL OUTPUT.
+NO SIMPLIFICATION.
+FULL PRODUCT ONLY.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
