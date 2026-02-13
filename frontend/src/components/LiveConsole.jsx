@@ -9,28 +9,43 @@ const LiveConsole = ({ scanId }) => {
 
     useEffect(() => {
         const wsProtocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
-        const wsUrl = `${wsProtocol}//${window.location.host}/api/scan/ws/${scanId}`;
+        // Ensure the WebSocket URL correctly points to your backend's WebSocket endpoint
+        // Example: ws://localhost:8000/api/scan/ws/{scanId} or wss://yourdomain.com/api/scan/ws/{scanId}
+        const backendHost = window.location.hostname === 'localhost' ? 'localhost:8000' : window.location.host;
+        const wsUrl = `${wsProtocol}//${backendHost}/api/scan/ws/${scanId}`;
         
         webSocketRef.current = new WebSocket(wsUrl);
 
         webSocketRef.current.onopen = () => {
             setConnectionStatus('Connected');
-            setOutput(prev => [...prev, '--- Connection Established ---']);
+            setOutput(prev => [...prev, { level: 'INFO', message: '--- Connection Established ---', timestamp: new Date().toISOString() }]);
         };
 
         webSocketRef.current.onmessage = (event) => {
-            setOutput(prev => [...prev, event.data]);
+            try {
+                const message = JSON.parse(event.data);
+                // Ensure the message has the expected structure
+                if (message.level && message.message) {
+                    setOutput(prev => [...prev, message]);
+                } else {
+                    console.warn("Received malformed message:", message);
+                    setOutput(prev => [...prev, { level: 'DEBUG', message: `Malformed message: ${event.data}`, timestamp: new Date().toISOString() }]);
+                }
+            } catch (e) {
+                console.error("Failed to parse WebSocket message:", event.data, e);
+                setOutput(prev => [...prev, { level: 'ERROR', message: `Failed to parse message: ${event.data}`, timestamp: new Date().toISOString() }]);
+            }
         };
 
         webSocketRef.current.onclose = () => {
             setConnectionStatus('Disconnected');
-            setOutput(prev => [...prev, '--- Connection Closed ---']);
+            setOutput(prev => [...prev, { level: 'INFO', message: '--- Connection Closed ---', timestamp: new Date().toISOString() }]);
         };
 
         webSocketRef.current.onerror = (error) => {
             setConnectionStatus('Error');
             console.error("WebSocket Error: ", error);
-            setOutput(prev => [...prev, '--- An error occurred with the connection ---']);
+            setOutput(prev => [...prev, { level: 'ERROR', message: '--- An error occurred with the connection ---', timestamp: new Date().toISOString() }]);
         };
 
         return () => {
@@ -45,10 +60,25 @@ const LiveConsole = ({ scanId }) => {
         consoleEndRef.current?.scrollIntoView({ behavior: 'smooth' });
     }, [output]);
 
+    const getMessageColor = (level) => {
+        switch (level) {
+            case 'INFO':
+                return 'lightgray';
+            case 'WARNING':
+                return 'yellow';
+            case 'ERROR':
+                return 'red';
+            case 'DEBUG':
+                return 'gray';
+            default:
+                return 'white';
+        }
+    };
+
     return (
         <Paper elevation={3} sx={{ height: '60vh', display: 'flex', flexDirection: 'column' }}>
-            <Box sx={{ p: 2, borderBottom: 1, borderColor: 'divider', display: 'flex', justifyContent: 'space-between' }}>
-                <Typography variant="h6">Live Output</Typography>
+            <Box sx={{ p: 2, borderBottom: 1, borderColor: 'divider', display: 'flex', justifyContent: 'space-between', alignItems: 'center', backgroundColor: '#333' }}>
+                <Typography variant="h6" sx={{ color: 'white' }}>Live Output</Typography>
                 <Typography variant="body2" color={connectionStatus === 'Connected' ? 'success.main' : 'error.main'}>
                     {connectionStatus}
                 </Typography>
@@ -65,8 +95,11 @@ const LiveConsole = ({ scanId }) => {
                 whiteSpace: 'pre-wrap',
                 wordBreak: 'break-all',
             }}>
-                {output.map((line, index) => (
-                    <div key={index}>{`> ${line}`}</div>
+                {output.map((msg, index) => (
+                    <div key={index} style={{ color: getMessageColor(msg.level) }}>
+                        <span style={{ color: 'gray' }}>{new Date(msg.timestamp).toLocaleTimeString()}</span>{' '}
+                        <strong>[{msg.level}]</strong> {msg.message}
+                    </div>
                 ))}
                 <div ref={consoleEndRef} />
             </Box>
