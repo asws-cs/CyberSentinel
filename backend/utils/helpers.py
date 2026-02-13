@@ -2,6 +2,8 @@ import asyncio
 import json
 from datetime import datetime
 import uuid
+import os
+import shutil
 from utils.logger import logger
 
 async def run_command(command: str) -> tuple[str, str]:
@@ -22,6 +24,26 @@ async def run_command(command: str) -> tuple[str, str]:
     stdout, stderr = await process.communicate()
     return stdout.decode().strip(), stderr.decode().strip()
 from utils.logger import logger
+
+import shutil
+
+def validate_tool_path(tool_path: str, tool_name: str):
+    """
+    Validates if a tool's executable is available in the system's PATH.
+    Raises specific exceptions for different failure cases.
+    """
+    if not tool_path:
+        raise ValueError(f"{tool_name}_PATH is not set in settings.")
+    
+    resolved_path = shutil.which(tool_path)
+    
+    if not resolved_path:
+        raise FileNotFoundError(
+            f"{tool_name} executable not found. "
+            f"'{tool_path}' is not in the system's PATH or is not executable."
+        )
+    
+    logger.debug(f"{tool_name} found at: {resolved_path}")
 
 class CustomJsonEncoder(json.JSONEncoder):
     """

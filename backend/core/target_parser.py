@@ -7,8 +7,9 @@ from utils.logger import logger
 from typing import Optional, Dict, Any
 
 class Target:
-    def __init__(self, input_target: str):
+    def __init__(self, input_target: str, scan_id: Optional[str] = None):
         self.raw_target = input_target.strip()
+        self.scan_id = scan_id
         self.normalized_target: str = ""
         self.ip_address: Optional[str] = None
         self.domain: Optional[str] = None
@@ -43,7 +44,7 @@ class Target:
             self.normalized_target = self.raw_target
             self._resolve_dns()
         else:
-            logger.warning(f"Could not determine target type for: {self.raw_target}")
+            logger.warning(f"Could not determine target type for: {self.raw_target}", extra={"scan_id": self.scan_id})
             raise ValueError(f"Invalid target: {self.raw_target}")
 
     def _resolve_dns(self):
@@ -53,14 +54,14 @@ class Target:
         if self.domain:
             try:
                 self.ip_address = socket.gethostbyname(self.domain)
-                logger.info(f"Resolved {self.domain} to {self.ip_address}")
+                logger.info(f"Resolved {self.domain} to {self.ip_address}", extra={"scan_id": self.scan_id})
                 try:
                     ip_obj = ipaddress.ip_address(self.ip_address)
                     self.is_local = ip_obj.is_private
                 except ValueError:
                     self.is_local = False
             except socket.gaierror:
-                logger.error(f"Could not resolve DNS for domain: {self.domain}")
+                logger.error(f"Could not resolve DNS for domain: {self.domain}", extra={"scan_id": self.scan_id})
                 self.ip_address = None
 
     def to_dict(self) -> Dict[str, Any]:
@@ -76,9 +77,9 @@ class Target:
             "target_type": self.target_type,
         }
 
-async def parse_target(target_str: str) -> Target:
+async def parse_target(target_str: str, scan_id: Optional[str] = None) -> Target:
     """
     Asynchronously parse and resolve a target string.
     """
     loop = asyncio.get_event_loop()
-    return await loop.run_in_executor(None, Target, target_str)
+    return await loop.run_in_executor(None, Target, target_str, scan_id)

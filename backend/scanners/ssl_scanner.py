@@ -1,25 +1,26 @@
 import asyncio
 import re
-from typing import Dict, Any, List
+from typing import Dict, Any, List, Optional
 from utils.logger import logger
 from utils.helpers import run_command
 from config import settings
 
 class SSLScanner:
-    def __init__(self, target: str):
+    def __init__(self, target: str, scan_id: Optional[str] = None):
         self.target = target
+        self.scan_id = scan_id
 
     async def scan(self) -> Dict[str, Any]:
         """
         Performs an SSL scan using sslscan.
         """
-        logger.info(f"Starting SSL scan on {self.target}")
+        logger.info(f"Starting SSL scan on {self.target}", extra={"scan_id": self.scan_id})
         command = f"{settings.SSLSCAN_PATH} --no-colour {self.target}"
         
         stdout, stderr = await run_command(command)
         
         if stderr:
-            logger.error(f"SSLScan returned an error for {self.target}: {stderr}")
+            logger.error(f"SSLScan returned an error for {self.target}: {stderr}", extra={"scan_id": self.scan_id})
 
         return self._parse_results(stdout)
 
@@ -62,12 +63,12 @@ class SSLScanner:
             if match:
                 results["supported_ciphers"].append(f"{match.group(1)}: {match.group(2).strip()}")
 
-        logger.info(f"SSL scan finished for {self.target}.")
+        logger.info(f"SSL scan finished for {self.target}.", extra={"scan_id": self.scan_id})
         return results
 
-async def run_ssl_scan(target: str) -> Dict[str, Any]:
+async def run_ssl_scan(target: str, scan_id: Optional[str] = None) -> Dict[str, Any]:
     """
     High-level function to run an SSL scan.
     """
-    scanner = SSLScanner(target)
+    scanner = SSLScanner(target, scan_id)
     return await scanner.scan()

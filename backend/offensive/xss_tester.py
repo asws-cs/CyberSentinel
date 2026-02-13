@@ -1,13 +1,14 @@
 import httpx
 from bs4 import BeautifulSoup
-from typing import Dict, Any, List
+from typing import Dict, Any, List, Optional
 from urllib.parse import urljoin, urlparse, unquote
 
 from utils.logger import logger
 
 class XSSTester:
-    def __init__(self, url: str):
+    def __init__(self, url: str, scan_id: Optional[str] = None):
         self.url = self._ensure_scheme(url)
+        self.scan_id = scan_id
         # A unique, safe payload to check for reflection
         self.payload = "<script>cybersentinel-xss-test</script>"
         self.reflection_tag = "cybersentinel-xss-test"
@@ -18,7 +19,7 @@ class XSSTester:
         return url
 
     async def test(self) -> Dict[str, Any]:
-        logger.info(f"Starting XSS test for {self.url}")
+        logger.info(f"Starting XSS test for {self.url}", extra={"scan_id": self.scan_id})
         vulnerable_points: List[Dict[str, str]] = []
 
         try:
@@ -31,7 +32,7 @@ class XSSTester:
                 response = await client.get(self.url)
                 soup = BeautifulSoup(response.text, "html.parser")
                 forms = soup.find_all("form")
-                logger.info(f"Found {len(forms)} forms to test for XSS on {self.url}")
+                logger.info(f"Found {len(forms)} forms to test for XSS on {self.url}", extra={"scan_id": self.scan_id})
                 for form in forms:
                     if await self._test_form(client, form):
                         vulnerable_points.append({
@@ -41,7 +42,7 @@ class XSSTester:
                         })
 
         except httpx.RequestError as e:
-            logger.error(f"Could not connect to {self.url} for XSS test: {e}")
+            logger.error(f"Could not connect to {self.url} for XSS test: {e}", extra={"scan_id": self.scan_id})
             return {"error": str(e)}
 
         is_vulnerable = len(vulnerable_points) > 0
@@ -68,7 +69,7 @@ class XSSTester:
             try:
                 response = await client.get(test_url)
                 if self.reflection_tag in unquote(response.text):
-                    logger.warning(f"Reflected XSS detected in URL parameter '{key}' at {test_url}")
+                    logger.warning(f"Reflected XSS detected in URL parameter '{key}' at {test_url}", extra={"scan_id": self.scan_id})
                     return True
             except httpx.RequestError:
                 continue
@@ -102,14 +103,14 @@ class XSSTester:
                 response = await client.get(form_url, params=data)
             
             if self.reflection_tag in unquote(response.text):
-                logger.warning(f"Reflected XSS detected in form input '{injected_field}' at {form_url}")
+                logger.warning(f"Reflected XSS detected in form input '{injected_field}' at {form_url}", extra={"scan_id": self.scan_id})
                 return True
         except httpx.RequestError as e:
-            logger.error(f"Request failed during XSS form submission to {form_url}: {e}")
+            logger.error(f"Request failed during XSS form submission to {form_url}: {e}", extra={"scan_id": self.scan_id})
 
         return False
 
 
-async def run_xss_test(url: str) -> Dict[str, Any]:
-    tester = XSSTester(url)
+async def run_xss_test(url: str, scan_id: Optional[str] = None) -> Dict[str, Any]:
+    tester = XSSTester(url, scan_id)
     return await tester.test()

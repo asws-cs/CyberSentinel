@@ -2,6 +2,7 @@ from fastapi import APIRouter, Depends, HTTPException, status, Body, Header
 from fastapi.websockets import WebSocket, WebSocketDisconnect
 from sqlmodel import select
 from sqlmodel.ext.asyncio.session import AsyncSession
+from sqlalchemy.orm import selectinload
 from typing import List, Dict, Any, Optional
 
 from database.db_connect import get_session
@@ -39,17 +40,24 @@ async def start_new_scan(
             )
 
     try:
-        target_obj = await parse_target(scan_in.target)
+        scan_id = str(uuid.uuid4()) # scan_id is generated here
+        target_obj = await parse_target(scan_in.target, scan_id)
         if not target_obj.ip_address and not target_obj.domain:
              raise HTTPException(status_code=400, detail="Invalid or unresolvable target.")
     except ValueError as e:
         raise HTTPException(status_code=400, detail=str(e))
 
-    pipeline = get_scan_pipeline(scan_in.target, scan_in.scan_mode, scan_in.scan_depth)
+    pipeline = get_scan_pipeline(
+        scan_in.target, 
+        scan_id, # Pass scan_id here
+        scan_in.scan_mode, 
+        scan_in.scan_depth,
+        scan_in.aggressive,
+        scan_in.tools
+    )
     if not pipeline:
         raise HTTPException(status_code=400, detail="Could not build a valid scan pipeline for the target.")
 
-    scan_id = str(uuid.uuid4())
     new_scan = Scan(
         scan_id=scan_id,
         target=scan_in.target,
@@ -71,7 +79,7 @@ async def start_new_scan(
     queue = get_queue()
     await queue.enqueue_task(task)
 
-    logger.info(f"Scan {scan_id} for target '{scan_in.target}' has been queued.")
+    logger.info(f"Scan {scan_id} for target '{scan_in.target}' has been queued.", extra={"scan_id": scan_id})
     return new_scan
 
 
@@ -90,12 +98,15 @@ async def get_scan_details(scan_id: str, session: AsyncSession = Depends(get_ses
     """
     Retrieve the details and results of a specific scan.
     """
-    result = await session.execute(select(Scan).where(Scan.scan_id == scan_id))
+    result = await session.execute(
+        select(Scan)
+        .where(Scan.scan_id == scan_id)
+        .options(selectinload(Scan.results))
+    )
     scan = result.scalar_one_or_none()
     if scan is None:
         raise HTTPException(status_code=404, detail="Scan not found.")
     return scan
-
 
 @router.websocket("/ws/{scan_id}")
 async def websocket_scan_output(websocket: WebSocket, scan_id: str):
@@ -104,14 +115,14 @@ async def websocket_scan_output(websocket: WebSocket, scan_id: str):
     """
     await websocket.accept()
     subscriber = await get_live_output_subscriber()
-    channel = f"scan_output:{scan_id}"
+    channel = f"scan_live_feed:{scan_id}" # Changed channel name
     
     try:
         async for message in subscriber.subscribe(channel):
             await websocket.send_text(message)
     except WebSocketDisconnect:
-        logger.info(f"WebSocket disconnected for scan ID: {scan_id}")
+        logger.info(f"WebSocket disconnected for scan ID: {scan_id}", extra={"scan_id": scan_id}) # Added extra
     except Exception as e:
-        logger.error(f"WebSocket error for scan ID {scan_id}: {e}")
+        logger.error(f"WebSocket error for scan ID {scan_id}: {e}", extra={"scan_id": scan_id}) # Added extra
         await websocket.close(code=status.WS_1011_INTERNAL_ERROR)
 

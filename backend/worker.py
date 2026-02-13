@@ -22,18 +22,18 @@ async def process_task(task: dict):
     db_id = task.get("db_id")
 
     if not all([scan_id, target, pipeline, db_id]):
-        logger.error(f"Invalid task received: {task}")
+        logger.error(f"Invalid task received: {task}") # No scan_id for truly invalid task
         return
 
-    logger.info(f"[{scan_id}] Starting processing for target: {target}, db_id: {db_id}")
+    logger.info(f"[{scan_id}] Starting processing for target: {target}, db_id: {db_id}", extra={"scan_id": scan_id})
 
     async with AsyncSessionLocal() as session:
         # 1. Update scan status to 'in_progress'
         scan_record = await session.get(Scan, db_id)
         if not scan_record:
-            logger.error(f"[{scan_id}] Scan record not found in database for db_id: {db_id}.")
+            logger.error(f"[{scan_id}] Scan record not found in database for db_id: {db_id}.", extra={"scan_id": scan_id})
             return
-        logger.info(f"[{scan_id}] Scan record found. Current status: {scan_record.status}")
+        logger.info(f"[{scan_id}] Scan record found. Current status: {scan_record.status}", extra={"scan_id": scan_id})
         scan_record.status = "in_progress"
         session.add(scan_record)
         await session.commit()
@@ -44,9 +44,9 @@ async def process_task(task: dict):
             # 2. Run the tool pipeline
             controller = ToolController(scan_id)
             results = await controller.run_pipeline(pipeline)
-            logger.info(f"[{scan_id}] Tool pipeline completed. Results count: {len(results)}")
+            logger.info(f"[{scan_id}] Tool pipeline completed. Results count: {len(results)}", extra={"scan_id": scan_id})
         except Exception as e:
-            logger.error(f"[{scan_id}] Failed to run tool pipeline: {type(e).__name__}: {e}", exc_info=True)
+            logger.error(f"[{scan_id}] Failed to run tool pipeline: {type(e).__name__}: {e}", exc_info=True, extra={"scan_id": scan_id})
             scan_record.status = "failed"
             scan_record.finished_at = datetime.utcnow()
             scan_record.error_message = f"Tool pipeline failed: {str(e)}"
@@ -63,9 +63,9 @@ async def process_task(task: dict):
                 "severity": severity,
                 "breakdown": breakdown,
             }
-            logger.info(f"[{scan_id}] Risk assessment complete. Score: {total_score} ({severity})")
+            logger.info(f"[{scan_id}] Risk assessment complete. Score: {total_score} ({severity})", extra={"scan_id": scan_id})
         except Exception as e:
-            logger.error(f"[{scan_id}] Failed to perform risk assessment: {type(e).__name__}: {e}", exc_info=True)
+            logger.error(f"[{scan_id}] Failed to perform risk assessment: {type(e).__name__}: {e}", exc_info=True, extra={"scan_id": scan_id})
             scan_record.status = "failed"
             scan_record.finished_at = datetime.utcnow()
             scan_record.error_message = f"Risk assessment failed: {str(e)}"
@@ -83,9 +83,9 @@ async def process_task(task: dict):
                     findings_json=to_json(findings_data)
                 )
                 session.add(new_result)
-            logger.info(f"[{scan_id}] Scan results saved to database.")
+            logger.info(f"[{scan_id}] Scan results saved to database.", extra={"scan_id": scan_id})
         except Exception as e:
-            logger.error(f"[{scan_id}] Failed to save scan results: {type(e).__name__}: {e}", exc_info=True)
+            logger.error(f"[{scan_id}] Failed to save scan results: {type(e).__name__}: {e}", exc_info=True, extra={"scan_id": scan_id})
             scan_record.status = "failed"
             scan_record.finished_at = datetime.utcnow()
             scan_record.error_message = f"Saving results failed: {str(e)}"
@@ -107,14 +107,14 @@ async def process_task(task: dict):
             pdf_report = Report(scan_id=scan_id, report_type='pdf', risk_score=total_score, severity=severity, content_blob=pdf_content_bytes)
             session.add(json_report)
             session.add(pdf_report)
-            logger.info(f"[{scan_id}] Reports generated and saved.")
+            logger.info(f"[{scan_id}] Reports generated and saved.", extra={"scan_id": scan_id})
         except Exception as e:
-            logger.error(f"[{scan_id}] Failed to generate or save reports: {type(e).__name__}: {e}", exc_info=True)
+            logger.error(f"[{scan_id}] Failed to generate or save reports: {type(e).__name__}: {e}", exc_info=True, extra={"scan_id": scan_id})
             # Do not return here, as results might still be useful even without reports
             scan_record.error_message = f"Report generation failed: {str(e)}"
         
         await session.commit()
-        logger.info(f"[{scan_id}] Scan processing finished and results saved.")
+        logger.info(f"[{scan_id}] Scan processing finished and results saved.", extra={"scan_id": scan_id})
 
 
 async def worker_loop():
@@ -126,11 +126,14 @@ async def worker_loop():
     while True:
         task_data = await queue.dequeue_task()
         if task_data:
+            current_scan_id = task_data.get("scan_id", "unknown")
             try:
                 # The task is already a dict because of `decode_responses=True` in the queue's Redis client
                 await process_task(task_data)
             except Exception as e:
-                logger.error(f"An unexpected error occurred while processing a task: {e}", exc_info=True)
+                # If process_task fails before scan_id is extracted, this needs to handle it.
+                # If scan_id is available in task_data, use it. Otherwise, log without.
+                logger.error(f"An unexpected error occurred while processing a task for scan_id: {current_scan_id}: {e}", exc_info=True, extra={"scan_id": current_scan_id})
         else:
             # If queue is empty, wait a bit before checking again
             await asyncio.sleep(5)

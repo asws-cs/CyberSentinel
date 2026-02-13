@@ -48,6 +48,10 @@ class Settings:
     DIG_PATH: str = os.getenv("DIG_PATH", "dig")
     NSLOOKUP_PATH: str = os.getenv("NSLOOKUP_PATH", "nslookup")
     DIRSEARCH_PATH: str = os.getenv("DIRSEARCH_PATH", "dirsearch")
-    GOBUSTER_PATH: str = os.getenv("GOBUSTER_PATH", "gobuster")
+    SQLMAP_PATH: str = os.getenv("SQLMAP_PATH", "sqlmap")
+    XSSER_PATH: str = os.getenv("XSSER_PATH", "xsser")
+    
+    # Wordlists
+    DIRSEARCH_DEFAULT_WORDLIST: str = os.getenv("DIRSEARCH_DEFAULT_WORDLIST", "/usr/share/wordlists/dirb/common.txt")
 
 settings = Settings()

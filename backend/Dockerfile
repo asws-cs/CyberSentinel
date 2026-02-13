@@ -24,7 +24,7 @@ WORKDIR /app
 RUN apt-get update && apt-get install -y --no-install-recommends \
     nmap \
     sslscan \
-    gobuster \
+    sqlmap \
     libglib2.0-0 \
     libcairo2 \
     libpango-1.0-0 \
@@ -32,14 +32,22 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libgdk-pixbuf-xlib-2.0-0 \
     libffi-dev \
     shared-mime-info \
+    git \
     # dirsearch requires python3-pip which is already there
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
 # Install dirsearch separately
-RUN apt-get update && apt-get install -y git && \
-    git clone https://github.com/maurosoria/dirsearch.git /opt/dirsearch && \
+RUN git clone https://github.com/maurosoria/dirsearch.git /opt/dirsearch && \
     ln -s /opt/dirsearch/dirsearch.py /usr/local/bin/dirsearch
+
+# Install xsser separately
+RUN git clone https://github.com/epsylon/xsser.git /opt/xsser && \
+    ln -s /opt/xsser/xsser /usr/local/bin/xsser
+
+# Install nikto separately
+RUN git clone https://github.com/sullo/nikto.git /opt/nikto && \
+    ln -s /opt/nikto/program/nikto.pl /usr/local/bin/nikto
 
 # Copy installed Python packages from builder stage
 COPY --from=builder /app/wheels /wheels

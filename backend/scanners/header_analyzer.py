@@ -1,10 +1,11 @@
 import httpx
-from typing import Dict, Any, List
+from typing import Dict, Any, List, Optional
 from utils.logger import logger
 
 class HeaderAnalyzer:
-    def __init__(self, url: str):
+    def __init__(self, url: str, scan_id: Optional[str] = None):
         self.url = self._ensure_scheme(url)
+        self.scan_id = scan_id
         self.security_headers = {
             "Strict-Transport-Security": False,
             "Content-Security-Policy": False,
@@ -20,7 +21,7 @@ class HeaderAnalyzer:
         Ensures the URL has a scheme (http or https). Defaults to https.
         """
         if not url.startswith(('http://', 'https://')):
-            logger.info(f"No scheme found for {url}. Defaulting to https.")
+            logger.info(f"No scheme found for {url}. Defaulting to https.", extra={"scan_id": self.scan_id})
             return f'https://{url}'
         return url
 
@@ -28,7 +29,7 @@ class HeaderAnalyzer:
         """
         Analyzes HTTP security headers of the target URL.
         """
-        logger.info(f"Starting header analysis for {self.url}")
+        logger.info(f"Starting header analysis for {self.url}", extra={"scan_id": self.scan_id})
         results: Dict[str, Any] = {
             "url": self.url,
             "present_headers": {},
@@ -56,10 +57,10 @@ class HeaderAnalyzer:
                     results["recommendations"].append("X-XSS-Protection header should be set to '0' to disable the browser's auditor and prevent potential bypasses.")
 
         except httpx.RequestError as e:
-            logger.error(f"HTTP request failed for {self.url}: {e}")
+            logger.error(f"HTTP request failed for {self.url}: {e}", extra={"scan_id": self.scan_id})
             results["error"] = f"Could not connect to {self.url}. Error: {e}"
         
-        logger.info(f"Header analysis finished for {self.url}.")
+        logger.info(f"Header analysis finished for {self.url}.", extra={"scan_id": self.scan_id})
         return results
 
     def _get_recommendation(self, header: str) -> str:
@@ -77,9 +78,9 @@ class HeaderAnalyzer:
         }
         return recommendations.get(header, "No specific recommendation available.")
 
-async def run_header_analysis(url: str) -> Dict[str, Any]:
+async def run_header_analysis(url: str, scan_id: Optional[str] = None) -> Dict[str, Any]:
     """
     High-level function to run an HTTP header analysis.
     """
-    analyzer = HeaderAnalyzer(url)
+    analyzer = HeaderAnalyzer(url, scan_id)
     return await analyzer.analyze()

@@ -1,9 +1,10 @@
-from typing import Dict, Any, List
+from typing import Dict, Any, List, Optional
 from utils.logger import logger
 
 class VulnerabilityAnalyzer:
-    def __init__(self, scan_results: List[Dict[str, Any]]):
+    def __init__(self, scan_results: List[Dict[str, Any]], scan_id: Optional[str] = None):
         self.scan_results = scan_results
+        self.scan_id = scan_id
         # In a real application, this would be a comprehensive, up-to-date database.
         self.vulnerability_db = {
             "apache": {
@@ -22,13 +23,13 @@ class VulnerabilityAnalyzer:
         """
         Analyzes Nmap results to find potential vulnerabilities based on service versions.
         """
-        logger.info("Starting vulnerability analysis based on service versions.")
+        logger.info("Starting vulnerability analysis based on service versions.", extra={"scan_id": self.scan_id})
         vulnerabilities_found: List[str] = []
 
         nmap_results = next((r for r in self.scan_results if r.get("tool_name") == "nmap_scan"), None)
 
         if not nmap_results or "findings" not in nmap_results:
-            logger.info("No Nmap results found to analyze for vulnerabilities.")
+            logger.info("No Nmap results found to analyze for vulnerabilities.", extra={"scan_id": self.scan_id})
             return {"vulnerabilities_found": []}
 
         findings = nmap_results["findings"]
@@ -46,14 +47,14 @@ class VulnerabilityAnalyzer:
                         if version in cves:
                             vulnerability_info = f"Port {key.split('_')[1]} ({product} {version}): {cves[version]}"
                             vulnerabilities_found.append(vulnerability_info)
-                            logger.warning(f"Potential vulnerability found: {vulnerability_info}")
+                            logger.warning(f"Potential vulnerability found: {vulnerability_info}", extra={"scan_id": self.scan_id})
         
-        logger.info(f"Vulnerability analysis finished. Found {len(vulnerabilities_found)} potential issues.")
+        logger.info(f"Vulnerability analysis finished. Found {len(vulnerabilities_found)} potential issues.", extra={"scan_id": self.scan_id})
         return {"vulnerabilities_found": vulnerabilities_found}
 
-async def run_vulnerability_analysis(scan_results: List[Dict[str, Any]]) -> Dict[str, Any]:
+async def run_vulnerability_analysis(scan_results: List[Dict[str, Any]], scan_id: Optional[str] = None) -> Dict[str, Any]:
     """
     High-level function to run a vulnerability analysis.
     """
-    analyzer = VulnerabilityAnalyzer(scan_results)
+    analyzer = VulnerabilityAnalyzer(scan_results, scan_id)
     return await analyzer.analyze()

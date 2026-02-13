@@ -1,13 +1,14 @@
 import httpx
 from bs4 import BeautifulSoup
-from typing import Dict, Any, List, Set
+from typing import Dict, Any, List, Set, Optional
 from urllib.parse import urljoin, urlparse
 
 from utils.logger import logger
 
 class SQLTester:
-    def __init__(self, url: str):
+    def __init__(self, url: str, scan_id: Optional[str] = None):
         self.url = self._ensure_scheme(url)
+        self.scan_id = scan_id
         self.sql_payloads = ["'", "\"", " ' OR 1=1 --"]
         self.error_messages = [
             "you have an error in your sql syntax",
@@ -22,7 +23,7 @@ class SQLTester:
         return url
 
     async def test(self) -> Dict[str, Any]:
-        logger.info(f"Starting SQL injection test for {self.url}")
+        logger.info(f"Starting SQL injection test for {self.url}", extra={"scan_id": self.scan_id})
         vulnerable_forms: List[Dict[str, str]] = []
 
         try:
@@ -30,7 +31,7 @@ class SQLTester:
                 response = await client.get(self.url)
                 soup = BeautifulSoup(response.text, "html.parser")
                 forms = soup.find_all("form")
-                logger.info(f"Found {len(forms)} forms on {self.url}")
+                logger.info(f"Found {len(forms)} forms on {self.url}", extra={"scan_id": self.scan_id})
 
                 for form in forms:
                     if await self._test_form(client, form):
@@ -40,7 +41,7 @@ class SQLTester:
                         })
 
         except httpx.RequestError as e:
-            logger.error(f"Could not connect to {self.url} for SQL injection test: {e}")
+            logger.error(f"Could not connect to {self.url} for SQL injection test: {e}", extra={"scan_id": self.scan_id})
             return {"error": str(e)}
 
         is_vulnerable = len(vulnerable_forms) > 0
@@ -77,14 +78,14 @@ class SQLTester:
 
                 for error in self.error_messages:
                     if error in response.text.lower():
-                        logger.warning(f"SQL injection vulnerability detected on {form_url} with payload '{payload}'")
+                        logger.warning(f"SQL injection vulnerability detected on {form_url} with payload '{payload}'", extra={"scan_id": self.scan_id})
                         return True
             except httpx.RequestError as e:
-                logger.error(f"Request failed during form submission to {form_url}: {e}")
+                logger.error(f"Request failed during form submission to {form_url}: {e}", extra={"scan_id": self.scan_id})
                 continue
                 
         return False
 
-async def run_sql_test(url: str) -> Dict[str, Any]:
-    tester = SQLTester(url)
+async def run_sql_test(url: str, scan_id: Optional[str] = None) -> Dict[str, Any]:
+    tester = SQLTester(url, scan_id)
     return await tester.test()

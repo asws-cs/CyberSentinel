@@ -17,3 +17,4 @@ sqlmodel
 psutil
 typer
 jinja2
+websockets

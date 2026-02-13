@@ -429,3 +429,1284 @@
 2026-02-12 10:22:28,533 - [INFO] - CyberSentinel - (worker.py:117) - [9624a22c-3f48-4154-9e16-506bab0cdb6c] Scan processing finished and results saved.
 2026-02-12 10:36:27,216 - [INFO] - CyberSentinel - (main.py:24) - Shutting down CyberSentinel backend...
 2026-02-12 10:36:27,216 - [INFO] - CyberSentinel - (db_connect.py:39) - Closing database connection.
+2026-02-12 11:21:08,365 - [INFO] - CyberSentinel - (main.py:64) - Starting FastAPI server...
+2026-02-12 11:21:08,376 - [INFO] - CyberSentinel - (main.py:20) - Starting up CyberSentinel backend...
+2026-02-12 11:21:08,408 - [INFO] - CyberSentinel - (db_connect.py:29) - Initializing database and creating tables...
+2026-02-12 11:21:08,415 - [INFO] - CyberSentinel - (db_connect.py:33) - Database tables created successfully.
+2026-02-12 11:21:08,417 - [INFO] - CyberSentinel - (queue_manager.py:23) - Redis client connected successfully.
+2026-02-12 11:21:08,417 - [INFO] - CyberSentinel - (queue_manager.py:88) - Task queue initialized.
+2026-02-12 11:21:08,540 - [INFO] - CyberSentinel - (main.py:72) - Starting background worker...
+2026-02-12 11:21:08,543 - [INFO] - CyberSentinel - (queue_manager.py:23) - Redis client connected successfully.
+2026-02-12 11:21:08,543 - [INFO] - CyberSentinel - (queue_manager.py:88) - Task queue initialized.
+2026-02-12 11:21:08,543 - [INFO] - CyberSentinel - (worker.py:125) - Worker loop started. Waiting for tasks...
+2026-02-12 11:22:51,815 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 11:22:57,828 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 11:23:03,844 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 11:23:09,856 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 11:23:15,869 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 11:23:21,882 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 11:25:42,951 - [INFO] - CyberSentinel - (target_parser.py:56) - Resolved atlas.picoctf.net to 18.217.83.136
+2026-02-12 11:25:42,957 - [INFO] - CyberSentinel - (target_parser.py:56) - Resolved atlas.picoctf.net to 18.217.83.136
+2026-02-12 11:25:42,957 - [INFO] - CyberSentinel - (decision_engine.py:16) - Building tool pipeline for http://atlas.picoctf.net:49165/ with mode 'defensive' and depth 'deep'
+2026-02-12 11:25:42,957 - [INFO] - CyberSentinel - (decision_engine.py:26) - Tool pipeline built: ['nmap_scan', 'ssl_scan', 'header_analysis', 'vulnerability_analysis']
+2026-02-12 11:25:42,970 - [INFO] - CyberSentinel - (queue_manager.py:37) - Enqueued task: e01b7576-4957-44a7-9c94-d36954566620
+2026-02-12 11:25:42,970 - [INFO] - CyberSentinel - (routes_scan.py:74) - Scan e01b7576-4957-44a7-9c94-d36954566620 for target 'http://atlas.picoctf.net:49165/' has been queued.
+2026-02-12 11:25:43,821 - [INFO] - CyberSentinel - (queue_manager.py:53) - Dequeued task: e01b7576-4957-44a7-9c94-d36954566620
+2026-02-12 11:25:43,821 - [INFO] - CyberSentinel - (worker.py:28) - [e01b7576-4957-44a7-9c94-d36954566620] Starting processing for target: http://atlas.picoctf.net:49165/, db_id: 7
+2026-02-12 11:25:43,870 - [INFO] - CyberSentinel - (worker.py:36) - [e01b7576-4957-44a7-9c94-d36954566620] Scan record found. Current status: queued
+2026-02-12 11:25:43,886 - [INFO] - CyberSentinel - (tool_controller.py:34) - [e01b7576-4957-44a7-9c94-d36954566620] Starting tool pipeline execution.
+2026-02-12 11:25:43,888 - [INFO] - CyberSentinel - (tool_controller.py:46) - [e01b7576-4957-44a7-9c94-d36954566620] Running tool: nmap_scan with params: {'options': '-sV -T4', 'target': '18.217.83.136'}
+2026-02-12 11:25:43,888 - [INFO] - CyberSentinel - (subprocess_stream.py:18) - Starting streamed command: nmap -sV -T4 18.217.83.136
+2026-02-12 11:25:47,855 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 11:25:53,867 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 11:26:08,473 - [INFO] - CyberSentinel - (nmap_scanner.py:16) - Starting Nmap scan on 18.217.83.136 with options '-sV -T4'
+2026-02-12 11:26:33,455 - [INFO] - CyberSentinel - (nmap_scanner.py:60) - Nmap scan finished for 18.217.83.136. Found 3 open ports.
+2026-02-12 11:26:33,456 - [INFO] - CyberSentinel - (tool_controller.py:46) - [e01b7576-4957-44a7-9c94-d36954566620] Running tool: ssl_scan with params: {'target': 'atlas.picoctf.net'}
+2026-02-12 11:26:33,456 - [INFO] - CyberSentinel - (subprocess_stream.py:18) - Starting streamed command: sslscan --no-colour atlas.picoctf.net
+2026-02-12 11:26:33,847 - [INFO] - CyberSentinel - (ssl_scanner.py:16) - Starting SSL scan on atlas.picoctf.net
+2026-02-12 11:26:34,156 - [ERROR] - CyberSentinel - (ssl_scanner.py:22) - SSLScan returned an error for atlas.picoctf.net: ERROR: Could not open a connection to host atlas.picoctf.net (18.217.83.136) on port 443 (connect: Connection refused).
+2026-02-12 11:26:34,156 - [INFO] - CyberSentinel - (ssl_scanner.py:65) - SSL scan finished for atlas.picoctf.net.
+2026-02-12 11:26:34,158 - [INFO] - CyberSentinel - (tool_controller.py:46) - [e01b7576-4957-44a7-9c94-d36954566620] Running tool: header_analysis with params: {'url': 'http://atlas.picoctf.net:49165/'}
+2026-02-12 11:26:34,158 - [INFO] - CyberSentinel - (header_analyzer.py:31) - Starting header analysis for http://atlas.picoctf.net:49165/
+2026-02-12 11:26:34,694 - [INFO] - CyberSentinel - (header_analyzer.py:62) - Header analysis finished for http://atlas.picoctf.net:49165/.
+2026-02-12 11:26:34,696 - [INFO] - CyberSentinel - (tool_controller.py:46) - [e01b7576-4957-44a7-9c94-d36954566620] Running tool: vulnerability_analysis with params: {'target': 'http://atlas.picoctf.net:49165/'}
+2026-02-12 11:26:34,696 - [INFO] - CyberSentinel - (vuln_analyzer.py:25) - Starting vulnerability analysis based on service versions.
+2026-02-12 11:26:34,696 - [INFO] - CyberSentinel - (vuln_analyzer.py:51) - Vulnerability analysis finished. Found 0 potential issues.
+2026-02-12 11:26:34,697 - [INFO] - CyberSentinel - (tool_controller.py:69) - [e01b7576-4957-44a7-9c94-d36954566620] Tool pipeline execution finished.
+2026-02-12 11:26:34,697 - [INFO] - CyberSentinel - (worker.py:47) - [e01b7576-4957-44a7-9c94-d36954566620] Tool pipeline completed. Results count: 4
+2026-02-12 11:26:34,697 - [INFO] - CyberSentinel - (worker.py:66) - [e01b7576-4957-44a7-9c94-d36954566620] Risk assessment complete. Score: 53 (Medium)
+2026-02-12 11:26:34,699 - [INFO] - CyberSentinel - (worker.py:86) - [e01b7576-4957-44a7-9c94-d36954566620] Scan results saved to database.
+2026-02-12 11:26:34,699 - [INFO] - CyberSentinel - (json_exporter.py:18) - Generating JSON report for scan ID: e01b7576-4957-44a7-9c94-d36954566620
+2026-02-12 11:26:34,700 - [INFO] - CyberSentinel - (pdf_generator.py:116) - Generating PDF report for scan ID: e01b7576-4957-44a7-9c94-d36954566620
+2026-02-12 11:26:34,965 - [INFO] - CyberSentinel - (worker.py:110) - [e01b7576-4957-44a7-9c94-d36954566620] Reports generated and saved.
+2026-02-12 11:26:34,981 - [INFO] - CyberSentinel - (worker.py:117) - [e01b7576-4957-44a7-9c94-d36954566620] Scan processing finished and results saved.
+2026-02-12 11:27:21,647 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 11:30:23,740 - [INFO] - CyberSentinel - (target_parser.py:56) - Resolved atlas.picoctf.net to 18.217.83.136
+2026-02-12 11:30:23,743 - [INFO] - CyberSentinel - (target_parser.py:56) - Resolved atlas.picoctf.net to 18.217.83.136
+2026-02-12 11:30:23,743 - [INFO] - CyberSentinel - (decision_engine.py:16) - Building tool pipeline for http://atlas.picoctf.net:49165/ with mode 'offensive' and depth 'deep'
+2026-02-12 11:30:23,743 - [INFO] - CyberSentinel - (decision_engine.py:45) - Building offensive pipeline. User confirmation is required.
+2026-02-12 11:30:23,743 - [INFO] - CyberSentinel - (decision_engine.py:26) - Tool pipeline built: ['nmap_scan', 'dir_discovery', 'sql_injection_test', 'xss_test', 'nikto_scan']
+2026-02-12 11:30:23,763 - [INFO] - CyberSentinel - (queue_manager.py:37) - Enqueued task: 9f21ee81-28a1-4f32-9a3b-cb9c7ef2322b
+2026-02-12 11:30:23,763 - [INFO] - CyberSentinel - (routes_scan.py:74) - Scan 9f21ee81-28a1-4f32-9a3b-cb9c7ef2322b for target 'http://atlas.picoctf.net:49165/' has been queued.
+2026-02-12 11:30:25,224 - [INFO] - CyberSentinel - (queue_manager.py:53) - Dequeued task: 9f21ee81-28a1-4f32-9a3b-cb9c7ef2322b
+2026-02-12 11:30:25,224 - [INFO] - CyberSentinel - (worker.py:28) - [9f21ee81-28a1-4f32-9a3b-cb9c7ef2322b] Starting processing for target: http://atlas.picoctf.net:49165/, db_id: 8
+2026-02-12 11:30:25,228 - [INFO] - CyberSentinel - (worker.py:36) - [9f21ee81-28a1-4f32-9a3b-cb9c7ef2322b] Scan record found. Current status: queued
+2026-02-12 11:30:25,246 - [INFO] - CyberSentinel - (tool_controller.py:34) - [9f21ee81-28a1-4f32-9a3b-cb9c7ef2322b] Starting tool pipeline execution.
+2026-02-12 11:30:25,247 - [INFO] - CyberSentinel - (tool_controller.py:46) - [9f21ee81-28a1-4f32-9a3b-cb9c7ef2322b] Running tool: nmap_scan with params: {'options': '-A -T4', 'target': '18.217.83.136'}
+2026-02-12 11:30:25,247 - [INFO] - CyberSentinel - (subprocess_stream.py:18) - Starting streamed command: nmap -A -T4 18.217.83.136
+2026-02-12 11:30:29,745 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 11:30:35,758 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 11:31:04,944 - [INFO] - CyberSentinel - (nmap_scanner.py:16) - Starting Nmap scan on 18.217.83.136 with options '-A -T4'
+2026-02-12 11:31:43,539 - [INFO] - CyberSentinel - (nmap_scanner.py:60) - Nmap scan finished for 18.217.83.136. Found 3 open ports.
+2026-02-12 11:31:43,540 - [INFO] - CyberSentinel - (tool_controller.py:46) - [9f21ee81-28a1-4f32-9a3b-cb9c7ef2322b] Running tool: dir_discovery with params: {'target': 'http://atlas.picoctf.net:49165/'}
+2026-02-12 11:31:43,540 - [INFO] - CyberSentinel - (dir_discovery.py:29) - Starting directory discovery on http://atlas.picoctf.net:49165/
+2026-02-12 11:31:43,540 - [WARNING] - CyberSentinel - (dir_discovery.py:23) - Wordlist not found at /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt. Dir discovery may fail.
+2026-02-12 11:31:43,540 - [INFO] - CyberSentinel - (tool_controller.py:46) - [9f21ee81-28a1-4f32-9a3b-cb9c7ef2322b] Running tool: sql_injection_test with params: {'url': 'http://atlas.picoctf.net:49165/'}
+2026-02-12 11:31:43,540 - [INFO] - CyberSentinel - (sql_tester.py:25) - Starting SQL injection test for http://atlas.picoctf.net:49165/
+2026-02-12 11:31:44,432 - [INFO] - CyberSentinel - (sql_tester.py:33) - Found 1 forms on http://atlas.picoctf.net:49165/
+2026-02-12 11:31:45,048 - [INFO] - CyberSentinel - (tool_controller.py:46) - [9f21ee81-28a1-4f32-9a3b-cb9c7ef2322b] Running tool: xss_test with params: {'url': 'http://atlas.picoctf.net:49165/'}
+2026-02-12 11:31:45,048 - [INFO] - CyberSentinel - (xss_tester.py:21) - Starting XSS test for http://atlas.picoctf.net:49165/
+2026-02-12 11:31:45,480 - [INFO] - CyberSentinel - (xss_tester.py:34) - Found 1 forms to test for XSS on http://atlas.picoctf.net:49165/
+2026-02-12 11:31:45,665 - [INFO] - CyberSentinel - (tool_controller.py:46) - [9f21ee81-28a1-4f32-9a3b-cb9c7ef2322b] Running tool: nikto_scan with params: {'target': 'http://atlas.picoctf.net:49165/'}
+2026-02-12 11:31:45,665 - [INFO] - CyberSentinel - (subprocess_stream.py:18) - Starting streamed command: nikto -h http://atlas.picoctf.net:49165/
+2026-02-12 11:31:45,669 - [INFO] - CyberSentinel - (tool_controller.py:69) - [9f21ee81-28a1-4f32-9a3b-cb9c7ef2322b] Tool pipeline execution finished.
+2026-02-12 11:31:45,669 - [INFO] - CyberSentinel - (worker.py:47) - [9f21ee81-28a1-4f32-9a3b-cb9c7ef2322b] Tool pipeline completed. Results count: 5
+2026-02-12 11:31:45,669 - [INFO] - CyberSentinel - (worker.py:66) - [9f21ee81-28a1-4f32-9a3b-cb9c7ef2322b] Risk assessment complete. Score: 18 (Low)
+2026-02-12 11:31:45,670 - [INFO] - CyberSentinel - (worker.py:86) - [9f21ee81-28a1-4f32-9a3b-cb9c7ef2322b] Scan results saved to database.
+2026-02-12 11:31:45,671 - [INFO] - CyberSentinel - (json_exporter.py:18) - Generating JSON report for scan ID: 9f21ee81-28a1-4f32-9a3b-cb9c7ef2322b
+2026-02-12 11:31:45,671 - [INFO] - CyberSentinel - (pdf_generator.py:116) - Generating PDF report for scan ID: 9f21ee81-28a1-4f32-9a3b-cb9c7ef2322b
+2026-02-12 11:31:45,888 - [INFO] - CyberSentinel - (worker.py:110) - [9f21ee81-28a1-4f32-9a3b-cb9c7ef2322b] Reports generated and saved.
+2026-02-12 11:31:45,903 - [INFO] - CyberSentinel - (worker.py:117) - [9f21ee81-28a1-4f32-9a3b-cb9c7ef2322b] Scan processing finished and results saved.
+2026-02-12 11:33:32,436 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 11:33:38,446 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 11:33:43,973 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 11:33:49,987 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 11:34:30,223 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 11:40:26,126 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 11:40:32,136 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 11:40:38,150 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 11:40:43,206 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 11:40:49,216 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 11:40:55,226 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 11:41:46,292 - [INFO] - CyberSentinel - (main.py:24) - Shutting down CyberSentinel backend...
+2026-02-12 11:41:46,292 - [INFO] - CyberSentinel - (db_connect.py:39) - Closing database connection.
+2026-02-12 13:46:03,005 - [WARNING] - CyberSentinel - (tool_controller.py:32) - Tool 'nikto_scan' not found at path: nikto. This tool will be unavailable.
+2026-02-12 13:46:03,005 - [WARNING] - CyberSentinel - (tool_controller.py:32) - Tool 'nikto_scan' not found at path: nikto. This tool will be unavailable.
+2026-02-12 13:46:03,006 - [WARNING] - CyberSentinel - (tool_controller.py:32) - Tool 'sqlmap_scan' not found at path: sqlmap. This tool will be unavailable.
+2026-02-12 13:46:03,006 - [WARNING] - CyberSentinel - (tool_controller.py:32) - Tool 'sqlmap_scan' not found at path: sqlmap. This tool will be unavailable.
+2026-02-12 13:46:03,006 - [WARNING] - CyberSentinel - (tool_controller.py:32) - Tool 'xsser_scan' not found at path: xsser. This tool will be unavailable.
+2026-02-12 13:46:03,006 - [WARNING] - CyberSentinel - (tool_controller.py:32) - Tool 'xsser_scan' not found at path: xsser. This tool will be unavailable.
+2026-02-12 13:46:03,337 - [INFO] - CyberSentinel - (main.py:72) - Starting background worker...
+2026-02-12 13:46:03,341 - [INFO] - CyberSentinel - (queue_manager.py:23) - Redis client connected successfully.
+2026-02-12 13:46:03,341 - [INFO] - CyberSentinel - (queue_manager.py:88) - Task queue initialized.
+2026-02-12 13:46:03,341 - [INFO] - CyberSentinel - (worker.py:125) - Worker loop started. Waiting for tasks...
+2026-02-12 13:46:03,347 - [INFO] - CyberSentinel - (main.py:64) - Starting FastAPI server...
+2026-02-12 13:46:03,358 - [INFO] - CyberSentinel - (main.py:20) - Starting up CyberSentinel backend...
+2026-02-12 13:46:03,400 - [INFO] - CyberSentinel - (db_connect.py:29) - Initializing database and creating tables...
+2026-02-12 13:46:03,422 - [INFO] - CyberSentinel - (db_connect.py:33) - Database tables created successfully.
+2026-02-12 13:46:03,425 - [INFO] - CyberSentinel - (queue_manager.py:23) - Redis client connected successfully.
+2026-02-12 13:46:03,425 - [INFO] - CyberSentinel - (queue_manager.py:88) - Task queue initialized.
+2026-02-12 13:46:20,536 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 13:46:26,560 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 13:46:37,872 - [INFO] - CyberSentinel - (target_parser.py:56) - Resolved nl3b.online to 89.116.22.196
+2026-02-12 13:46:37,880 - [INFO] - CyberSentinel - (target_parser.py:56) - Resolved nl3b.online to 89.116.22.196
+2026-02-12 13:46:37,880 - [INFO] - CyberSentinel - (decision_engine.py:18) - Building tool pipeline for https://nl3b.online/ with tools: []
+2026-02-12 13:46:37,881 - [INFO] - CyberSentinel - (decision_engine.py:32) - Tool pipeline built: []
+2026-02-12 13:48:15,554 - [INFO] - CyberSentinel - (main.py:24) - Shutting down CyberSentinel backend...
+2026-02-12 13:48:15,554 - [INFO] - CyberSentinel - (db_connect.py:39) - Closing database connection.
+2026-02-12 13:51:16,068 - [WARNING] - CyberSentinel - (tool_controller.py:32) - Tool 'nikto_scan' not found at path: nikto. This tool will be unavailable.
+2026-02-12 13:51:16,068 - [WARNING] - CyberSentinel - (tool_controller.py:32) - Tool 'sqlmap_scan' not found at path: sqlmap. This tool will be unavailable.
+2026-02-12 13:51:16,068 - [WARNING] - CyberSentinel - (tool_controller.py:32) - Tool 'xsser_scan' not found at path: xsser. This tool will be unavailable.
+2026-02-12 13:51:16,292 - [WARNING] - CyberSentinel - (tool_controller.py:32) - Tool 'nikto_scan' not found at path: nikto. This tool will be unavailable.
+2026-02-12 13:51:16,292 - [WARNING] - CyberSentinel - (tool_controller.py:32) - Tool 'sqlmap_scan' not found at path: sqlmap. This tool will be unavailable.
+2026-02-12 13:51:16,292 - [WARNING] - CyberSentinel - (tool_controller.py:32) - Tool 'xsser_scan' not found at path: xsser. This tool will be unavailable.
+2026-02-12 13:51:16,294 - [INFO] - CyberSentinel - (main.py:64) - Starting FastAPI server...
+2026-02-12 13:51:16,302 - [INFO] - CyberSentinel - (main.py:20) - Starting up CyberSentinel backend...
+2026-02-12 13:51:16,329 - [INFO] - CyberSentinel - (db_connect.py:29) - Initializing database and creating tables...
+2026-02-12 13:51:16,339 - [INFO] - CyberSentinel - (db_connect.py:33) - Database tables created successfully.
+2026-02-12 13:51:16,340 - [INFO] - CyberSentinel - (queue_manager.py:23) - Redis client connected successfully.
+2026-02-12 13:51:16,340 - [INFO] - CyberSentinel - (queue_manager.py:88) - Task queue initialized.
+2026-02-12 13:51:16,523 - [INFO] - CyberSentinel - (main.py:72) - Starting background worker...
+2026-02-12 13:51:16,526 - [INFO] - CyberSentinel - (queue_manager.py:23) - Redis client connected successfully.
+2026-02-12 13:51:16,526 - [INFO] - CyberSentinel - (queue_manager.py:88) - Task queue initialized.
+2026-02-12 13:51:16,526 - [INFO] - CyberSentinel - (worker.py:125) - Worker loop started. Waiting for tasks...
+2026-02-12 13:51:31,738 - [INFO] - CyberSentinel - (target_parser.py:56) - Resolved nl3b.online to 89.116.22.196
+2026-02-12 13:51:31,747 - [INFO] - CyberSentinel - (target_parser.py:56) - Resolved nl3b.online to 89.116.22.196
+2026-02-12 13:51:31,747 - [INFO] - CyberSentinel - (decision_engine.py:18) - Building tool pipeline for https://nl3b.online/ with tools: []
+2026-02-12 13:51:31,747 - [INFO] - CyberSentinel - (decision_engine.py:32) - Tool pipeline built: []
+2026-02-12 13:51:59,858 - [INFO] - CyberSentinel - (main.py:24) - Shutting down CyberSentinel backend...
+2026-02-12 13:51:59,858 - [INFO] - CyberSentinel - (db_connect.py:39) - Closing database connection.
+2026-02-12 13:57:50,642 - [INFO] - CyberSentinel - (main.py:64) - Starting FastAPI server...
+2026-02-12 13:57:50,649 - [INFO] - CyberSentinel - (main.py:20) - Starting up CyberSentinel backend...
+2026-02-12 13:57:50,686 - [INFO] - CyberSentinel - (db_connect.py:29) - Initializing database and creating tables...
+2026-02-12 13:57:50,692 - [INFO] - CyberSentinel - (db_connect.py:33) - Database tables created successfully.
+2026-02-12 13:57:50,694 - [INFO] - CyberSentinel - (queue_manager.py:23) - Redis client connected successfully.
+2026-02-12 13:57:50,694 - [INFO] - CyberSentinel - (queue_manager.py:88) - Task queue initialized.
+2026-02-12 13:57:50,809 - [INFO] - CyberSentinel - (main.py:72) - Starting background worker...
+2026-02-12 13:57:50,826 - [INFO] - CyberSentinel - (queue_manager.py:23) - Redis client connected successfully.
+2026-02-12 13:57:50,826 - [INFO] - CyberSentinel - (queue_manager.py:88) - Task queue initialized.
+2026-02-12 13:57:50,826 - [INFO] - CyberSentinel - (worker.py:125) - Worker loop started. Waiting for tasks...
+2026-02-12 13:58:03,615 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 13:58:09,625 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 13:58:17,913 - [INFO] - CyberSentinel - (target_parser.py:56) - Resolved nl3b.online to 89.116.22.196
+2026-02-12 13:58:17,915 - [INFO] - CyberSentinel - (target_parser.py:56) - Resolved nl3b.online to 89.116.22.196
+2026-02-12 13:58:17,916 - [INFO] - CyberSentinel - (decision_engine.py:18) - Building tool pipeline for https://nl3b.online/ with tools: []
+2026-02-12 13:58:17,916 - [INFO] - CyberSentinel - (decision_engine.py:32) - Tool pipeline built: []
+2026-02-12 13:58:58,863 - [INFO] - CyberSentinel - (main.py:24) - Shutting down CyberSentinel backend...
+2026-02-12 13:58:58,863 - [INFO] - CyberSentinel - (db_connect.py:39) - Closing database connection.
+2026-02-12 14:03:26,245 - [INFO] - CyberSentinel - (main.py:64) - Starting FastAPI server...
+2026-02-12 14:03:26,252 - [INFO] - CyberSentinel - (main.py:20) - Starting up CyberSentinel backend...
+2026-02-12 14:03:26,279 - [INFO] - CyberSentinel - (db_connect.py:29) - Initializing database and creating tables...
+2026-02-12 14:03:26,286 - [INFO] - CyberSentinel - (db_connect.py:33) - Database tables created successfully.
+2026-02-12 14:03:26,287 - [INFO] - CyberSentinel - (queue_manager.py:23) - Redis client connected successfully.
+2026-02-12 14:03:26,287 - [INFO] - CyberSentinel - (queue_manager.py:88) - Task queue initialized.
+2026-02-12 14:03:26,425 - [INFO] - CyberSentinel - (main.py:72) - Starting background worker...
+2026-02-12 14:03:26,442 - [INFO] - CyberSentinel - (queue_manager.py:23) - Redis client connected successfully.
+2026-02-12 14:03:26,442 - [INFO] - CyberSentinel - (queue_manager.py:88) - Task queue initialized.
+2026-02-12 14:03:26,442 - [INFO] - CyberSentinel - (worker.py:125) - Worker loop started. Waiting for tasks...
+2026-02-12 14:04:35,288 - [INFO] - CyberSentinel - (target_parser.py:56) - Resolved nl3b.online to 89.116.22.196
+2026-02-12 14:04:35,290 - [INFO] - CyberSentinel - (target_parser.py:56) - Resolved nl3b.online to 89.116.22.196
+2026-02-12 14:04:35,291 - [INFO] - CyberSentinel - (decision_engine.py:18) - Building tool pipeline for https://nl3b.online/ with tools: ['nmap_scan', 'ssl_scan', 'header_analysis', 'dir_discovery', 'gobuster_scan', 'sqlmap_scan', 'xsser_scan', 'nikto_scan', 'sql_injection_test', 'xss_test']
+2026-02-12 14:04:35,291 - [INFO] - CyberSentinel - (decision_engine.py:32) - Tool pipeline built: ['nmap_scan', 'ssl_scan', 'header_analysis', 'dir_discovery', 'gobuster_scan', 'sqlmap_scan', 'xsser_scan', 'nikto_scan', 'sql_injection_test', 'xss_test', 'vulnerability_analysis']
+2026-02-12 14:04:35,311 - [INFO] - CyberSentinel - (queue_manager.py:37) - Enqueued task: 513d2288-c8de-4402-a6cb-a45a0316dceb
+2026-02-12 14:04:35,311 - [INFO] - CyberSentinel - (routes_scan.py:80) - Scan 513d2288-c8de-4402-a6cb-a45a0316dceb for target 'https://nl3b.online/' has been queued.
+2026-02-12 14:04:36,497 - [INFO] - CyberSentinel - (queue_manager.py:53) - Dequeued task: 513d2288-c8de-4402-a6cb-a45a0316dceb
+2026-02-12 14:04:36,497 - [INFO] - CyberSentinel - (worker.py:28) - [513d2288-c8de-4402-a6cb-a45a0316dceb] Starting processing for target: https://nl3b.online/, db_id: 9
+2026-02-12 14:04:36,541 - [INFO] - CyberSentinel - (worker.py:36) - [513d2288-c8de-4402-a6cb-a45a0316dceb] Scan record found. Current status: queued
+2026-02-12 14:04:36,564 - [INFO] - CyberSentinel - (tool_controller.py:61) - [513d2288-c8de-4402-a6cb-a45a0316dceb] Starting tool pipeline execution with timeout 3600s.
+2026-02-12 14:04:36,566 - [INFO] - CyberSentinel - (tool_controller.py:80) - [513d2288-c8de-4402-a6cb-a45a0316dceb] Running tool: nmap_scan with params: {'options': '-A -T4', 'target': '89.116.22.196'}
+2026-02-12 14:04:36,574 - [INFO] - CyberSentinel - (nmap_scanner.py:16) - Starting Nmap scan on 89.116.22.196 with options '-A -T4'
+2026-02-12 14:05:19,740 - [INFO] - CyberSentinel - (nmap_scanner.py:60) - Nmap scan finished for 89.116.22.196. Found 4 open ports.
+2026-02-12 14:05:19,741 - [INFO] - CyberSentinel - (tool_controller.py:80) - [513d2288-c8de-4402-a6cb-a45a0316dceb] Running tool: ssl_scan with params: {'target': 'nl3b.online'}
+2026-02-12 14:05:19,741 - [INFO] - CyberSentinel - (ssl_scanner.py:16) - Starting SSL scan on nl3b.online
+2026-02-12 14:05:37,224 - [ERROR] - CyberSentinel - (ssl_scanner.py:22) - SSLScan returned an error for nl3b.online: ERROR: Could not open a connection to host nl3b.online (89.116.22.196) on port 443 (connect: No route to host).
+2026-02-12 14:05:37,225 - [INFO] - CyberSentinel - (ssl_scanner.py:65) - SSL scan finished for nl3b.online.
+2026-02-12 14:05:37,225 - [INFO] - CyberSentinel - (tool_controller.py:80) - [513d2288-c8de-4402-a6cb-a45a0316dceb] Running tool: header_analysis with params: {'url': 'https://nl3b.online/'}
+2026-02-12 14:05:37,226 - [INFO] - CyberSentinel - (header_analyzer.py:31) - Starting header analysis for https://nl3b.online/
+2026-02-12 14:05:38,262 - [INFO] - CyberSentinel - (header_analyzer.py:62) - Header analysis finished for https://nl3b.online/.
+2026-02-12 14:05:38,263 - [INFO] - CyberSentinel - (tool_controller.py:80) - [513d2288-c8de-4402-a6cb-a45a0316dceb] Running tool: dir_discovery with params: {'target': 'https://nl3b.online/'}
+2026-02-12 14:05:38,263 - [INFO] - CyberSentinel - (dir_discovery.py:29) - Starting directory discovery on https://nl3b.online/
+2026-02-12 14:05:38,263 - [WARNING] - CyberSentinel - (dir_discovery.py:23) - Wordlist not found at /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt. Dir discovery may fail.
+2026-02-12 14:05:38,264 - [INFO] - CyberSentinel - (tool_controller.py:80) - [513d2288-c8de-4402-a6cb-a45a0316dceb] Running tool: gobuster_scan with params: {'target': 'https://nl3b.online/', 'wordlist': '/usr/share/wordlists/dirb/big.txt'}
+2026-02-12 14:05:38,264 - [INFO] - CyberSentinel - (gobuster_scanner.py:38) - Starting Gobuster scan on https://nl3b.online/ with wordlist /usr/share/wordlists/dirb/big.txt
+2026-02-12 14:05:38,264 - [INFO] - CyberSentinel - (subprocess_stream.py:18) - Starting streamed command: ['gobuster', 'dir', '-u', 'https://nl3b.online/', '-w', '/usr/share/wordlists/dirb/big.txt', '--no-progress', '-t', '20', '--random-user-agent', '-x', '.php,.html,.txt']
+2026-02-12 14:05:38,264 - [ERROR] - CyberSentinel - (subprocess_stream.py:37) - Error running streamed command '['gobuster', 'dir', '-u', 'https://nl3b.online/', '-w', '/usr/share/wordlists/dirb/big.txt', '--no-progress', '-t', '20', '--random-user-agent', '-x', '.php,.html,.txt']': cmd must be a string
+2026-02-12 14:05:38,264 - [INFO] - CyberSentinel - (gobuster_scanner.py:51) - Gobuster scan completed. Found 0 paths.
+2026-02-12 14:05:38,264 - [INFO] - CyberSentinel - (tool_controller.py:80) - [513d2288-c8de-4402-a6cb-a45a0316dceb] Running tool: sqlmap_scan with params: {'aggressive': True, 'target': 'https://nl3b.online/'}
+2026-02-12 14:05:38,277 - [INFO] - CyberSentinel - (sqlmap_scanner.py:53) - Starting SQLMap scan on https://nl3b.online/
+2026-02-12 14:05:38,277 - [INFO] - CyberSentinel - (subprocess_stream.py:18) - Starting streamed command: ['sqlmap', '-u', 'https://nl3b.online/', '--batch', '--output-dir', '/tmp/sqlmap_i_32ulsd', '--dump-format=JSON', '--level=1', '--risk=1', '--all', '--random-agent', '--threads=10']
+2026-02-12 14:05:38,277 - [ERROR] - CyberSentinel - (subprocess_stream.py:37) - Error running streamed command '['sqlmap', '-u', 'https://nl3b.online/', '--batch', '--output-dir', '/tmp/sqlmap_i_32ulsd', '--dump-format=JSON', '--level=1', '--risk=1', '--all', '--random-agent', '--threads=10']': cmd must be a string
+2026-02-12 14:05:38,277 - [WARNING] - CyberSentinel - (sqlmap_scanner.py:63) - SQLMap scan on https://nl3b.online/ finished, but no JSON output file was found.
+2026-02-12 14:05:38,278 - [INFO] - CyberSentinel - (tool_controller.py:80) - [513d2288-c8de-4402-a6cb-a45a0316dceb] Running tool: xsser_scan with params: {'aggressive': True, 'target': 'https://nl3b.online/'}
+2026-02-12 14:05:38,278 - [INFO] - CyberSentinel - (xss_scanner.py:46) - Starting XSSer scan on https://nl3b.online/
+2026-02-12 14:05:38,278 - [INFO] - CyberSentinel - (subprocess_stream.py:18) - Starting streamed command: ['xsser', '-u', 'https://nl3b.online/', '--no-head', '--Crawl', '--depth=4', '--Cw=2', '--XSS', '--DS']
+2026-02-12 14:05:38,278 - [ERROR] - CyberSentinel - (subprocess_stream.py:37) - Error running streamed command '['xsser', '-u', 'https://nl3b.online/', '--no-head', '--Crawl', '--depth=4', '--Cw=2', '--XSS', '--DS']': cmd must be a string
+2026-02-12 14:05:38,278 - [INFO] - CyberSentinel - (xss_scanner.py:58) - XSSer scan completed. Found 0 potential vulnerabilities.
+2026-02-12 14:05:38,278 - [INFO] - CyberSentinel - (tool_controller.py:80) - [513d2288-c8de-4402-a6cb-a45a0316dceb] Running tool: nikto_scan with params: {'target': 'https://nl3b.online/'}
+2026-02-12 14:05:38,278 - [ERROR] - CyberSentinel - (tool_controller.py:101) - [513d2288-c8de-4402-a6cb-a45a0316dceb] Error running tool 'nikto_scan': stream_command() got an unexpected keyword argument 'timeout'
+2026-02-12 14:05:38,279 - [INFO] - CyberSentinel - (tool_controller.py:80) - [513d2288-c8de-4402-a6cb-a45a0316dceb] Running tool: sql_injection_test with params: {'url': 'https://nl3b.online/'}
+2026-02-12 14:05:38,279 - [INFO] - CyberSentinel - (sql_tester.py:25) - Starting SQL injection test for https://nl3b.online/
+2026-02-12 14:05:39,189 - [INFO] - CyberSentinel - (sql_tester.py:33) - Found 0 forms on https://nl3b.online/
+2026-02-12 14:05:39,189 - [INFO] - CyberSentinel - (tool_controller.py:80) - [513d2288-c8de-4402-a6cb-a45a0316dceb] Running tool: xss_test with params: {'url': 'https://nl3b.online/'}
+2026-02-12 14:05:39,189 - [INFO] - CyberSentinel - (xss_tester.py:21) - Starting XSS test for https://nl3b.online/
+2026-02-12 14:05:40,110 - [INFO] - CyberSentinel - (xss_tester.py:34) - Found 0 forms to test for XSS on https://nl3b.online/
+2026-02-12 14:05:40,111 - [INFO] - CyberSentinel - (tool_controller.py:80) - [513d2288-c8de-4402-a6cb-a45a0316dceb] Running tool: vulnerability_analysis with params: {}
+2026-02-12 14:05:40,111 - [INFO] - CyberSentinel - (vuln_analyzer.py:25) - Starting vulnerability analysis based on service versions.
+2026-02-12 14:05:40,111 - [INFO] - CyberSentinel - (vuln_analyzer.py:51) - Vulnerability analysis finished. Found 0 potential issues.
+2026-02-12 14:05:40,112 - [INFO] - CyberSentinel - (tool_controller.py:110) - [513d2288-c8de-4402-a6cb-a45a0316dceb] Tool pipeline execution finished.
+2026-02-12 14:05:40,112 - [INFO] - CyberSentinel - (worker.py:47) - [513d2288-c8de-4402-a6cb-a45a0316dceb] Tool pipeline completed. Results count: 11
+2026-02-12 14:05:40,112 - [INFO] - CyberSentinel - (worker.py:66) - [513d2288-c8de-4402-a6cb-a45a0316dceb] Risk assessment complete. Score: 100 (Critical)
+2026-02-12 14:05:40,113 - [INFO] - CyberSentinel - (worker.py:86) - [513d2288-c8de-4402-a6cb-a45a0316dceb] Scan results saved to database.
+2026-02-12 14:05:40,113 - [INFO] - CyberSentinel - (json_exporter.py:18) - Generating JSON report for scan ID: 513d2288-c8de-4402-a6cb-a45a0316dceb
+2026-02-12 14:05:40,113 - [INFO] - CyberSentinel - (pdf_generator.py:116) - Generating PDF report for scan ID: 513d2288-c8de-4402-a6cb-a45a0316dceb
+2026-02-12 14:05:40,501 - [INFO] - CyberSentinel - (worker.py:110) - [513d2288-c8de-4402-a6cb-a45a0316dceb] Reports generated and saved.
+2026-02-12 14:05:40,513 - [INFO] - CyberSentinel - (worker.py:117) - [513d2288-c8de-4402-a6cb-a45a0316dceb] Scan processing finished and results saved.
+2026-02-12 14:12:53,288 - [INFO] - CyberSentinel - (target_parser.py:56) - Resolved 192.168.1.131 to 192.168.1.131
+2026-02-12 14:12:53,288 - [INFO] - CyberSentinel - (target_parser.py:56) - Resolved 192.168.1.131 to 192.168.1.131
+2026-02-12 14:12:53,288 - [INFO] - CyberSentinel - (decision_engine.py:18) - Building tool pipeline for http://192.168.1.131:8080/sqli with tools: ['nmap_scan', 'ssl_scan', 'header_analysis', 'gobuster_scan', 'sqlmap_scan', 'xsser_scan', 'sql_injection_test', 'xss_test']
+2026-02-12 14:12:53,289 - [INFO] - CyberSentinel - (decision_engine.py:32) - Tool pipeline built: ['nmap_scan', 'ssl_scan', 'header_analysis', 'gobuster_scan', 'sqlmap_scan', 'xsser_scan', 'sql_injection_test', 'xss_test', 'vulnerability_analysis']
+2026-02-12 14:12:53,295 - [INFO] - CyberSentinel - (queue_manager.py:37) - Enqueued task: 37db061f-3b68-425e-9a33-5d14482d3649
+2026-02-12 14:12:53,295 - [INFO] - CyberSentinel - (routes_scan.py:80) - Scan 37db061f-3b68-425e-9a33-5d14482d3649 for target 'http://192.168.1.131:8080/sqli' has been queued.
+2026-02-12 14:12:55,900 - [INFO] - CyberSentinel - (queue_manager.py:53) - Dequeued task: 37db061f-3b68-425e-9a33-5d14482d3649
+2026-02-12 14:12:55,901 - [INFO] - CyberSentinel - (worker.py:28) - [37db061f-3b68-425e-9a33-5d14482d3649] Starting processing for target: http://192.168.1.131:8080/sqli, db_id: 10
+2026-02-12 14:12:55,903 - [INFO] - CyberSentinel - (worker.py:36) - [37db061f-3b68-425e-9a33-5d14482d3649] Scan record found. Current status: queued
+2026-02-12 14:12:55,919 - [INFO] - CyberSentinel - (tool_controller.py:61) - [37db061f-3b68-425e-9a33-5d14482d3649] Starting tool pipeline execution with timeout 3600s.
+2026-02-12 14:12:55,920 - [INFO] - CyberSentinel - (tool_controller.py:80) - [37db061f-3b68-425e-9a33-5d14482d3649] Running tool: nmap_scan with params: {'options': '-A -T4', 'target': '192.168.1.131'}
+2026-02-12 14:12:55,928 - [INFO] - CyberSentinel - (nmap_scanner.py:16) - Starting Nmap scan on 192.168.1.131 with options '-A -T4'
+2026-02-12 14:13:08,939 - [INFO] - CyberSentinel - (nmap_scanner.py:60) - Nmap scan finished for 192.168.1.131. Found 3 open ports.
+2026-02-12 14:13:08,940 - [INFO] - CyberSentinel - (tool_controller.py:80) - [37db061f-3b68-425e-9a33-5d14482d3649] Running tool: ssl_scan with params: {'target': '192.168.1.131'}
+2026-02-12 14:13:08,940 - [INFO] - CyberSentinel - (ssl_scanner.py:16) - Starting SSL scan on 192.168.1.131
+2026-02-12 14:13:08,947 - [ERROR] - CyberSentinel - (ssl_scanner.py:22) - SSLScan returned an error for 192.168.1.131: ERROR: Could not open a connection to host 192.168.1.131 (192.168.1.131) on port 443 (connect: Connection refused).
+2026-02-12 14:13:08,947 - [INFO] - CyberSentinel - (ssl_scanner.py:65) - SSL scan finished for 192.168.1.131.
+2026-02-12 14:13:08,947 - [INFO] - CyberSentinel - (tool_controller.py:80) - [37db061f-3b68-425e-9a33-5d14482d3649] Running tool: header_analysis with params: {'url': 'http://192.168.1.131:8080/sqli'}
+2026-02-12 14:13:08,947 - [INFO] - CyberSentinel - (header_analyzer.py:31) - Starting header analysis for http://192.168.1.131:8080/sqli
+2026-02-12 14:13:08,951 - [INFO] - CyberSentinel - (header_analyzer.py:62) - Header analysis finished for http://192.168.1.131:8080/sqli.
+2026-02-12 14:13:08,951 - [INFO] - CyberSentinel - (tool_controller.py:80) - [37db061f-3b68-425e-9a33-5d14482d3649] Running tool: gobuster_scan with params: {'target': 'http://192.168.1.131:8080/sqli', 'wordlist': '/usr/share/wordlists/dirb/big.txt'}
+2026-02-12 14:13:08,951 - [INFO] - CyberSentinel - (gobuster_scanner.py:38) - Starting Gobuster scan on http://192.168.1.131:8080/sqli with wordlist /usr/share/wordlists/dirb/big.txt
+2026-02-12 14:13:08,951 - [INFO] - CyberSentinel - (subprocess_stream.py:18) - Starting streamed command: ['gobuster', 'dir', '-u', 'http://192.168.1.131:8080/sqli', '-w', '/usr/share/wordlists/dirb/big.txt', '--no-progress', '-t', '20', '--random-user-agent', '-x', '.php,.html,.txt']
+2026-02-12 14:13:08,951 - [ERROR] - CyberSentinel - (subprocess_stream.py:37) - Error running streamed command '['gobuster', 'dir', '-u', 'http://192.168.1.131:8080/sqli', '-w', '/usr/share/wordlists/dirb/big.txt', '--no-progress', '-t', '20', '--random-user-agent', '-x', '.php,.html,.txt']': cmd must be a string
+2026-02-12 14:13:08,952 - [INFO] - CyberSentinel - (gobuster_scanner.py:51) - Gobuster scan completed. Found 0 paths.
+2026-02-12 14:13:08,952 - [INFO] - CyberSentinel - (tool_controller.py:80) - [37db061f-3b68-425e-9a33-5d14482d3649] Running tool: sqlmap_scan with params: {'aggressive': True, 'target': 'http://192.168.1.131:8080/sqli'}
+2026-02-12 14:13:08,953 - [INFO] - CyberSentinel - (sqlmap_scanner.py:53) - Starting SQLMap scan on http://192.168.1.131:8080/sqli
+2026-02-12 14:13:08,953 - [INFO] - CyberSentinel - (subprocess_stream.py:18) - Starting streamed command: ['sqlmap', '-u', 'http://192.168.1.131:8080/sqli', '--batch', '--output-dir', '/tmp/sqlmap_7fwv6f5m', '--dump-format=JSON', '--level=1', '--risk=1', '--all', '--random-agent', '--threads=10']
+2026-02-12 14:13:08,953 - [ERROR] - CyberSentinel - (subprocess_stream.py:37) - Error running streamed command '['sqlmap', '-u', 'http://192.168.1.131:8080/sqli', '--batch', '--output-dir', '/tmp/sqlmap_7fwv6f5m', '--dump-format=JSON', '--level=1', '--risk=1', '--all', '--random-agent', '--threads=10']': cmd must be a string
+2026-02-12 14:13:08,953 - [WARNING] - CyberSentinel - (sqlmap_scanner.py:63) - SQLMap scan on http://192.168.1.131:8080/sqli finished, but no JSON output file was found.
+2026-02-12 14:13:08,954 - [INFO] - CyberSentinel - (tool_controller.py:80) - [37db061f-3b68-425e-9a33-5d14482d3649] Running tool: xsser_scan with params: {'aggressive': True, 'target': 'http://192.168.1.131:8080/sqli'}
+2026-02-12 14:13:08,954 - [INFO] - CyberSentinel - (xss_scanner.py:46) - Starting XSSer scan on http://192.168.1.131:8080/sqli
+2026-02-12 14:13:08,954 - [INFO] - CyberSentinel - (subprocess_stream.py:18) - Starting streamed command: ['xsser', '-u', 'http://192.168.1.131:8080/sqli', '--no-head', '--Crawl', '--depth=4', '--Cw=2', '--XSS', '--DS']
+2026-02-12 14:13:08,954 - [ERROR] - CyberSentinel - (subprocess_stream.py:37) - Error running streamed command '['xsser', '-u', 'http://192.168.1.131:8080/sqli', '--no-head', '--Crawl', '--depth=4', '--Cw=2', '--XSS', '--DS']': cmd must be a string
+2026-02-12 14:13:08,954 - [INFO] - CyberSentinel - (xss_scanner.py:58) - XSSer scan completed. Found 0 potential vulnerabilities.
+2026-02-12 14:13:08,955 - [INFO] - CyberSentinel - (tool_controller.py:80) - [37db061f-3b68-425e-9a33-5d14482d3649] Running tool: sql_injection_test with params: {'url': 'http://192.168.1.131:8080/sqli'}
+2026-02-12 14:13:08,955 - [INFO] - CyberSentinel - (sql_tester.py:25) - Starting SQL injection test for http://192.168.1.131:8080/sqli
+2026-02-12 14:13:08,967 - [INFO] - CyberSentinel - (sql_tester.py:33) - Found 1 forms on http://192.168.1.131:8080/sqli
+2026-02-12 14:13:08,979 - [INFO] - CyberSentinel - (tool_controller.py:80) - [37db061f-3b68-425e-9a33-5d14482d3649] Running tool: xss_test with params: {'url': 'http://192.168.1.131:8080/sqli'}
+2026-02-12 14:13:08,979 - [INFO] - CyberSentinel - (xss_tester.py:21) - Starting XSS test for http://192.168.1.131:8080/sqli
+2026-02-12 14:13:08,983 - [INFO] - CyberSentinel - (xss_tester.py:34) - Found 1 forms to test for XSS on http://192.168.1.131:8080/sqli
+2026-02-12 14:13:08,987 - [INFO] - CyberSentinel - (tool_controller.py:80) - [37db061f-3b68-425e-9a33-5d14482d3649] Running tool: vulnerability_analysis with params: {}
+2026-02-12 14:13:08,987 - [INFO] - CyberSentinel - (vuln_analyzer.py:25) - Starting vulnerability analysis based on service versions.
+2026-02-12 14:13:08,987 - [INFO] - CyberSentinel - (vuln_analyzer.py:51) - Vulnerability analysis finished. Found 0 potential issues.
+2026-02-12 14:13:08,987 - [INFO] - CyberSentinel - (tool_controller.py:110) - [37db061f-3b68-425e-9a33-5d14482d3649] Tool pipeline execution finished.
+2026-02-12 14:13:08,987 - [INFO] - CyberSentinel - (worker.py:47) - [37db061f-3b68-425e-9a33-5d14482d3649] Tool pipeline completed. Results count: 9
+2026-02-12 14:13:08,987 - [INFO] - CyberSentinel - (worker.py:66) - [37db061f-3b68-425e-9a33-5d14482d3649] Risk assessment complete. Score: 38 (Medium)
+2026-02-12 14:13:08,987 - [INFO] - CyberSentinel - (worker.py:86) - [37db061f-3b68-425e-9a33-5d14482d3649] Scan results saved to database.
+2026-02-12 14:13:08,988 - [INFO] - CyberSentinel - (json_exporter.py:18) - Generating JSON report for scan ID: 37db061f-3b68-425e-9a33-5d14482d3649
+2026-02-12 14:13:08,988 - [INFO] - CyberSentinel - (pdf_generator.py:116) - Generating PDF report for scan ID: 37db061f-3b68-425e-9a33-5d14482d3649
+2026-02-12 14:13:09,226 - [INFO] - CyberSentinel - (worker.py:110) - [37db061f-3b68-425e-9a33-5d14482d3649] Reports generated and saved.
+2026-02-12 14:13:09,241 - [INFO] - CyberSentinel - (worker.py:117) - [37db061f-3b68-425e-9a33-5d14482d3649] Scan processing finished and results saved.
+2026-02-12 14:16:54,397 - [INFO] - CyberSentinel - (main.py:24) - Shutting down CyberSentinel backend...
+2026-02-12 14:16:54,397 - [INFO] - CyberSentinel - (db_connect.py:39) - Closing database connection.
+2026-02-12 14:16:55,213 - [ERROR] - CyberSentinel - (queue_manager.py:57) - Failed to dequeue task: ConnectionError: Error -2 connecting to redis:6379. Name or service not known.
+2026-02-12 14:17:00,717 - [ERROR] - CyberSentinel - (queue_manager.py:57) - Failed to dequeue task: ConnectionError: Error -2 connecting to redis:6379. Name or service not known.
+2026-02-12 16:15:01,849 - [INFO] - CyberSentinel - (main.py:72) - Starting background worker...
+2026-02-12 16:15:01,854 - [INFO] - CyberSentinel - (queue_manager.py:23) - Redis client connected successfully.
+2026-02-12 16:15:01,854 - [INFO] - CyberSentinel - (queue_manager.py:88) - Task queue initialized.
+2026-02-12 16:15:01,854 - [INFO] - CyberSentinel - (worker.py:125) - Worker loop started. Waiting for tasks...
+2026-02-12 16:15:01,862 - [INFO] - CyberSentinel - (main.py:64) - Starting FastAPI server...
+2026-02-12 16:15:01,873 - [INFO] - CyberSentinel - (main.py:20) - Starting up CyberSentinel backend...
+2026-02-12 16:15:01,914 - [INFO] - CyberSentinel - (db_connect.py:29) - Initializing database and creating tables...
+2026-02-12 16:15:01,935 - [INFO] - CyberSentinel - (db_connect.py:33) - Database tables created successfully.
+2026-02-12 16:15:01,939 - [INFO] - CyberSentinel - (queue_manager.py:23) - Redis client connected successfully.
+2026-02-12 16:15:01,939 - [INFO] - CyberSentinel - (queue_manager.py:88) - Task queue initialized.
+2026-02-12 16:15:11,429 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 16:15:17,453 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 16:15:38,124 - [INFO] - CyberSentinel - (main.py:24) - Shutting down CyberSentinel backend...
+2026-02-12 16:15:38,124 - [INFO] - CyberSentinel - (db_connect.py:39) - Closing database connection.
+2026-02-12 16:42:47,430 - [INFO] - CyberSentinel - (main.py:64) - Starting FastAPI server...
+2026-02-12 16:42:47,438 - [INFO] - CyberSentinel - (main.py:20) - Starting up CyberSentinel backend...
+2026-02-12 16:42:47,461 - [INFO] - CyberSentinel - (db_connect.py:29) - Initializing database and creating tables...
+2026-02-12 16:42:47,468 - [INFO] - CyberSentinel - (db_connect.py:33) - Database tables created successfully.
+2026-02-12 16:42:47,469 - [INFO] - CyberSentinel - (queue_manager.py:23) - Redis client connected successfully.
+2026-02-12 16:42:47,469 - [INFO] - CyberSentinel - (queue_manager.py:88) - Task queue initialized.
+2026-02-12 16:42:47,609 - [INFO] - CyberSentinel - (main.py:72) - Starting background worker...
+2026-02-12 16:42:47,611 - [INFO] - CyberSentinel - (queue_manager.py:23) - Redis client connected successfully.
+2026-02-12 16:42:47,611 - [INFO] - CyberSentinel - (queue_manager.py:88) - Task queue initialized.
+2026-02-12 16:42:47,611 - [INFO] - CyberSentinel - (worker.py:125) - Worker loop started. Waiting for tasks...
+2026-02-12 16:42:53,894 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 16:44:13,521 - [INFO] - CyberSentinel - (target_parser.py:56) - Resolved globaliraq.iq to 172.67.171.49
+2026-02-12 16:44:13,528 - [INFO] - CyberSentinel - (target_parser.py:56) - Resolved globaliraq.iq to 104.21.28.248
+2026-02-12 16:44:13,528 - [INFO] - CyberSentinel - (decision_engine.py:18) - Building tool pipeline for https://globaliraq.iq/ with tools: ['nmap_scan', 'ssl_scan', 'header_analysis', 'dir_discovery', 'gobuster_scan', 'sqlmap_scan', 'xsser_scan', 'nikto_scan', 'sql_injection_test', 'xss_test']
+2026-02-12 16:44:13,528 - [INFO] - CyberSentinel - (decision_engine.py:32) - Tool pipeline built: ['nmap_scan', 'ssl_scan', 'header_analysis', 'dir_discovery', 'gobuster_scan', 'sqlmap_scan', 'xsser_scan', 'nikto_scan', 'sql_injection_test', 'xss_test', 'vulnerability_analysis']
+2026-02-12 16:44:13,545 - [INFO] - CyberSentinel - (queue_manager.py:37) - Enqueued task: 2d785a71-8d82-4136-82d7-d14b70ccdbe8
+2026-02-12 16:44:13,545 - [INFO] - CyberSentinel - (routes_scan.py:80) - Scan 2d785a71-8d82-4136-82d7-d14b70ccdbe8 for target 'https://globaliraq.iq/' has been queued.
+2026-02-12 16:44:17,714 - [INFO] - CyberSentinel - (queue_manager.py:53) - Dequeued task: 2d785a71-8d82-4136-82d7-d14b70ccdbe8
+2026-02-12 16:44:17,715 - [INFO] - CyberSentinel - (worker.py:28) - [2d785a71-8d82-4136-82d7-d14b70ccdbe8] Starting processing for target: https://globaliraq.iq/, db_id: 11
+2026-02-12 16:44:17,763 - [INFO] - CyberSentinel - (worker.py:36) - [2d785a71-8d82-4136-82d7-d14b70ccdbe8] Scan record found. Current status: queued
+2026-02-12 16:44:17,783 - [INFO] - CyberSentinel - (tool_controller.py:61) - [2d785a71-8d82-4136-82d7-d14b70ccdbe8] Starting tool pipeline execution with timeout 3600s.
+2026-02-12 16:44:17,785 - [INFO] - CyberSentinel - (tool_controller.py:80) - [2d785a71-8d82-4136-82d7-d14b70ccdbe8] Running tool: nmap_scan with params: {'options': '-A -T4', 'target': '104.21.28.248'}
+2026-02-12 16:44:17,802 - [INFO] - CyberSentinel - (nmap_scanner.py:16) - Starting Nmap scan on 104.21.28.248 with options '-A -T4'
+2026-02-12 16:44:45,083 - [INFO] - CyberSentinel - (nmap_scanner.py:60) - Nmap scan finished for 104.21.28.248. Found 5 open ports.
+2026-02-12 16:44:45,084 - [INFO] - CyberSentinel - (tool_controller.py:80) - [2d785a71-8d82-4136-82d7-d14b70ccdbe8] Running tool: ssl_scan with params: {'target': 'globaliraq.iq'}
+2026-02-12 16:44:45,084 - [INFO] - CyberSentinel - (ssl_scanner.py:16) - Starting SSL scan on globaliraq.iq
+2026-02-12 16:45:05,241 - [INFO] - CyberSentinel - (ssl_scanner.py:65) - SSL scan finished for globaliraq.iq.
+2026-02-12 16:45:05,242 - [INFO] - CyberSentinel - (tool_controller.py:80) - [2d785a71-8d82-4136-82d7-d14b70ccdbe8] Running tool: header_analysis with params: {'url': 'https://globaliraq.iq/'}
+2026-02-12 16:45:05,242 - [INFO] - CyberSentinel - (header_analyzer.py:31) - Starting header analysis for https://globaliraq.iq/
+2026-02-12 16:45:05,988 - [INFO] - CyberSentinel - (header_analyzer.py:62) - Header analysis finished for https://globaliraq.iq/.
+2026-02-12 16:45:05,989 - [INFO] - CyberSentinel - (tool_controller.py:80) - [2d785a71-8d82-4136-82d7-d14b70ccdbe8] Running tool: dir_discovery with params: {'target': 'https://globaliraq.iq/'}
+2026-02-12 16:45:05,989 - [INFO] - CyberSentinel - (dir_discovery.py:29) - Starting directory discovery on https://globaliraq.iq/
+2026-02-12 16:45:05,989 - [WARNING] - CyberSentinel - (dir_discovery.py:23) - Wordlist not found at /usr/share/wordlists/dirb/common.txt. Dir discovery may fail.
+2026-02-12 16:45:05,990 - [INFO] - CyberSentinel - (tool_controller.py:80) - [2d785a71-8d82-4136-82d7-d14b70ccdbe8] Running tool: gobuster_scan with params: {'target': 'https://globaliraq.iq/', 'wordlist': '/usr/share/wordlists/dirb/big.txt'}
+2026-02-12 16:45:05,990 - [INFO] - CyberSentinel - (gobuster_scanner.py:38) - Starting Gobuster scan on https://globaliraq.iq/ with wordlist /usr/share/wordlists/dirb/big.txt
+2026-02-12 16:45:05,990 - [INFO] - CyberSentinel - (subprocess_stream.py:18) - Starting streamed command: ['gobuster', 'dir', '-u', 'https://globaliraq.iq/', '-w', '/usr/share/wordlists/dirb/big.txt', '--no-progress', '-t', '20', '--random-user-agent', '-x', '.php,.html,.txt']
+2026-02-12 16:45:05,990 - [ERROR] - CyberSentinel - (subprocess_stream.py:37) - Error running streamed command '['gobuster', 'dir', '-u', 'https://globaliraq.iq/', '-w', '/usr/share/wordlists/dirb/big.txt', '--no-progress', '-t', '20', '--random-user-agent', '-x', '.php,.html,.txt']': cmd must be a string
+2026-02-12 16:45:05,990 - [INFO] - CyberSentinel - (gobuster_scanner.py:51) - Gobuster scan completed. Found 0 paths.
+2026-02-12 16:45:05,990 - [INFO] - CyberSentinel - (tool_controller.py:80) - [2d785a71-8d82-4136-82d7-d14b70ccdbe8] Running tool: sqlmap_scan with params: {'aggressive': True, 'target': 'https://globaliraq.iq/'}
+2026-02-12 16:45:05,992 - [INFO] - CyberSentinel - (sqlmap_scanner.py:53) - Starting SQLMap scan on https://globaliraq.iq/
+2026-02-12 16:45:05,992 - [INFO] - CyberSentinel - (subprocess_stream.py:18) - Starting streamed command: ['sqlmap', '-u', 'https://globaliraq.iq/', '--batch', '--output-dir', '/tmp/sqlmap_eevyyp8n', '--dump-format=JSON', '--level=1', '--risk=1', '--all', '--random-agent', '--threads=10']
+2026-02-12 16:45:05,992 - [ERROR] - CyberSentinel - (subprocess_stream.py:37) - Error running streamed command '['sqlmap', '-u', 'https://globaliraq.iq/', '--batch', '--output-dir', '/tmp/sqlmap_eevyyp8n', '--dump-format=JSON', '--level=1', '--risk=1', '--all', '--random-agent', '--threads=10']': cmd must be a string
+2026-02-12 16:45:05,992 - [WARNING] - CyberSentinel - (sqlmap_scanner.py:63) - SQLMap scan on https://globaliraq.iq/ finished, but no JSON output file was found.
+2026-02-12 16:45:05,993 - [INFO] - CyberSentinel - (tool_controller.py:80) - [2d785a71-8d82-4136-82d7-d14b70ccdbe8] Running tool: xsser_scan with params: {'aggressive': True, 'target': 'https://globaliraq.iq/'}
+2026-02-12 16:45:05,993 - [INFO] - CyberSentinel - (xss_scanner.py:46) - Starting XSSer scan on https://globaliraq.iq/
+2026-02-12 16:45:05,993 - [INFO] - CyberSentinel - (subprocess_stream.py:18) - Starting streamed command: ['xsser', '-u', 'https://globaliraq.iq/', '--no-head', '--Crawl', '--depth=4', '--Cw=2', '--XSS', '--DS']
+2026-02-12 16:45:05,993 - [ERROR] - CyberSentinel - (subprocess_stream.py:37) - Error running streamed command '['xsser', '-u', 'https://globaliraq.iq/', '--no-head', '--Crawl', '--depth=4', '--Cw=2', '--XSS', '--DS']': cmd must be a string
+2026-02-12 16:45:05,993 - [INFO] - CyberSentinel - (xss_scanner.py:58) - XSSer scan completed. Found 0 potential vulnerabilities.
+2026-02-12 16:45:05,994 - [INFO] - CyberSentinel - (tool_controller.py:80) - [2d785a71-8d82-4136-82d7-d14b70ccdbe8] Running tool: nikto_scan with params: {'target': 'https://globaliraq.iq/'}
+2026-02-12 16:45:05,994 - [ERROR] - CyberSentinel - (tool_controller.py:101) - [2d785a71-8d82-4136-82d7-d14b70ccdbe8] Error running tool 'nikto_scan': stream_command() got an unexpected keyword argument 'timeout'
+2026-02-12 16:45:05,994 - [INFO] - CyberSentinel - (tool_controller.py:80) - [2d785a71-8d82-4136-82d7-d14b70ccdbe8] Running tool: sql_injection_test with params: {'url': 'https://globaliraq.iq/'}
+2026-02-12 16:45:05,994 - [INFO] - CyberSentinel - (sql_tester.py:25) - Starting SQL injection test for https://globaliraq.iq/
+2026-02-12 16:45:06,533 - [INFO] - CyberSentinel - (sql_tester.py:33) - Found 33 forms on https://globaliraq.iq/
+2026-02-12 16:45:46,928 - [INFO] - CyberSentinel - (tool_controller.py:80) - [2d785a71-8d82-4136-82d7-d14b70ccdbe8] Running tool: xss_test with params: {'url': 'https://globaliraq.iq/'}
+2026-02-12 16:45:46,928 - [INFO] - CyberSentinel - (xss_tester.py:21) - Starting XSS test for https://globaliraq.iq/
+2026-02-12 16:45:47,393 - [INFO] - CyberSentinel - (xss_tester.py:34) - Found 33 forms to test for XSS on https://globaliraq.iq/
+2026-02-12 16:45:47,842 - [WARNING] - CyberSentinel - (xss_tester.py:105) - Reflected XSS detected in form input 'q' at https://globaliraq.iq/search
+2026-02-12 16:45:48,046 - [WARNING] - CyberSentinel - (xss_tester.py:105) - Reflected XSS detected in form input 'q' at https://globaliraq.iq/search
+2026-02-12 16:45:48,146 - [INFO] - CyberSentinel - (tool_controller.py:80) - [2d785a71-8d82-4136-82d7-d14b70ccdbe8] Running tool: vulnerability_analysis with params: {}
+2026-02-12 16:45:48,146 - [INFO] - CyberSentinel - (vuln_analyzer.py:25) - Starting vulnerability analysis based on service versions.
+2026-02-12 16:45:48,146 - [INFO] - CyberSentinel - (vuln_analyzer.py:51) - Vulnerability analysis finished. Found 0 potential issues.
+2026-02-12 16:45:48,148 - [INFO] - CyberSentinel - (tool_controller.py:110) - [2d785a71-8d82-4136-82d7-d14b70ccdbe8] Tool pipeline execution finished.
+2026-02-12 16:45:48,148 - [INFO] - CyberSentinel - (worker.py:47) - [2d785a71-8d82-4136-82d7-d14b70ccdbe8] Tool pipeline completed. Results count: 11
+2026-02-12 16:45:48,148 - [INFO] - CyberSentinel - (worker.py:66) - [2d785a71-8d82-4136-82d7-d14b70ccdbe8] Risk assessment complete. Score: 100 (Critical)
+2026-02-12 16:45:48,150 - [INFO] - CyberSentinel - (worker.py:86) - [2d785a71-8d82-4136-82d7-d14b70ccdbe8] Scan results saved to database.
+2026-02-12 16:45:48,150 - [INFO] - CyberSentinel - (json_exporter.py:18) - Generating JSON report for scan ID: 2d785a71-8d82-4136-82d7-d14b70ccdbe8
+2026-02-12 16:45:48,151 - [INFO] - CyberSentinel - (pdf_generator.py:116) - Generating PDF report for scan ID: 2d785a71-8d82-4136-82d7-d14b70ccdbe8
+2026-02-12 16:45:48,622 - [INFO] - CyberSentinel - (worker.py:110) - [2d785a71-8d82-4136-82d7-d14b70ccdbe8] Reports generated and saved.
+2026-02-12 16:45:48,632 - [INFO] - CyberSentinel - (worker.py:117) - [2d785a71-8d82-4136-82d7-d14b70ccdbe8] Scan processing finished and results saved.
+2026-02-12 17:03:04,383 - [INFO] - CyberSentinel - (main.py:24) - Shutting down CyberSentinel backend...
+2026-02-12 17:03:04,383 - [INFO] - CyberSentinel - (db_connect.py:39) - Closing database connection.
+2026-02-12 17:28:52,984 - [INFO] - CyberSentinel - (main.py:64) - Starting FastAPI server...
+2026-02-12 17:28:52,991 - [INFO] - CyberSentinel - (main.py:20) - Starting up CyberSentinel backend...
+2026-02-12 17:28:53,017 - [INFO] - CyberSentinel - (db_connect.py:29) - Initializing database and creating tables...
+2026-02-12 17:28:53,023 - [INFO] - CyberSentinel - (db_connect.py:33) - Database tables created successfully.
+2026-02-12 17:28:53,024 - [INFO] - CyberSentinel - (queue_manager.py:23) - Redis client connected successfully.
+2026-02-12 17:28:53,024 - [INFO] - CyberSentinel - (queue_manager.py:88) - Task queue initialized.
+2026-02-12 17:28:53,146 - [INFO] - CyberSentinel - (main.py:72) - Starting background worker...
+2026-02-12 17:28:53,162 - [INFO] - CyberSentinel - (queue_manager.py:23) - Redis client connected successfully.
+2026-02-12 17:28:53,163 - [INFO] - CyberSentinel - (queue_manager.py:88) - Task queue initialized.
+2026-02-12 17:28:53,163 - [INFO] - CyberSentinel - (worker.py:125) - Worker loop started. Waiting for tasks...
+2026-02-12 17:29:10,225 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 17:29:16,236 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 17:29:49,953 - [INFO] - CyberSentinel - (target_parser.py:57) - Resolved globaliraq.iq to 172.67.171.49
+2026-02-12 17:29:49,959 - [INFO] - CyberSentinel - (target_parser.py:57) - Resolved globaliraq.iq to 104.21.28.248
+2026-02-12 17:29:49,960 - [INFO] - CyberSentinel - (decision_engine.py:19) - Building tool pipeline for https://globaliraq.iq/ with tools: ['nmap_scan', 'ssl_scan', 'header_analysis', 'gobuster_scan', 'sqlmap_scan', 'xsser_scan', 'nikto_scan', 'sql_injection_test', 'xss_test']
+2026-02-12 17:29:49,961 - [INFO] - CyberSentinel - (decision_engine.py:33) - Tool pipeline built: ['nmap_scan', 'ssl_scan', 'header_analysis', 'gobuster_scan', 'sqlmap_scan', 'xsser_scan', 'nikto_scan', 'sql_injection_test', 'xss_test', 'vulnerability_analysis']
+2026-02-12 17:29:49,986 - [INFO] - CyberSentinel - (queue_manager.py:37) - Enqueued task: 69726668-29b2-4344-ad9d-26f129c39395
+2026-02-12 17:29:49,986 - [INFO] - CyberSentinel - (routes_scan.py:81) - Scan 69726668-29b2-4344-ad9d-26f129c39395 for target 'https://globaliraq.iq/' has been queued.
+2026-02-12 17:29:53,217 - [INFO] - CyberSentinel - (queue_manager.py:53) - Dequeued task: 69726668-29b2-4344-ad9d-26f129c39395
+2026-02-12 17:29:53,218 - [INFO] - CyberSentinel - (worker.py:28) - [69726668-29b2-4344-ad9d-26f129c39395] Starting processing for target: https://globaliraq.iq/, db_id: 12
+2026-02-12 17:29:53,257 - [INFO] - CyberSentinel - (worker.py:36) - [69726668-29b2-4344-ad9d-26f129c39395] Scan record found. Current status: queued
+2026-02-12 17:29:53,274 - [INFO] - CyberSentinel - (tool_controller.py:63) - [69726668-29b2-4344-ad9d-26f129c39395] Starting tool pipeline execution with timeout 3600s.
+2026-02-12 17:29:53,278 - [INFO] - CyberSentinel - (tool_controller.py:83) - [69726668-29b2-4344-ad9d-26f129c39395] Running tool: nmap_scan with params: {'options': '-A -T4', 'target': '104.21.28.248'}
+2026-02-12 17:29:53,286 - [INFO] - CyberSentinel - (nmap_scanner.py:17) - Starting Nmap scan on 104.21.28.248 with options '-A -T4'
+2026-02-12 17:30:23,053 - [INFO] - CyberSentinel - (nmap_scanner.py:61) - Nmap scan finished for 104.21.28.248. Found 5 open ports.
+2026-02-12 17:30:23,054 - [INFO] - CyberSentinel - (tool_controller.py:83) - [69726668-29b2-4344-ad9d-26f129c39395] Running tool: ssl_scan with params: {'target': 'globaliraq.iq'}
+2026-02-12 17:30:23,054 - [INFO] - CyberSentinel - (ssl_scanner.py:17) - Starting SSL scan on globaliraq.iq
+2026-02-12 17:30:47,713 - [INFO] - CyberSentinel - (ssl_scanner.py:66) - SSL scan finished for globaliraq.iq.
+2026-02-12 17:30:47,715 - [INFO] - CyberSentinel - (tool_controller.py:83) - [69726668-29b2-4344-ad9d-26f129c39395] Running tool: header_analysis with params: {'url': 'https://globaliraq.iq/'}
+2026-02-12 17:30:47,715 - [INFO] - CyberSentinel - (header_analyzer.py:32) - Starting header analysis for https://globaliraq.iq/
+2026-02-12 17:30:48,227 - [INFO] - CyberSentinel - (header_analyzer.py:63) - Header analysis finished for https://globaliraq.iq/.
+2026-02-12 17:30:48,228 - [INFO] - CyberSentinel - (tool_controller.py:83) - [69726668-29b2-4344-ad9d-26f129c39395] Running tool: gobuster_scan with params: {'target': 'https://globaliraq.iq/', 'wordlist': '/usr/share/wordlists/dirb/big.txt'}
+2026-02-12 17:30:48,228 - [INFO] - CyberSentinel - (gobuster_scanner.py:39) - Starting Gobuster scan on https://globaliraq.iq/ with wordlist /usr/share/wordlists/dirb/big.txt
+2026-02-12 17:30:48,229 - [INFO] - CyberSentinel - (subprocess_stream.py:18) - Starting streamed command: ['gobuster', 'dir', '-u', 'https://globaliraq.iq/', '-w', '/usr/share/wordlists/dirb/big.txt', '--no-progress', '-t', '20', '--random-user-agent', '-x', '.php,.html,.txt']
+2026-02-12 17:30:48,229 - [ERROR] - CyberSentinel - (subprocess_stream.py:37) - Error running streamed command '['gobuster', 'dir', '-u', 'https://globaliraq.iq/', '-w', '/usr/share/wordlists/dirb/big.txt', '--no-progress', '-t', '20', '--random-user-agent', '-x', '.php,.html,.txt']': cmd must be a string
+2026-02-12 17:30:48,229 - [INFO] - CyberSentinel - (gobuster_scanner.py:52) - Gobuster scan completed. Found 0 paths.
+2026-02-12 17:30:48,229 - [INFO] - CyberSentinel - (tool_controller.py:83) - [69726668-29b2-4344-ad9d-26f129c39395] Running tool: sqlmap_scan with params: {'aggressive': True, 'target': 'https://globaliraq.iq/'}
+2026-02-12 17:30:48,241 - [INFO] - CyberSentinel - (sqlmap_scanner.py:55) - Starting SQLMap scan on https://globaliraq.iq/
+2026-02-12 17:30:48,242 - [INFO] - CyberSentinel - (subprocess_stream.py:18) - Starting streamed command: ['sqlmap', '-u', 'https://globaliraq.iq/', '--batch', '--output-dir', '/tmp/sqlmap_d5uxd_tc', '--dump-format=JSON', '--level=1', '--risk=1', '--all', '--random-agent', '--threads=10']
+2026-02-12 17:30:48,242 - [ERROR] - CyberSentinel - (subprocess_stream.py:37) - Error running streamed command '['sqlmap', '-u', 'https://globaliraq.iq/', '--batch', '--output-dir', '/tmp/sqlmap_d5uxd_tc', '--dump-format=JSON', '--level=1', '--risk=1', '--all', '--random-agent', '--threads=10']': cmd must be a string
+2026-02-12 17:30:48,242 - [WARNING] - CyberSentinel - (sqlmap_scanner.py:65) - SQLMap scan on https://globaliraq.iq/ finished, but no JSON output file was found.
+2026-02-12 17:30:48,242 - [INFO] - CyberSentinel - (tool_controller.py:83) - [69726668-29b2-4344-ad9d-26f129c39395] Running tool: xsser_scan with params: {'aggressive': True, 'target': 'https://globaliraq.iq/'}
+2026-02-12 17:30:48,243 - [INFO] - CyberSentinel - (xss_scanner.py:47) - Starting XSSer scan on https://globaliraq.iq/
+2026-02-12 17:30:48,243 - [INFO] - CyberSentinel - (subprocess_stream.py:18) - Starting streamed command: ['xsser', '-u', 'https://globaliraq.iq/', '--no-head', '--Crawl', '--depth=4', '--Cw=2', '--XSS', '--DS']
+2026-02-12 17:30:48,243 - [ERROR] - CyberSentinel - (subprocess_stream.py:37) - Error running streamed command '['xsser', '-u', 'https://globaliraq.iq/', '--no-head', '--Crawl', '--depth=4', '--Cw=2', '--XSS', '--DS']': cmd must be a string
+2026-02-12 17:30:48,243 - [INFO] - CyberSentinel - (xss_scanner.py:59) - XSSer scan completed. Found 0 potential vulnerabilities.
+2026-02-12 17:30:48,243 - [INFO] - CyberSentinel - (tool_controller.py:83) - [69726668-29b2-4344-ad9d-26f129c39395] Running tool: nikto_scan with params: {'target': 'https://globaliraq.iq/'}
+2026-02-12 17:30:48,243 - [ERROR] - CyberSentinel - (tool_controller.py:107) - [69726668-29b2-4344-ad9d-26f129c39395] Error running tool 'nikto_scan': stream_command() got an unexpected keyword argument 'timeout'
+Traceback (most recent call last):
+  File "/app/tools/tool_controller.py", line 92, in run_pipeline
+    result_data = await self.tool_functions[tool_name](**params_with_scan_id)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/tools/tool_controller.py", line 143, in _run_nikto
+    return await self._stream_cli_tool(command, "nikto_scan", scan_id, timeout=600)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/tools/tool_controller.py", line 121, in _stream_cli_tool
+    async for line in stream_command(command, timeout=timeout):
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: stream_command() got an unexpected keyword argument 'timeout'
+2026-02-12 17:30:48,244 - [INFO] - CyberSentinel - (tool_controller.py:83) - [69726668-29b2-4344-ad9d-26f129c39395] Running tool: sql_injection_test with params: {'url': 'https://globaliraq.iq/'}
+2026-02-12 17:30:48,244 - [INFO] - CyberSentinel - (sql_tester.py:26) - Starting SQL injection test for https://globaliraq.iq/
+2026-02-12 17:30:48,804 - [INFO] - CyberSentinel - (sql_tester.py:34) - Found 33 forms on https://globaliraq.iq/
+2026-02-12 17:31:29,606 - [INFO] - CyberSentinel - (tool_controller.py:83) - [69726668-29b2-4344-ad9d-26f129c39395] Running tool: xss_test with params: {'url': 'https://globaliraq.iq/'}
+2026-02-12 17:31:29,606 - [INFO] - CyberSentinel - (xss_tester.py:22) - Starting XSS test for https://globaliraq.iq/
+2026-02-12 17:31:30,074 - [INFO] - CyberSentinel - (xss_tester.py:35) - Found 33 forms to test for XSS on https://globaliraq.iq/
+2026-02-12 17:31:30,521 - [WARNING] - CyberSentinel - (xss_tester.py:106) - Reflected XSS detected in form input 'q' at https://globaliraq.iq/search
+2026-02-12 17:31:30,930 - [WARNING] - CyberSentinel - (xss_tester.py:106) - Reflected XSS detected in form input 'q' at https://globaliraq.iq/search
+2026-02-12 17:31:31,030 - [INFO] - CyberSentinel - (tool_controller.py:83) - [69726668-29b2-4344-ad9d-26f129c39395] Running tool: vulnerability_analysis with params: {}
+2026-02-12 17:31:31,030 - [INFO] - CyberSentinel - (vuln_analyzer.py:26) - Starting vulnerability analysis based on service versions.
+2026-02-12 17:31:31,031 - [INFO] - CyberSentinel - (vuln_analyzer.py:52) - Vulnerability analysis finished. Found 0 potential issues.
+2026-02-12 17:31:31,032 - [INFO] - CyberSentinel - (tool_controller.py:116) - [69726668-29b2-4344-ad9d-26f129c39395] Tool pipeline execution finished.
+2026-02-12 17:31:31,032 - [INFO] - CyberSentinel - (worker.py:47) - [69726668-29b2-4344-ad9d-26f129c39395] Tool pipeline completed. Results count: 10
+2026-02-12 17:31:31,033 - [INFO] - CyberSentinel - (worker.py:66) - [69726668-29b2-4344-ad9d-26f129c39395] Risk assessment complete. Score: 100 (Critical)
+2026-02-12 17:31:31,035 - [INFO] - CyberSentinel - (worker.py:86) - [69726668-29b2-4344-ad9d-26f129c39395] Scan results saved to database.
+2026-02-12 17:31:31,035 - [INFO] - CyberSentinel - (json_exporter.py:18) - Generating JSON report for scan ID: 69726668-29b2-4344-ad9d-26f129c39395
+2026-02-12 17:31:31,036 - [INFO] - CyberSentinel - (pdf_generator.py:116) - Generating PDF report for scan ID: 69726668-29b2-4344-ad9d-26f129c39395
+2026-02-12 17:31:31,475 - [INFO] - CyberSentinel - (worker.py:110) - [69726668-29b2-4344-ad9d-26f129c39395] Reports generated and saved.
+2026-02-12 17:31:31,486 - [INFO] - CyberSentinel - (worker.py:117) - [69726668-29b2-4344-ad9d-26f129c39395] Scan processing finished and results saved.
+2026-02-12 17:32:11,667 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 17:32:36,640 - [INFO] - CyberSentinel - (main.py:24) - Shutting down CyberSentinel backend...
+2026-02-12 17:32:36,640 - [INFO] - CyberSentinel - (db_connect.py:39) - Closing database connection.
+2026-02-12 20:04:57,384 - [INFO] - CyberSentinel - (main.py:72) - Starting background worker...
+2026-02-12 20:04:57,399 - [INFO] - CyberSentinel - (queue_manager.py:23) - Redis client connected successfully.
+2026-02-12 20:04:57,399 - [INFO] - CyberSentinel - (queue_manager.py:88) - Task queue initialized.
+2026-02-12 20:04:57,399 - [INFO] - CyberSentinel - (worker.py:125) - Worker loop started. Waiting for tasks...
+2026-02-12 20:04:57,414 - [INFO] - CyberSentinel - (main.py:64) - Starting FastAPI server...
+2026-02-12 20:04:57,426 - [INFO] - CyberSentinel - (main.py:20) - Starting up CyberSentinel backend...
+2026-02-12 20:04:57,472 - [INFO] - CyberSentinel - (db_connect.py:29) - Initializing database and creating tables...
+2026-02-12 20:04:57,487 - [INFO] - CyberSentinel - (db_connect.py:33) - Database tables created successfully.
+2026-02-12 20:04:57,489 - [INFO] - CyberSentinel - (queue_manager.py:23) - Redis client connected successfully.
+2026-02-12 20:04:57,489 - [INFO] - CyberSentinel - (queue_manager.py:88) - Task queue initialized.
+2026-02-12 20:05:09,401 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 20:05:32,047 - [INFO] - CyberSentinel - (target_parser.py:57) - Resolved globaliraq.iq to 104.21.28.248
+2026-02-12 20:05:32,053 - [INFO] - CyberSentinel - (target_parser.py:57) - Resolved globaliraq.iq to 172.67.171.49
+2026-02-12 20:05:32,054 - [INFO] - CyberSentinel - (decision_engine.py:19) - Building tool pipeline for https://globaliraq.iq/ with tools: ['nmap_scan', 'ssl_scan', 'header_analysis', 'dir_discovery', 'gobuster_scan', 'sqlmap_scan', 'xsser_scan', 'sql_injection_test', 'xss_test']
+2026-02-12 20:05:32,054 - [INFO] - CyberSentinel - (decision_engine.py:33) - Tool pipeline built: ['nmap_scan', 'ssl_scan', 'header_analysis', 'dir_discovery', 'gobuster_scan', 'sqlmap_scan', 'xsser_scan', 'sql_injection_test', 'xss_test', 'vulnerability_analysis']
+2026-02-12 20:05:32,065 - [INFO] - CyberSentinel - (queue_manager.py:37) - Enqueued task: b9407381-0b81-46d9-873a-39cc74cf9a10
+2026-02-12 20:05:32,065 - [INFO] - CyberSentinel - (routes_scan.py:81) - Scan b9407381-0b81-46d9-873a-39cc74cf9a10 for target 'https://globaliraq.iq/' has been queued.
+2026-02-12 20:05:32,432 - [INFO] - CyberSentinel - (queue_manager.py:53) - Dequeued task: b9407381-0b81-46d9-873a-39cc74cf9a10
+2026-02-12 20:05:32,432 - [INFO] - CyberSentinel - (worker.py:28) - [b9407381-0b81-46d9-873a-39cc74cf9a10] Starting processing for target: https://globaliraq.iq/, db_id: 14
+2026-02-12 20:05:32,469 - [INFO] - CyberSentinel - (worker.py:36) - [b9407381-0b81-46d9-873a-39cc74cf9a10] Scan record found. Current status: queued
+2026-02-12 20:05:32,476 - [INFO] - CyberSentinel - (tool_controller.py:63) - [b9407381-0b81-46d9-873a-39cc74cf9a10] Starting tool pipeline execution with timeout 3600s.
+2026-02-12 20:05:32,478 - [INFO] - CyberSentinel - (tool_controller.py:83) - [b9407381-0b81-46d9-873a-39cc74cf9a10] Running tool: nmap_scan with params: {'options': '-A -T4', 'target': '172.67.171.49'}
+2026-02-12 20:05:32,491 - [INFO] - CyberSentinel - (nmap_scanner.py:17) - Starting Nmap scan on 172.67.171.49 with options '-A -T4'
+2026-02-12 20:06:07,293 - [INFO] - CyberSentinel - (nmap_scanner.py:61) - Nmap scan finished for 172.67.171.49. Found 4 open ports.
+2026-02-12 20:06:07,294 - [INFO] - CyberSentinel - (tool_controller.py:83) - [b9407381-0b81-46d9-873a-39cc74cf9a10] Running tool: ssl_scan with params: {'target': 'globaliraq.iq'}
+2026-02-12 20:06:07,294 - [INFO] - CyberSentinel - (ssl_scanner.py:17) - Starting SSL scan on globaliraq.iq
+2026-02-12 20:06:30,424 - [INFO] - CyberSentinel - (ssl_scanner.py:66) - SSL scan finished for globaliraq.iq.
+2026-02-12 20:06:30,426 - [INFO] - CyberSentinel - (tool_controller.py:83) - [b9407381-0b81-46d9-873a-39cc74cf9a10] Running tool: header_analysis with params: {'url': 'https://globaliraq.iq/'}
+2026-02-12 20:06:30,426 - [INFO] - CyberSentinel - (header_analyzer.py:32) - Starting header analysis for https://globaliraq.iq/
+2026-02-12 20:06:31,059 - [INFO] - CyberSentinel - (header_analyzer.py:63) - Header analysis finished for https://globaliraq.iq/.
+2026-02-12 20:06:31,060 - [INFO] - CyberSentinel - (tool_controller.py:83) - [b9407381-0b81-46d9-873a-39cc74cf9a10] Running tool: dir_discovery with params: {'target': 'https://globaliraq.iq/'}
+2026-02-12 20:06:31,061 - [INFO] - CyberSentinel - (dir_discovery.py:30) - Starting directory discovery on https://globaliraq.iq/
+2026-02-12 20:06:31,061 - [WARNING] - CyberSentinel - (dir_discovery.py:24) - Wordlist not found at /usr/share/wordlists/dirb/common.txt. Dir discovery may fail.
+2026-02-12 20:06:31,062 - [INFO] - CyberSentinel - (tool_controller.py:83) - [b9407381-0b81-46d9-873a-39cc74cf9a10] Running tool: gobuster_scan with params: {'target': 'https://globaliraq.iq/', 'wordlist': '/usr/share/wordlists/dirb/big.txt'}
+2026-02-12 20:06:31,062 - [INFO] - CyberSentinel - (gobuster_scanner.py:39) - Starting Gobuster scan on https://globaliraq.iq/ with wordlist /usr/share/wordlists/dirb/big.txt
+2026-02-12 20:06:31,063 - [INFO] - CyberSentinel - (subprocess_stream.py:18) - Starting streamed command: ['gobuster', 'dir', '-u', 'https://globaliraq.iq/', '-w', '/usr/share/wordlists/dirb/big.txt', '--no-progress', '-t', '20', '--random-user-agent', '-x', '.php,.html,.txt']
+2026-02-12 20:06:31,063 - [ERROR] - CyberSentinel - (subprocess_stream.py:37) - Error running streamed command '['gobuster', 'dir', '-u', 'https://globaliraq.iq/', '-w', '/usr/share/wordlists/dirb/big.txt', '--no-progress', '-t', '20', '--random-user-agent', '-x', '.php,.html,.txt']': cmd must be a string
+2026-02-12 20:06:31,063 - [INFO] - CyberSentinel - (gobuster_scanner.py:52) - Gobuster scan completed. Found 0 paths.
+2026-02-12 20:06:31,064 - [INFO] - CyberSentinel - (tool_controller.py:83) - [b9407381-0b81-46d9-873a-39cc74cf9a10] Running tool: sqlmap_scan with params: {'aggressive': True, 'target': 'https://globaliraq.iq/'}
+2026-02-12 20:06:31,066 - [INFO] - CyberSentinel - (sqlmap_scanner.py:55) - Starting SQLMap scan on https://globaliraq.iq/
+2026-02-12 20:06:31,067 - [INFO] - CyberSentinel - (subprocess_stream.py:18) - Starting streamed command: ['sqlmap', '-u', 'https://globaliraq.iq/', '--batch', '--output-dir', '/tmp/sqlmap_s5xnaklr', '--dump-format=JSON', '--level=1', '--risk=1', '--all', '--random-agent', '--threads=10']
+2026-02-12 20:06:31,067 - [ERROR] - CyberSentinel - (subprocess_stream.py:37) - Error running streamed command '['sqlmap', '-u', 'https://globaliraq.iq/', '--batch', '--output-dir', '/tmp/sqlmap_s5xnaklr', '--dump-format=JSON', '--level=1', '--risk=1', '--all', '--random-agent', '--threads=10']': cmd must be a string
+2026-02-12 20:06:31,067 - [WARNING] - CyberSentinel - (sqlmap_scanner.py:65) - SQLMap scan on https://globaliraq.iq/ finished, but no JSON output file was found.
+2026-02-12 20:06:31,068 - [INFO] - CyberSentinel - (tool_controller.py:83) - [b9407381-0b81-46d9-873a-39cc74cf9a10] Running tool: xsser_scan with params: {'aggressive': True, 'target': 'https://globaliraq.iq/'}
+2026-02-12 20:06:31,068 - [INFO] - CyberSentinel - (xss_scanner.py:47) - Starting XSSer scan on https://globaliraq.iq/
+2026-02-12 20:06:31,068 - [INFO] - CyberSentinel - (subprocess_stream.py:18) - Starting streamed command: ['xsser', '-u', 'https://globaliraq.iq/', '--no-head', '--Crawl', '--depth=4', '--Cw=2', '--XSS', '--DS']
+2026-02-12 20:06:31,068 - [ERROR] - CyberSentinel - (subprocess_stream.py:37) - Error running streamed command '['xsser', '-u', 'https://globaliraq.iq/', '--no-head', '--Crawl', '--depth=4', '--Cw=2', '--XSS', '--DS']': cmd must be a string
+2026-02-12 20:06:31,068 - [INFO] - CyberSentinel - (xss_scanner.py:59) - XSSer scan completed. Found 0 potential vulnerabilities.
+2026-02-12 20:06:31,069 - [INFO] - CyberSentinel - (tool_controller.py:83) - [b9407381-0b81-46d9-873a-39cc74cf9a10] Running tool: sql_injection_test with params: {'url': 'https://globaliraq.iq/'}
+2026-02-12 20:06:31,069 - [INFO] - CyberSentinel - (sql_tester.py:26) - Starting SQL injection test for https://globaliraq.iq/
+2026-02-12 20:06:31,630 - [INFO] - CyberSentinel - (sql_tester.py:34) - Found 33 forms on https://globaliraq.iq/
+2026-02-12 20:07:12,832 - [INFO] - CyberSentinel - (tool_controller.py:83) - [b9407381-0b81-46d9-873a-39cc74cf9a10] Running tool: xss_test with params: {'url': 'https://globaliraq.iq/'}
+2026-02-12 20:07:12,832 - [INFO] - CyberSentinel - (xss_tester.py:22) - Starting XSS test for https://globaliraq.iq/
+2026-02-12 20:07:13,292 - [INFO] - CyberSentinel - (xss_tester.py:35) - Found 33 forms to test for XSS on https://globaliraq.iq/
+2026-02-12 20:07:13,748 - [WARNING] - CyberSentinel - (xss_tester.py:106) - Reflected XSS detected in form input 'q' at https://globaliraq.iq/search
+2026-02-12 20:07:14,259 - [WARNING] - CyberSentinel - (xss_tester.py:106) - Reflected XSS detected in form input 'q' at https://globaliraq.iq/search
+2026-02-12 20:07:14,356 - [INFO] - CyberSentinel - (tool_controller.py:83) - [b9407381-0b81-46d9-873a-39cc74cf9a10] Running tool: vulnerability_analysis with params: {}
+2026-02-12 20:07:14,357 - [INFO] - CyberSentinel - (vuln_analyzer.py:26) - Starting vulnerability analysis based on service versions.
+2026-02-12 20:07:14,357 - [INFO] - CyberSentinel - (vuln_analyzer.py:52) - Vulnerability analysis finished. Found 0 potential issues.
+2026-02-12 20:07:14,359 - [INFO] - CyberSentinel - (tool_controller.py:116) - [b9407381-0b81-46d9-873a-39cc74cf9a10] Tool pipeline execution finished.
+2026-02-12 20:07:14,359 - [INFO] - CyberSentinel - (worker.py:47) - [b9407381-0b81-46d9-873a-39cc74cf9a10] Tool pipeline completed. Results count: 10
+2026-02-12 20:07:14,359 - [INFO] - CyberSentinel - (worker.py:66) - [b9407381-0b81-46d9-873a-39cc74cf9a10] Risk assessment complete. Score: 100 (Critical)
+2026-02-12 20:07:14,362 - [INFO] - CyberSentinel - (worker.py:86) - [b9407381-0b81-46d9-873a-39cc74cf9a10] Scan results saved to database.
+2026-02-12 20:07:14,363 - [INFO] - CyberSentinel - (json_exporter.py:18) - Generating JSON report for scan ID: b9407381-0b81-46d9-873a-39cc74cf9a10
+2026-02-12 20:07:14,363 - [INFO] - CyberSentinel - (pdf_generator.py:116) - Generating PDF report for scan ID: b9407381-0b81-46d9-873a-39cc74cf9a10
+2026-02-12 20:07:14,838 - [INFO] - CyberSentinel - (worker.py:110) - [b9407381-0b81-46d9-873a-39cc74cf9a10] Reports generated and saved.
+2026-02-12 20:07:14,854 - [INFO] - CyberSentinel - (worker.py:117) - [b9407381-0b81-46d9-873a-39cc74cf9a10] Scan processing finished and results saved.
+2026-02-12 20:08:03,511 - [INFO] - CyberSentinel - (main.py:24) - Shutting down CyberSentinel backend...
+2026-02-12 20:08:03,511 - [INFO] - CyberSentinel - (db_connect.py:39) - Closing database connection.
+2026-02-12 20:16:18,995 - [INFO] - CyberSentinel - (main.py:64) - Starting FastAPI server...
+2026-02-12 20:16:19,003 - [INFO] - CyberSentinel - (main.py:20) - Starting up CyberSentinel backend...
+2026-02-12 20:16:19,027 - [INFO] - CyberSentinel - (db_connect.py:29) - Initializing database and creating tables...
+2026-02-12 20:16:19,034 - [INFO] - CyberSentinel - (db_connect.py:33) - Database tables created successfully.
+2026-02-12 20:16:19,036 - [INFO] - CyberSentinel - (queue_manager.py:23) - Redis client connected successfully.
+2026-02-12 20:16:19,036 - [INFO] - CyberSentinel - (queue_manager.py:88) - Task queue initialized.
+2026-02-12 20:16:19,160 - [INFO] - CyberSentinel - (main.py:72) - Starting background worker...
+2026-02-12 20:16:19,177 - [INFO] - CyberSentinel - (queue_manager.py:23) - Redis client connected successfully.
+2026-02-12 20:16:19,178 - [INFO] - CyberSentinel - (queue_manager.py:88) - Task queue initialized.
+2026-02-12 20:16:19,178 - [INFO] - CyberSentinel - (worker.py:125) - Worker loop started. Waiting for tasks...
+2026-02-12 20:16:46,068 - [INFO] - CyberSentinel - (target_parser.py:57) - Resolved globaliraq.iq to 172.67.171.49
+2026-02-12 20:16:46,074 - [INFO] - CyberSentinel - (target_parser.py:57) - Resolved globaliraq.iq to 104.21.28.248
+2026-02-12 20:16:46,075 - [INFO] - CyberSentinel - (decision_engine.py:19) - Building tool pipeline for https://globaliraq.iq/ with tools: ['gobuster_scan']
+2026-02-12 20:16:46,075 - [INFO] - CyberSentinel - (decision_engine.py:33) - Tool pipeline built: ['gobuster_scan']
+2026-02-12 20:16:46,116 - [INFO] - CyberSentinel - (queue_manager.py:37) - Enqueued task: e7ff7de8-f324-4299-ab6e-5b6997f7d89d
+2026-02-12 20:16:46,116 - [INFO] - CyberSentinel - (routes_scan.py:81) - Scan e7ff7de8-f324-4299-ab6e-5b6997f7d89d for target 'https://globaliraq.iq/' has been queued.
+2026-02-12 20:16:49,208 - [INFO] - CyberSentinel - (queue_manager.py:53) - Dequeued task: e7ff7de8-f324-4299-ab6e-5b6997f7d89d
+2026-02-12 20:16:49,208 - [INFO] - CyberSentinel - (worker.py:28) - [e7ff7de8-f324-4299-ab6e-5b6997f7d89d] Starting processing for target: https://globaliraq.iq/, db_id: 15
+2026-02-12 20:16:49,248 - [INFO] - CyberSentinel - (worker.py:36) - [e7ff7de8-f324-4299-ab6e-5b6997f7d89d] Scan record found. Current status: queued
+2026-02-12 20:16:49,264 - [INFO] - CyberSentinel - (tool_controller.py:63) - [e7ff7de8-f324-4299-ab6e-5b6997f7d89d] Starting tool pipeline execution with timeout 3600s.
+2026-02-12 20:16:49,267 - [INFO] - CyberSentinel - (tool_controller.py:83) - [e7ff7de8-f324-4299-ab6e-5b6997f7d89d] Running tool: gobuster_scan with params: {'target': 'https://globaliraq.iq/', 'wordlist': '/usr/share/wordlists/dirb/big.txt'}
+2026-02-12 20:16:49,268 - [INFO] - CyberSentinel - (gobuster_scanner.py:39) - Starting Gobuster scan on https://globaliraq.iq/ with wordlist /usr/share/wordlists/dirb/big.txt
+2026-02-12 20:16:49,268 - [INFO] - CyberSentinel - (subprocess_stream.py:18) - Starting streamed command: ['gobuster', 'dir', '-u', 'https://globaliraq.iq/', '-w', '/usr/share/wordlists/dirb/big.txt', '--no-progress', '-t', '20', '--random-user-agent', '-x', '.php,.html,.txt']
+2026-02-12 20:16:49,296 - [INFO] - CyberSentinel - (gobuster_scanner.py:52) - Gobuster scan completed. Found 0 paths.
+2026-02-12 20:16:49,297 - [INFO] - CyberSentinel - (tool_controller.py:116) - [e7ff7de8-f324-4299-ab6e-5b6997f7d89d] Tool pipeline execution finished.
+2026-02-12 20:16:49,298 - [INFO] - CyberSentinel - (worker.py:47) - [e7ff7de8-f324-4299-ab6e-5b6997f7d89d] Tool pipeline completed. Results count: 1
+2026-02-12 20:16:49,298 - [INFO] - CyberSentinel - (worker.py:66) - [e7ff7de8-f324-4299-ab6e-5b6997f7d89d] Risk assessment complete. Score: 0 (Low)
+2026-02-12 20:16:49,299 - [INFO] - CyberSentinel - (worker.py:86) - [e7ff7de8-f324-4299-ab6e-5b6997f7d89d] Scan results saved to database.
+2026-02-12 20:16:49,299 - [INFO] - CyberSentinel - (json_exporter.py:18) - Generating JSON report for scan ID: e7ff7de8-f324-4299-ab6e-5b6997f7d89d
+2026-02-12 20:16:49,299 - [INFO] - CyberSentinel - (pdf_generator.py:116) - Generating PDF report for scan ID: e7ff7de8-f324-4299-ab6e-5b6997f7d89d
+2026-02-12 20:16:49,424 - [INFO] - CyberSentinel - (worker.py:110) - [e7ff7de8-f324-4299-ab6e-5b6997f7d89d] Reports generated and saved.
+2026-02-12 20:16:49,443 - [INFO] - CyberSentinel - (worker.py:117) - [e7ff7de8-f324-4299-ab6e-5b6997f7d89d] Scan processing finished and results saved.
+2026-02-12 20:21:50,492 - [INFO] - CyberSentinel - (target_parser.py:57) - Resolved nl3b.online to 89.116.22.196
+2026-02-12 20:21:50,498 - [INFO] - CyberSentinel - (target_parser.py:57) - Resolved nl3b.online to 89.116.22.196
+2026-02-12 20:21:50,499 - [INFO] - CyberSentinel - (decision_engine.py:19) - Building tool pipeline for https://nl3b.online with tools: ['gobuster_scan']
+2026-02-12 20:21:50,499 - [INFO] - CyberSentinel - (decision_engine.py:33) - Tool pipeline built: ['gobuster_scan']
+2026-02-12 20:21:50,519 - [INFO] - CyberSentinel - (queue_manager.py:37) - Enqueued task: f36a4d44-9bd8-436e-a968-b6a6c5f5a42e
+2026-02-12 20:21:50,519 - [INFO] - CyberSentinel - (routes_scan.py:81) - Scan f36a4d44-9bd8-436e-a968-b6a6c5f5a42e for target 'https://nl3b.online' has been queued.
+2026-02-12 20:21:54,769 - [INFO] - CyberSentinel - (queue_manager.py:53) - Dequeued task: f36a4d44-9bd8-436e-a968-b6a6c5f5a42e
+2026-02-12 20:21:54,769 - [INFO] - CyberSentinel - (worker.py:28) - [f36a4d44-9bd8-436e-a968-b6a6c5f5a42e] Starting processing for target: https://nl3b.online, db_id: 16
+2026-02-12 20:21:54,773 - [INFO] - CyberSentinel - (worker.py:36) - [f36a4d44-9bd8-436e-a968-b6a6c5f5a42e] Scan record found. Current status: queued
+2026-02-12 20:21:54,790 - [INFO] - CyberSentinel - (tool_controller.py:63) - [f36a4d44-9bd8-436e-a968-b6a6c5f5a42e] Starting tool pipeline execution with timeout 3600s.
+2026-02-12 20:21:54,791 - [INFO] - CyberSentinel - (tool_controller.py:83) - [f36a4d44-9bd8-436e-a968-b6a6c5f5a42e] Running tool: gobuster_scan with params: {'target': 'https://nl3b.online', 'wordlist': '/usr/share/wordlists/dirb/big.txt'}
+2026-02-12 20:21:54,792 - [INFO] - CyberSentinel - (gobuster_scanner.py:39) - Starting Gobuster scan on https://nl3b.online with wordlist /usr/share/wordlists/dirb/big.txt
+2026-02-12 20:21:54,792 - [INFO] - CyberSentinel - (subprocess_stream.py:18) - Starting streamed command: ['gobuster', 'dir', '-u', 'https://nl3b.online', '-w', '/usr/share/wordlists/dirb/big.txt', '--no-progress', '-t', '20', '--random-user-agent', '-x', '.php,.html,.txt']
+2026-02-12 20:21:54,798 - [INFO] - CyberSentinel - (gobuster_scanner.py:52) - Gobuster scan completed. Found 0 paths.
+2026-02-12 20:21:54,799 - [INFO] - CyberSentinel - (tool_controller.py:116) - [f36a4d44-9bd8-436e-a968-b6a6c5f5a42e] Tool pipeline execution finished.
+2026-02-12 20:21:54,800 - [INFO] - CyberSentinel - (worker.py:47) - [f36a4d44-9bd8-436e-a968-b6a6c5f5a42e] Tool pipeline completed. Results count: 1
+2026-02-12 20:21:54,800 - [INFO] - CyberSentinel - (worker.py:66) - [f36a4d44-9bd8-436e-a968-b6a6c5f5a42e] Risk assessment complete. Score: 0 (Low)
+2026-02-12 20:21:54,801 - [INFO] - CyberSentinel - (worker.py:86) - [f36a4d44-9bd8-436e-a968-b6a6c5f5a42e] Scan results saved to database.
+2026-02-12 20:21:54,801 - [INFO] - CyberSentinel - (json_exporter.py:18) - Generating JSON report for scan ID: f36a4d44-9bd8-436e-a968-b6a6c5f5a42e
+2026-02-12 20:21:54,802 - [INFO] - CyberSentinel - (pdf_generator.py:116) - Generating PDF report for scan ID: f36a4d44-9bd8-436e-a968-b6a6c5f5a42e
+2026-02-12 20:21:54,892 - [INFO] - CyberSentinel - (worker.py:110) - [f36a4d44-9bd8-436e-a968-b6a6c5f5a42e] Reports generated and saved.
+2026-02-12 20:21:54,901 - [INFO] - CyberSentinel - (worker.py:117) - [f36a4d44-9bd8-436e-a968-b6a6c5f5a42e] Scan processing finished and results saved.
+2026-02-12 20:23:08,048 - [INFO] - CyberSentinel - (main.py:24) - Shutting down CyberSentinel backend...
+2026-02-12 20:23:08,048 - [INFO] - CyberSentinel - (db_connect.py:39) - Closing database connection.
+2026-02-12 20:45:23,766 - [INFO] - CyberSentinel - (main.py:64) - Starting FastAPI server...
+2026-02-12 20:45:23,774 - [INFO] - CyberSentinel - (main.py:20) - Starting up CyberSentinel backend...
+2026-02-12 20:45:23,798 - [INFO] - CyberSentinel - (db_connect.py:29) - Initializing database and creating tables...
+2026-02-12 20:45:23,804 - [INFO] - CyberSentinel - (db_connect.py:33) - Database tables created successfully.
+2026-02-12 20:45:23,805 - [INFO] - CyberSentinel - (queue_manager.py:23) - Redis client connected successfully.
+2026-02-12 20:45:23,805 - [INFO] - CyberSentinel - (queue_manager.py:88) - Task queue initialized.
+2026-02-12 20:45:23,934 - [INFO] - CyberSentinel - (main.py:72) - Starting background worker...
+2026-02-12 20:45:23,951 - [INFO] - CyberSentinel - (queue_manager.py:23) - Redis client connected successfully.
+2026-02-12 20:45:23,952 - [INFO] - CyberSentinel - (queue_manager.py:88) - Task queue initialized.
+2026-02-12 20:45:23,952 - [INFO] - CyberSentinel - (worker.py:125) - Worker loop started. Waiting for tasks...
+2026-02-12 20:45:29,967 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 20:45:46,568 - [INFO] - CyberSentinel - (target_parser.py:57) - Resolved globaliraq.iq to 104.21.28.248
+2026-02-12 20:45:46,574 - [INFO] - CyberSentinel - (target_parser.py:57) - Resolved globaliraq.iq to 172.67.171.49
+2026-02-12 20:45:46,574 - [INFO] - CyberSentinel - (decision_engine.py:19) - Building tool pipeline for https://globaliraq.iq/ with tools: ['gobuster_scan']
+2026-02-12 20:45:46,575 - [INFO] - CyberSentinel - (decision_engine.py:33) - Tool pipeline built: ['gobuster_scan']
+2026-02-12 20:45:46,602 - [INFO] - CyberSentinel - (queue_manager.py:37) - Enqueued task: 461114d3-015b-4835-8726-9eb17a7724a9
+2026-02-12 20:45:46,603 - [INFO] - CyberSentinel - (routes_scan.py:81) - Scan 461114d3-015b-4835-8726-9eb17a7724a9 for target 'https://globaliraq.iq/' has been queued.
+2026-02-12 20:45:48,980 - [INFO] - CyberSentinel - (queue_manager.py:53) - Dequeued task: 461114d3-015b-4835-8726-9eb17a7724a9
+2026-02-12 20:45:48,980 - [INFO] - CyberSentinel - (worker.py:28) - [461114d3-015b-4835-8726-9eb17a7724a9] Starting processing for target: https://globaliraq.iq/, db_id: 17
+2026-02-12 20:45:49,028 - [INFO] - CyberSentinel - (worker.py:36) - [461114d3-015b-4835-8726-9eb17a7724a9] Scan record found. Current status: queued
+2026-02-12 20:45:49,047 - [INFO] - CyberSentinel - (tool_controller.py:63) - [461114d3-015b-4835-8726-9eb17a7724a9] Starting tool pipeline execution with timeout 3600s.
+2026-02-12 20:45:49,050 - [INFO] - CyberSentinel - (tool_controller.py:83) - [461114d3-015b-4835-8726-9eb17a7724a9] Running tool: gobuster_scan with params: {'target': 'https://globaliraq.iq/', 'wordlist': '/usr/share/wordlists/dirb/big.txt'}
+2026-02-12 20:45:49,050 - [ERROR] - CyberSentinel - (tool_controller.py:107) - [461114d3-015b-4835-8726-9eb17a7724a9] Error running tool 'gobuster_scan': Gobuster executable not found at: gobuster
+Traceback (most recent call last):
+  File "/app/tools/tool_controller.py", line 92, in run_pipeline
+    result_data = await self.tool_functions[tool_name](**params_with_scan_id)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/tools/tool_controller.py", line 146, in _run_gobuster
+    return await gobuster_scanner.run_gobuster_scan(target, scan_id, wordlist)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/scanners/gobuster_scanner.py", line 149, in run_gobuster_scan
+    scanner = GobusterScanner(target, wordlist, scan_id=scan_id)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/scanners/gobuster_scanner.py", line 19, in __init__
+    validate_tool_path(settings.GOBUSTER_PATH, "Gobuster")
+  File "/app/utils/helpers.py", line 35, in validate_tool_path
+    raise FileNotFoundError(f"{tool_name} executable not found at: {tool_path}")
+FileNotFoundError: Gobuster executable not found at: gobuster
+2026-02-12 20:45:49,053 - [INFO] - CyberSentinel - (tool_controller.py:116) - [461114d3-015b-4835-8726-9eb17a7724a9] Tool pipeline execution finished.
+2026-02-12 20:45:49,053 - [INFO] - CyberSentinel - (worker.py:47) - [461114d3-015b-4835-8726-9eb17a7724a9] Tool pipeline completed. Results count: 1
+2026-02-12 20:45:49,053 - [INFO] - CyberSentinel - (worker.py:66) - [461114d3-015b-4835-8726-9eb17a7724a9] Risk assessment complete. Score: 0 (Low)
+2026-02-12 20:45:49,054 - [INFO] - CyberSentinel - (worker.py:86) - [461114d3-015b-4835-8726-9eb17a7724a9] Scan results saved to database.
+2026-02-12 20:45:49,054 - [INFO] - CyberSentinel - (json_exporter.py:18) - Generating JSON report for scan ID: 461114d3-015b-4835-8726-9eb17a7724a9
+2026-02-12 20:45:49,055 - [INFO] - CyberSentinel - (pdf_generator.py:116) - Generating PDF report for scan ID: 461114d3-015b-4835-8726-9eb17a7724a9
+2026-02-12 20:45:49,173 - [INFO] - CyberSentinel - (worker.py:110) - [461114d3-015b-4835-8726-9eb17a7724a9] Reports generated and saved.
+2026-02-12 20:45:49,192 - [INFO] - CyberSentinel - (worker.py:117) - [461114d3-015b-4835-8726-9eb17a7724a9] Scan processing finished and results saved.
+2026-02-12 20:46:33,500 - [INFO] - CyberSentinel - (main.py:24) - Shutting down CyberSentinel backend...
+2026-02-12 20:46:33,500 - [INFO] - CyberSentinel - (db_connect.py:39) - Closing database connection.
+2026-02-12 21:22:46,098 - [INFO] - CyberSentinel - (main.py:64) - Starting FastAPI server...
+2026-02-12 21:22:46,106 - [INFO] - CyberSentinel - (main.py:20) - Starting up CyberSentinel backend...
+2026-02-12 21:22:46,135 - [INFO] - CyberSentinel - (db_connect.py:29) - Initializing database and creating tables...
+2026-02-12 21:22:46,160 - [INFO] - CyberSentinel - (db_connect.py:33) - Database tables created successfully.
+2026-02-12 21:22:46,162 - [INFO] - CyberSentinel - (queue_manager.py:23) - Redis client connected successfully.
+2026-02-12 21:22:46,162 - [INFO] - CyberSentinel - (queue_manager.py:88) - Task queue initialized.
+2026-02-12 21:22:46,327 - [INFO] - CyberSentinel - (main.py:72) - Starting background worker...
+2026-02-12 21:22:46,345 - [INFO] - CyberSentinel - (queue_manager.py:23) - Redis client connected successfully.
+2026-02-12 21:22:46,345 - [INFO] - CyberSentinel - (queue_manager.py:88) - Task queue initialized.
+2026-02-12 21:22:46,345 - [INFO] - CyberSentinel - (worker.py:125) - Worker loop started. Waiting for tasks...
+2026-02-12 21:25:14,544 - [INFO] - CyberSentinel - (main.py:24) - Shutting down CyberSentinel backend...
+2026-02-12 21:25:14,544 - [INFO] - CyberSentinel - (db_connect.py:39) - Closing database connection.
+2026-02-12 21:26:27,302 - [INFO] - CyberSentinel - (main.py:64) - Starting FastAPI server...
+2026-02-12 21:26:27,310 - [INFO] - CyberSentinel - (main.py:20) - Starting up CyberSentinel backend...
+2026-02-12 21:26:27,333 - [INFO] - CyberSentinel - (db_connect.py:29) - Initializing database and creating tables...
+2026-02-12 21:26:27,341 - [INFO] - CyberSentinel - (db_connect.py:33) - Database tables created successfully.
+2026-02-12 21:26:27,343 - [INFO] - CyberSentinel - (queue_manager.py:23) - Redis client connected successfully.
+2026-02-12 21:26:27,343 - [INFO] - CyberSentinel - (queue_manager.py:88) - Task queue initialized.
+2026-02-12 21:26:27,491 - [INFO] - CyberSentinel - (main.py:72) - Starting background worker...
+2026-02-12 21:26:27,493 - [INFO] - CyberSentinel - (queue_manager.py:23) - Redis client connected successfully.
+2026-02-12 21:26:27,493 - [INFO] - CyberSentinel - (queue_manager.py:88) - Task queue initialized.
+2026-02-12 21:26:27,493 - [INFO] - CyberSentinel - (worker.py:125) - Worker loop started. Waiting for tasks...
+2026-02-12 21:27:48,254 - [INFO] - CyberSentinel - (main.py:24) - Shutting down CyberSentinel backend...
+2026-02-12 21:27:48,254 - [INFO] - CyberSentinel - (db_connect.py:39) - Closing database connection.
+2026-02-12 21:29:34,800 - [INFO] - CyberSentinel - (main.py:64) - Starting FastAPI server...
+2026-02-12 21:29:34,808 - [INFO] - CyberSentinel - (main.py:20) - Starting up CyberSentinel backend...
+2026-02-12 21:29:34,836 - [INFO] - CyberSentinel - (db_connect.py:29) - Initializing database and creating tables...
+2026-02-12 21:29:34,842 - [INFO] - CyberSentinel - (db_connect.py:33) - Database tables created successfully.
+2026-02-12 21:29:34,844 - [INFO] - CyberSentinel - (queue_manager.py:23) - Redis client connected successfully.
+2026-02-12 21:29:34,844 - [INFO] - CyberSentinel - (queue_manager.py:88) - Task queue initialized.
+2026-02-12 21:29:34,966 - [INFO] - CyberSentinel - (main.py:72) - Starting background worker...
+2026-02-12 21:29:34,984 - [INFO] - CyberSentinel - (queue_manager.py:23) - Redis client connected successfully.
+2026-02-12 21:29:34,984 - [INFO] - CyberSentinel - (queue_manager.py:88) - Task queue initialized.
+2026-02-12 21:29:34,984 - [INFO] - CyberSentinel - (worker.py:125) - Worker loop started. Waiting for tasks...
+2026-02-12 21:29:45,025 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 21:29:51,037 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 21:30:01,364 - [INFO] - CyberSentinel - (target_parser.py:57) - Resolved globaliraq.iq to 172.67.171.49
+2026-02-12 21:30:01,371 - [INFO] - CyberSentinel - (target_parser.py:57) - Resolved globaliraq.iq to 104.21.28.248
+2026-02-12 21:30:01,372 - [INFO] - CyberSentinel - (decision_engine.py:19) - Building tool pipeline for https://globaliraq.iq/ with tools: ['gobuster_scan']
+2026-02-12 21:30:01,372 - [INFO] - CyberSentinel - (decision_engine.py:33) - Tool pipeline built: ['gobuster_scan']
+2026-02-12 21:30:01,401 - [INFO] - CyberSentinel - (queue_manager.py:37) - Enqueued task: 9ce2980e-9325-4b07-8845-044d4bb8dfb8
+2026-02-12 21:30:01,401 - [INFO] - CyberSentinel - (routes_scan.py:81) - Scan 9ce2980e-9325-4b07-8845-044d4bb8dfb8 for target 'https://globaliraq.iq/' has been queued.
+2026-02-12 21:30:05,008 - [INFO] - CyberSentinel - (queue_manager.py:53) - Dequeued task: 9ce2980e-9325-4b07-8845-044d4bb8dfb8
+2026-02-12 21:30:05,008 - [INFO] - CyberSentinel - (worker.py:28) - [9ce2980e-9325-4b07-8845-044d4bb8dfb8] Starting processing for target: https://globaliraq.iq/, db_id: 1
+2026-02-12 21:30:05,063 - [INFO] - CyberSentinel - (worker.py:36) - [9ce2980e-9325-4b07-8845-044d4bb8dfb8] Scan record found. Current status: queued
+2026-02-12 21:30:05,068 - [INFO] - CyberSentinel - (tool_controller.py:63) - [9ce2980e-9325-4b07-8845-044d4bb8dfb8] Starting tool pipeline execution with timeout 3600s.
+2026-02-12 21:30:05,069 - [INFO] - CyberSentinel - (tool_controller.py:83) - [9ce2980e-9325-4b07-8845-044d4bb8dfb8] Running tool: gobuster_scan with params: {'target': 'https://globaliraq.iq/', 'wordlist': '/usr/share/wordlists/dirb/big.txt'}
+2026-02-12 21:30:05,069 - [ERROR] - CyberSentinel - (tool_controller.py:107) - [9ce2980e-9325-4b07-8845-044d4bb8dfb8] Error running tool 'gobuster_scan': Gobuster executable not found at: gobuster
+Traceback (most recent call last):
+  File "/app/tools/tool_controller.py", line 92, in run_pipeline
+    result_data = await self.tool_functions[tool_name](**params_with_scan_id)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/tools/tool_controller.py", line 146, in _run_gobuster
+    return await gobuster_scanner.run_gobuster_scan(target, scan_id, wordlist)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/scanners/gobuster_scanner.py", line 149, in run_gobuster_scan
+    scanner = GobusterScanner(target, wordlist, scan_id=scan_id)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/scanners/gobuster_scanner.py", line 19, in __init__
+    validate_tool_path(settings.GOBUSTER_PATH, "Gobuster")
+  File "/app/utils/helpers.py", line 35, in validate_tool_path
+    raise FileNotFoundError(f"{tool_name} executable not found at: {tool_path}")
+FileNotFoundError: Gobuster executable not found at: gobuster
+2026-02-12 21:30:05,070 - [INFO] - CyberSentinel - (tool_controller.py:116) - [9ce2980e-9325-4b07-8845-044d4bb8dfb8] Tool pipeline execution finished.
+2026-02-12 21:30:05,070 - [INFO] - CyberSentinel - (worker.py:47) - [9ce2980e-9325-4b07-8845-044d4bb8dfb8] Tool pipeline completed. Results count: 1
+2026-02-12 21:30:05,070 - [INFO] - CyberSentinel - (worker.py:66) - [9ce2980e-9325-4b07-8845-044d4bb8dfb8] Risk assessment complete. Score: 0 (Low)
+2026-02-12 21:30:05,071 - [INFO] - CyberSentinel - (worker.py:86) - [9ce2980e-9325-4b07-8845-044d4bb8dfb8] Scan results saved to database.
+2026-02-12 21:30:05,071 - [INFO] - CyberSentinel - (json_exporter.py:18) - Generating JSON report for scan ID: 9ce2980e-9325-4b07-8845-044d4bb8dfb8
+2026-02-12 21:30:05,071 - [INFO] - CyberSentinel - (pdf_generator.py:116) - Generating PDF report for scan ID: 9ce2980e-9325-4b07-8845-044d4bb8dfb8
+2026-02-12 21:30:05,184 - [INFO] - CyberSentinel - (worker.py:110) - [9ce2980e-9325-4b07-8845-044d4bb8dfb8] Reports generated and saved.
+2026-02-12 21:30:05,203 - [INFO] - CyberSentinel - (worker.py:117) - [9ce2980e-9325-4b07-8845-044d4bb8dfb8] Scan processing finished and results saved.
+2026-02-12 21:30:22,052 - [INFO] - CyberSentinel - (main.py:24) - Shutting down CyberSentinel backend...
+2026-02-12 21:30:22,053 - [INFO] - CyberSentinel - (db_connect.py:39) - Closing database connection.
+2026-02-12 21:45:49,050 - [INFO] - CyberSentinel - (main.py:64) - Starting FastAPI server...
+2026-02-12 21:45:49,057 - [INFO] - CyberSentinel - (main.py:20) - Starting up CyberSentinel backend...
+2026-02-12 21:45:49,086 - [INFO] - CyberSentinel - (db_connect.py:29) - Initializing database and creating tables...
+2026-02-12 21:45:49,092 - [INFO] - CyberSentinel - (db_connect.py:33) - Database tables created successfully.
+2026-02-12 21:45:49,094 - [INFO] - CyberSentinel - (queue_manager.py:23) - Redis client connected successfully.
+2026-02-12 21:45:49,094 - [INFO] - CyberSentinel - (queue_manager.py:88) - Task queue initialized.
+2026-02-12 21:45:49,306 - [INFO] - CyberSentinel - (main.py:72) - Starting background worker...
+2026-02-12 21:45:49,323 - [INFO] - CyberSentinel - (queue_manager.py:23) - Redis client connected successfully.
+2026-02-12 21:45:49,323 - [INFO] - CyberSentinel - (queue_manager.py:88) - Task queue initialized.
+2026-02-12 21:45:49,323 - [INFO] - CyberSentinel - (worker.py:125) - Worker loop started. Waiting for tasks...
+2026-02-12 21:45:53,993 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 21:46:07,931 - [INFO] - CyberSentinel - (target_parser.py:57) - Resolved globaliraq.iq to 172.67.171.49
+2026-02-12 21:46:07,937 - [INFO] - CyberSentinel - (target_parser.py:57) - Resolved globaliraq.iq to 104.21.28.248
+2026-02-12 21:46:07,938 - [INFO] - CyberSentinel - (decision_engine.py:19) - Building tool pipeline for https://globaliraq.iq/ with tools: ['gobuster_scan']
+2026-02-12 21:46:07,939 - [INFO] - CyberSentinel - (decision_engine.py:33) - Tool pipeline built: ['gobuster_scan']
+2026-02-12 21:46:07,958 - [INFO] - CyberSentinel - (queue_manager.py:37) - Enqueued task: a223d195-a171-43ec-999c-b5c599f0eb5d
+2026-02-12 21:46:07,958 - [INFO] - CyberSentinel - (routes_scan.py:81) - Scan a223d195-a171-43ec-999c-b5c599f0eb5d for target 'https://globaliraq.iq/' has been queued.
+2026-02-12 21:46:09,342 - [INFO] - CyberSentinel - (queue_manager.py:53) - Dequeued task: a223d195-a171-43ec-999c-b5c599f0eb5d
+2026-02-12 21:46:09,342 - [INFO] - CyberSentinel - (worker.py:28) - [a223d195-a171-43ec-999c-b5c599f0eb5d] Starting processing for target: https://globaliraq.iq/, db_id: 2
+2026-02-12 21:46:09,407 - [INFO] - CyberSentinel - (worker.py:36) - [a223d195-a171-43ec-999c-b5c599f0eb5d] Scan record found. Current status: queued
+2026-02-12 21:46:09,427 - [INFO] - CyberSentinel - (tool_controller.py:63) - [a223d195-a171-43ec-999c-b5c599f0eb5d] Starting tool pipeline execution with timeout 3600s.
+2026-02-12 21:46:09,429 - [INFO] - CyberSentinel - (tool_controller.py:83) - [a223d195-a171-43ec-999c-b5c599f0eb5d] Running tool: gobuster_scan with params: {'target': 'https://globaliraq.iq/', 'wordlist': '/usr/share/wordlists/dirb/big.txt'}
+2026-02-12 21:46:09,429 - [ERROR] - CyberSentinel - (tool_controller.py:107) - [a223d195-a171-43ec-999c-b5c599f0eb5d] Error running tool 'gobuster_scan': module 'scanners.gobuster_scanner' has no attribute 'run_gobuster_scan'
+Traceback (most recent call last):
+  File "/app/tools/tool_controller.py", line 92, in run_pipeline
+    result_data = await self.tool_functions[tool_name](**params_with_scan_id)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/tools/tool_controller.py", line 146, in _run_gobuster
+    return await gobuster_scanner.run_gobuster_scan(target, scan_id, wordlist)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'scanners.gobuster_scanner' has no attribute 'run_gobuster_scan'
+2026-02-12 21:46:09,429 - [INFO] - CyberSentinel - (tool_controller.py:116) - [a223d195-a171-43ec-999c-b5c599f0eb5d] Tool pipeline execution finished.
+2026-02-12 21:46:09,430 - [INFO] - CyberSentinel - (worker.py:47) - [a223d195-a171-43ec-999c-b5c599f0eb5d] Tool pipeline completed. Results count: 1
+2026-02-12 21:46:09,430 - [INFO] - CyberSentinel - (worker.py:66) - [a223d195-a171-43ec-999c-b5c599f0eb5d] Risk assessment complete. Score: 0 (Low)
+2026-02-12 21:46:09,430 - [INFO] - CyberSentinel - (worker.py:86) - [a223d195-a171-43ec-999c-b5c599f0eb5d] Scan results saved to database.
+2026-02-12 21:46:09,430 - [INFO] - CyberSentinel - (json_exporter.py:18) - Generating JSON report for scan ID: a223d195-a171-43ec-999c-b5c599f0eb5d
+2026-02-12 21:46:09,430 - [INFO] - CyberSentinel - (pdf_generator.py:116) - Generating PDF report for scan ID: a223d195-a171-43ec-999c-b5c599f0eb5d
+2026-02-12 21:46:09,530 - [INFO] - CyberSentinel - (worker.py:110) - [a223d195-a171-43ec-999c-b5c599f0eb5d] Reports generated and saved.
+2026-02-12 21:46:09,549 - [INFO] - CyberSentinel - (worker.py:117) - [a223d195-a171-43ec-999c-b5c599f0eb5d] Scan processing finished and results saved.
+2026-02-12 21:47:52,067 - [INFO] - CyberSentinel - (main.py:24) - Shutting down CyberSentinel backend...
+2026-02-12 21:47:52,067 - [INFO] - CyberSentinel - (db_connect.py:39) - Closing database connection.
+2026-02-12 21:52:00,780 - [INFO] - CyberSentinel - (main.py:64) - Starting FastAPI server...
+2026-02-12 21:52:00,787 - [INFO] - CyberSentinel - (main.py:20) - Starting up CyberSentinel backend...
+2026-02-12 21:52:00,813 - [INFO] - CyberSentinel - (db_connect.py:29) - Initializing database and creating tables...
+2026-02-12 21:52:00,819 - [INFO] - CyberSentinel - (db_connect.py:33) - Database tables created successfully.
+2026-02-12 21:52:00,820 - [INFO] - CyberSentinel - (queue_manager.py:23) - Redis client connected successfully.
+2026-02-12 21:52:00,820 - [INFO] - CyberSentinel - (queue_manager.py:88) - Task queue initialized.
+2026-02-12 21:52:00,905 - [INFO] - CyberSentinel - (main.py:72) - Starting background worker...
+2026-02-12 21:52:00,922 - [INFO] - CyberSentinel - (queue_manager.py:23) - Redis client connected successfully.
+2026-02-12 21:52:00,922 - [INFO] - CyberSentinel - (queue_manager.py:88) - Task queue initialized.
+2026-02-12 21:52:00,922 - [INFO] - CyberSentinel - (worker.py:125) - Worker loop started. Waiting for tasks...
+2026-02-12 21:52:35,016 - [INFO] - CyberSentinel - (target_parser.py:57) - Resolved nl3b.online to 89.116.22.196
+2026-02-12 21:52:35,022 - [INFO] - CyberSentinel - (target_parser.py:57) - Resolved nl3b.online to 89.116.22.196
+2026-02-12 21:52:35,023 - [INFO] - CyberSentinel - (decision_engine.py:19) - Building tool pipeline for https://nl3b.online/ with tools: ['gobuster_scan']
+2026-02-12 21:52:35,023 - [INFO] - CyberSentinel - (decision_engine.py:33) - Tool pipeline built: ['gobuster_scan']
+2026-02-12 21:52:35,040 - [INFO] - CyberSentinel - (queue_manager.py:37) - Enqueued task: c951cabe-35ff-4f27-ad00-6a264fb8b92a
+2026-02-12 21:52:35,040 - [INFO] - CyberSentinel - (routes_scan.py:81) - Scan c951cabe-35ff-4f27-ad00-6a264fb8b92a for target 'https://nl3b.online/' has been queued.
+2026-02-12 21:52:35,959 - [INFO] - CyberSentinel - (queue_manager.py:53) - Dequeued task: c951cabe-35ff-4f27-ad00-6a264fb8b92a
+2026-02-12 21:52:35,959 - [INFO] - CyberSentinel - (worker.py:28) - [c951cabe-35ff-4f27-ad00-6a264fb8b92a] Starting processing for target: https://nl3b.online/, db_id: 3
+2026-02-12 21:52:36,007 - [INFO] - CyberSentinel - (worker.py:36) - [c951cabe-35ff-4f27-ad00-6a264fb8b92a] Scan record found. Current status: queued
+2026-02-12 21:52:36,011 - [INFO] - CyberSentinel - (tool_controller.py:63) - [c951cabe-35ff-4f27-ad00-6a264fb8b92a] Starting tool pipeline execution with timeout 3600s.
+2026-02-12 21:52:36,012 - [INFO] - CyberSentinel - (tool_controller.py:83) - [c951cabe-35ff-4f27-ad00-6a264fb8b92a] Running tool: gobuster_scan with params: {'target': 'https://nl3b.online/', 'wordlist': '/usr/share/wordlists/dirb/big.txt'}
+2026-02-12 21:52:36,013 - [INFO] - CyberSentinel - (gobuster_scanner.py:44) - Starting Gobuster scan on https://nl3b.online/ with wordlist /usr/share/wordlists/dirb/big.txt
+2026-02-12 21:52:36,013 - [INFO] - CyberSentinel - (subprocess_stream.py:18) - Starting streamed command: gobuster dir -u https://nl3b.online/ -w /usr/share/wordlists/dirb/big.txt --no-progress -t 20 --random-agent -x .php,.html,.txt
+2026-02-12 21:52:36,017 - [INFO] - CyberSentinel - (gobuster_scanner.py:57) - Gobuster scan completed. Found 0 paths.
+2026-02-12 21:52:36,017 - [INFO] - CyberSentinel - (tool_controller.py:116) - [c951cabe-35ff-4f27-ad00-6a264fb8b92a] Tool pipeline execution finished.
+2026-02-12 21:52:36,017 - [INFO] - CyberSentinel - (worker.py:47) - [c951cabe-35ff-4f27-ad00-6a264fb8b92a] Tool pipeline completed. Results count: 1
+2026-02-12 21:52:36,017 - [INFO] - CyberSentinel - (worker.py:66) - [c951cabe-35ff-4f27-ad00-6a264fb8b92a] Risk assessment complete. Score: 0 (Low)
+2026-02-12 21:52:36,018 - [INFO] - CyberSentinel - (worker.py:86) - [c951cabe-35ff-4f27-ad00-6a264fb8b92a] Scan results saved to database.
+2026-02-12 21:52:36,018 - [INFO] - CyberSentinel - (json_exporter.py:18) - Generating JSON report for scan ID: c951cabe-35ff-4f27-ad00-6a264fb8b92a
+2026-02-12 21:52:36,018 - [INFO] - CyberSentinel - (pdf_generator.py:116) - Generating PDF report for scan ID: c951cabe-35ff-4f27-ad00-6a264fb8b92a
+2026-02-12 21:52:36,136 - [INFO] - CyberSentinel - (worker.py:110) - [c951cabe-35ff-4f27-ad00-6a264fb8b92a] Reports generated and saved.
+2026-02-12 21:52:36,154 - [INFO] - CyberSentinel - (worker.py:117) - [c951cabe-35ff-4f27-ad00-6a264fb8b92a] Scan processing finished and results saved.
+2026-02-12 21:58:01,987 - [INFO] - CyberSentinel - (target_parser.py:57) - Resolved globaliraq.iq to 104.21.28.248
+2026-02-12 21:58:01,992 - [INFO] - CyberSentinel - (target_parser.py:57) - Resolved globaliraq.iq to 172.67.171.49
+2026-02-12 21:58:01,993 - [INFO] - CyberSentinel - (decision_engine.py:19) - Building tool pipeline for https://globaliraq.iq/ with tools: ['gobuster_scan']
+2026-02-12 21:58:01,994 - [INFO] - CyberSentinel - (decision_engine.py:33) - Tool pipeline built: ['gobuster_scan']
+2026-02-12 21:58:02,002 - [INFO] - CyberSentinel - (queue_manager.py:37) - Enqueued task: 1472f64e-18c9-44f7-b4ba-b5c556defdce
+2026-02-12 21:58:02,002 - [INFO] - CyberSentinel - (routes_scan.py:81) - Scan 1472f64e-18c9-44f7-b4ba-b5c556defdce for target 'https://globaliraq.iq/' has been queued.
+2026-02-12 21:58:06,476 - [INFO] - CyberSentinel - (queue_manager.py:53) - Dequeued task: 1472f64e-18c9-44f7-b4ba-b5c556defdce
+2026-02-12 21:58:06,476 - [INFO] - CyberSentinel - (worker.py:28) - [1472f64e-18c9-44f7-b4ba-b5c556defdce] Starting processing for target: https://globaliraq.iq/, db_id: 4
+2026-02-12 21:58:06,479 - [INFO] - CyberSentinel - (worker.py:36) - [1472f64e-18c9-44f7-b4ba-b5c556defdce] Scan record found. Current status: queued
+2026-02-12 21:58:06,494 - [INFO] - CyberSentinel - (tool_controller.py:63) - [1472f64e-18c9-44f7-b4ba-b5c556defdce] Starting tool pipeline execution with timeout 3600s.
+2026-02-12 21:58:06,495 - [INFO] - CyberSentinel - (tool_controller.py:83) - [1472f64e-18c9-44f7-b4ba-b5c556defdce] Running tool: gobuster_scan with params: {'target': 'https://globaliraq.iq/', 'wordlist': '/usr/share/wordlists/dirb/big.txt'}
+2026-02-12 21:58:06,496 - [INFO] - CyberSentinel - (gobuster_scanner.py:44) - Starting Gobuster scan on https://globaliraq.iq/ with wordlist /usr/share/wordlists/dirb/big.txt
+2026-02-12 21:58:06,496 - [INFO] - CyberSentinel - (subprocess_stream.py:18) - Starting streamed command: gobuster dir -u https://globaliraq.iq/ -w /usr/share/wordlists/dirb/big.txt --no-progress -t 20 --random-agent -x .php,.html,.txt
+2026-02-12 21:58:06,503 - [INFO] - CyberSentinel - (gobuster_scanner.py:57) - Gobuster scan completed. Found 0 paths.
+2026-02-12 21:58:06,504 - [INFO] - CyberSentinel - (tool_controller.py:116) - [1472f64e-18c9-44f7-b4ba-b5c556defdce] Tool pipeline execution finished.
+2026-02-12 21:58:06,505 - [INFO] - CyberSentinel - (worker.py:47) - [1472f64e-18c9-44f7-b4ba-b5c556defdce] Tool pipeline completed. Results count: 1
+2026-02-12 21:58:06,505 - [INFO] - CyberSentinel - (worker.py:66) - [1472f64e-18c9-44f7-b4ba-b5c556defdce] Risk assessment complete. Score: 0 (Low)
+2026-02-12 21:58:06,506 - [INFO] - CyberSentinel - (worker.py:86) - [1472f64e-18c9-44f7-b4ba-b5c556defdce] Scan results saved to database.
+2026-02-12 21:58:06,506 - [INFO] - CyberSentinel - (json_exporter.py:18) - Generating JSON report for scan ID: 1472f64e-18c9-44f7-b4ba-b5c556defdce
+2026-02-12 21:58:06,506 - [INFO] - CyberSentinel - (pdf_generator.py:116) - Generating PDF report for scan ID: 1472f64e-18c9-44f7-b4ba-b5c556defdce
+2026-02-12 21:58:06,604 - [INFO] - CyberSentinel - (worker.py:110) - [1472f64e-18c9-44f7-b4ba-b5c556defdce] Reports generated and saved.
+2026-02-12 21:58:06,619 - [INFO] - CyberSentinel - (worker.py:117) - [1472f64e-18c9-44f7-b4ba-b5c556defdce] Scan processing finished and results saved.
+2026-02-12 22:05:50,026 - [INFO] - CyberSentinel - (main.py:24) - Shutting down CyberSentinel backend...
+2026-02-12 22:05:50,026 - [INFO] - CyberSentinel - (db_connect.py:39) - Closing database connection.
+2026-02-12 22:24:58,910 - [INFO] - CyberSentinel - (main.py:64) - Starting FastAPI server...
+2026-02-12 22:24:58,918 - [INFO] - CyberSentinel - (main.py:20) - Starting up CyberSentinel backend...
+2026-02-12 22:24:58,949 - [INFO] - CyberSentinel - (db_connect.py:29) - Initializing database and creating tables...
+2026-02-12 22:24:58,955 - [INFO] - CyberSentinel - (db_connect.py:33) - Database tables created successfully.
+2026-02-12 22:24:58,956 - [INFO] - CyberSentinel - (queue_manager.py:23) - Redis client connected successfully.
+2026-02-12 22:24:58,956 - [INFO] - CyberSentinel - (queue_manager.py:88) - Task queue initialized.
+2026-02-12 22:24:59,109 - [INFO] - CyberSentinel - (main.py:72) - Starting background worker...
+2026-02-12 22:24:59,125 - [INFO] - CyberSentinel - (queue_manager.py:23) - Redis client connected successfully.
+2026-02-12 22:24:59,126 - [INFO] - CyberSentinel - (queue_manager.py:88) - Task queue initialized.
+2026-02-12 22:24:59,126 - [INFO] - CyberSentinel - (worker.py:125) - Worker loop started. Waiting for tasks...
+2026-02-12 22:25:15,944 - [INFO] - CyberSentinel - (target_parser.py:57) - Resolved globaliraq.iq to 104.21.28.248
+2026-02-12 22:25:15,950 - [INFO] - CyberSentinel - (target_parser.py:57) - Resolved globaliraq.iq to 172.67.171.49
+2026-02-12 22:25:15,951 - [INFO] - CyberSentinel - (decision_engine.py:19) - Building tool pipeline for https://globaliraq.iq/ with tools: ['gobuster_scan']
+2026-02-12 22:25:15,952 - [INFO] - CyberSentinel - (decision_engine.py:33) - Tool pipeline built: ['gobuster_scan']
+2026-02-12 22:25:15,967 - [INFO] - CyberSentinel - (queue_manager.py:37) - Enqueued task: 64ab4d33-6106-49a0-8ed5-f78bd14f1021
+2026-02-12 22:25:15,967 - [INFO] - CyberSentinel - (routes_scan.py:81) - Scan 64ab4d33-6106-49a0-8ed5-f78bd14f1021 for target 'https://globaliraq.iq/' has been queued.
+2026-02-12 22:25:19,146 - [INFO] - CyberSentinel - (queue_manager.py:53) - Dequeued task: 64ab4d33-6106-49a0-8ed5-f78bd14f1021
+2026-02-12 22:25:19,146 - [INFO] - CyberSentinel - (worker.py:28) - [64ab4d33-6106-49a0-8ed5-f78bd14f1021] Starting processing for target: https://globaliraq.iq/, db_id: 5
+2026-02-12 22:25:19,200 - [INFO] - CyberSentinel - (worker.py:36) - [64ab4d33-6106-49a0-8ed5-f78bd14f1021] Scan record found. Current status: queued
+2026-02-12 22:25:19,219 - [INFO] - CyberSentinel - (tool_controller.py:63) - [64ab4d33-6106-49a0-8ed5-f78bd14f1021] Starting tool pipeline execution with timeout 3600s.
+2026-02-12 22:25:19,222 - [INFO] - CyberSentinel - (tool_controller.py:83) - [64ab4d33-6106-49a0-8ed5-f78bd14f1021] Running tool: gobuster_scan with params: {'target': 'https://globaliraq.iq/', 'wordlist': '/usr/share/wordlists/dirb/big.txt'}
+2026-02-12 22:25:19,223 - [INFO] - CyberSentinel - (gobuster_scanner.py:49) - Starting Gobuster scan: gobuster dir -u https://globaliraq.iq/ -w /usr/share/wordlists/dirb/big.txt --no-progress -t 20 --random-agent --wildcard -x .php,.html,.txt
+2026-02-12 22:25:19,224 - [INFO] - CyberSentinel - (subprocess_stream.py:19) - Starting streamed command: gobuster dir -u https://globaliraq.iq/ -w /usr/share/wordlists/dirb/big.txt --no-progress -t 20 --random-agent --wildcard -x .php,.html,.txt
+2026-02-12 22:25:19,229 - [ERROR] - CyberSentinel - (gobuster_scanner.py:90) - An unexpected error occurred during Gobuster scan: 'async_generator' object has no attribute 'process'
+Traceback (most recent call last):
+  File "/app/scanners/gobuster_scanner.py", line 66, in scan
+    process = streamer.process
+              ^^^^^^^^^^^^^^^^
+AttributeError: 'async_generator' object has no attribute 'process'
+2026-02-12 22:25:19,231 - [INFO] - CyberSentinel - (tool_controller.py:116) - [64ab4d33-6106-49a0-8ed5-f78bd14f1021] Tool pipeline execution finished.
+2026-02-12 22:25:19,231 - [INFO] - CyberSentinel - (worker.py:47) - [64ab4d33-6106-49a0-8ed5-f78bd14f1021] Tool pipeline completed. Results count: 1
+2026-02-12 22:25:19,232 - [INFO] - CyberSentinel - (worker.py:66) - [64ab4d33-6106-49a0-8ed5-f78bd14f1021] Risk assessment complete. Score: 0 (Low)
+2026-02-12 22:25:19,232 - [INFO] - CyberSentinel - (worker.py:86) - [64ab4d33-6106-49a0-8ed5-f78bd14f1021] Scan results saved to database.
+2026-02-12 22:25:19,233 - [INFO] - CyberSentinel - (json_exporter.py:18) - Generating JSON report for scan ID: 64ab4d33-6106-49a0-8ed5-f78bd14f1021
+2026-02-12 22:25:19,233 - [INFO] - CyberSentinel - (pdf_generator.py:116) - Generating PDF report for scan ID: 64ab4d33-6106-49a0-8ed5-f78bd14f1021
+2026-02-12 22:25:19,358 - [INFO] - CyberSentinel - (worker.py:110) - [64ab4d33-6106-49a0-8ed5-f78bd14f1021] Reports generated and saved.
+2026-02-12 22:25:19,376 - [INFO] - CyberSentinel - (worker.py:117) - [64ab4d33-6106-49a0-8ed5-f78bd14f1021] Scan processing finished and results saved.
+2026-02-12 22:26:12,946 - [INFO] - CyberSentinel - (main.py:24) - Shutting down CyberSentinel backend...
+2026-02-12 22:26:12,946 - [INFO] - CyberSentinel - (db_connect.py:39) - Closing database connection.
+2026-02-12 22:57:23,647 - [INFO] - CyberSentinel - (main.py:64) - Starting FastAPI server...
+2026-02-12 22:57:23,655 - [INFO] - CyberSentinel - (main.py:20) - Starting up CyberSentinel backend...
+2026-02-12 22:57:23,685 - [INFO] - CyberSentinel - (db_connect.py:29) - Initializing database and creating tables...
+2026-02-12 22:57:23,691 - [INFO] - CyberSentinel - (db_connect.py:33) - Database tables created successfully.
+2026-02-12 22:57:23,693 - [INFO] - CyberSentinel - (queue_manager.py:23) - Redis client connected successfully.
+2026-02-12 22:57:23,693 - [INFO] - CyberSentinel - (queue_manager.py:88) - Task queue initialized.
+2026-02-12 22:57:23,826 - [INFO] - CyberSentinel - (main.py:72) - Starting background worker...
+2026-02-12 22:57:23,843 - [INFO] - CyberSentinel - (queue_manager.py:23) - Redis client connected successfully.
+2026-02-12 22:57:23,844 - [INFO] - CyberSentinel - (queue_manager.py:88) - Task queue initialized.
+2026-02-12 22:57:23,844 - [INFO] - CyberSentinel - (worker.py:125) - Worker loop started. Waiting for tasks...
+2026-02-12 23:02:38,023 - [INFO] - CyberSentinel - (main.py:24) - Shutting down CyberSentinel backend...
+2026-02-12 23:02:38,023 - [INFO] - CyberSentinel - (db_connect.py:39) - Closing database connection.
+2026-02-12 23:03:58,089 - [INFO] - CyberSentinel - (main.py:64) - Starting FastAPI server...
+2026-02-12 23:03:58,096 - [INFO] - CyberSentinel - (main.py:20) - Starting up CyberSentinel backend...
+2026-02-12 23:03:58,121 - [INFO] - CyberSentinel - (db_connect.py:29) - Initializing database and creating tables...
+2026-02-12 23:03:58,128 - [INFO] - CyberSentinel - (db_connect.py:33) - Database tables created successfully.
+2026-02-12 23:03:58,129 - [INFO] - CyberSentinel - (queue_manager.py:23) - Redis client connected successfully.
+2026-02-12 23:03:58,129 - [INFO] - CyberSentinel - (queue_manager.py:88) - Task queue initialized.
+2026-02-12 23:03:58,232 - [INFO] - CyberSentinel - (main.py:72) - Starting background worker...
+2026-02-12 23:03:58,249 - [INFO] - CyberSentinel - (queue_manager.py:23) - Redis client connected successfully.
+2026-02-12 23:03:58,249 - [INFO] - CyberSentinel - (queue_manager.py:88) - Task queue initialized.
+2026-02-12 23:03:58,250 - [INFO] - CyberSentinel - (worker.py:125) - Worker loop started. Waiting for tasks...
+2026-02-12 23:04:16,207 - [INFO] - CyberSentinel - (target_parser.py:57) - Resolved globaliraq.iq to 172.67.171.49
+2026-02-12 23:04:16,221 - [INFO] - CyberSentinel - (target_parser.py:57) - Resolved globaliraq.iq to 104.21.28.248
+2026-02-12 23:04:16,222 - [INFO] - CyberSentinel - (decision_engine.py:19) - Building tool pipeline for https://globaliraq.iq/ with tools: ['gobuster_scan']
+2026-02-12 23:04:16,222 - [INFO] - CyberSentinel - (decision_engine.py:33) - Tool pipeline built: ['gobuster_scan']
+2026-02-12 23:04:16,249 - [INFO] - CyberSentinel - (queue_manager.py:37) - Enqueued task: d2338bb9-e692-41d2-bb09-234bc936cc57
+2026-02-12 23:04:16,249 - [INFO] - CyberSentinel - (routes_scan.py:81) - Scan d2338bb9-e692-41d2-bb09-234bc936cc57 for target 'https://globaliraq.iq/' has been queued.
+2026-02-12 23:04:18,269 - [INFO] - CyberSentinel - (queue_manager.py:53) - Dequeued task: d2338bb9-e692-41d2-bb09-234bc936cc57
+2026-02-12 23:04:18,269 - [INFO] - CyberSentinel - (worker.py:28) - [d2338bb9-e692-41d2-bb09-234bc936cc57] Starting processing for target: https://globaliraq.iq/, db_id: 6
+2026-02-12 23:04:18,315 - [INFO] - CyberSentinel - (worker.py:36) - [d2338bb9-e692-41d2-bb09-234bc936cc57] Scan record found. Current status: queued
+2026-02-12 23:04:18,333 - [INFO] - CyberSentinel - (tool_controller.py:63) - [d2338bb9-e692-41d2-bb09-234bc936cc57] Starting tool pipeline execution with timeout 3600s.
+2026-02-12 23:04:18,336 - [INFO] - CyberSentinel - (tool_controller.py:83) - [d2338bb9-e692-41d2-bb09-234bc936cc57] Running tool: gobuster_scan with params: {'target': 'https://globaliraq.iq/', 'wordlist': None}
+2026-02-12 23:04:18,337 - [INFO] - CyberSentinel - (gobuster_scanner.py:49) - Starting Gobuster scan: gobuster dir -u https://globaliraq.iq/ -w /usr/share/wordlists/dirb/common.txt --no-progress -t 20 --random-agent --wildcard -x .php,.html,.txt
+2026-02-12 23:04:18,337 - [INFO] - CyberSentinel - (subprocess_stream.py:19) - Starting streamed command: gobuster dir -u https://globaliraq.iq/ -w /usr/share/wordlists/dirb/common.txt --no-progress -t 20 --random-agent --wildcard -x .php,.html,.txt
+2026-02-12 23:04:18,342 - [ERROR] - CyberSentinel - (gobuster_scanner.py:74) - Gobuster exited with code 1. Stderr: Error: unknown flag: --wildcard
+2026-02-12 23:04:18,343 - [INFO] - CyberSentinel - (tool_controller.py:116) - [d2338bb9-e692-41d2-bb09-234bc936cc57] Tool pipeline execution finished.
+2026-02-12 23:04:18,344 - [INFO] - CyberSentinel - (worker.py:47) - [d2338bb9-e692-41d2-bb09-234bc936cc57] Tool pipeline completed. Results count: 1
+2026-02-12 23:04:18,344 - [INFO] - CyberSentinel - (worker.py:66) - [d2338bb9-e692-41d2-bb09-234bc936cc57] Risk assessment complete. Score: 0 (Low)
+2026-02-12 23:04:18,345 - [INFO] - CyberSentinel - (worker.py:86) - [d2338bb9-e692-41d2-bb09-234bc936cc57] Scan results saved to database.
+2026-02-12 23:04:18,346 - [INFO] - CyberSentinel - (json_exporter.py:18) - Generating JSON report for scan ID: d2338bb9-e692-41d2-bb09-234bc936cc57
+2026-02-12 23:04:18,346 - [INFO] - CyberSentinel - (pdf_generator.py:116) - Generating PDF report for scan ID: d2338bb9-e692-41d2-bb09-234bc936cc57
+2026-02-12 23:04:18,471 - [INFO] - CyberSentinel - (worker.py:110) - [d2338bb9-e692-41d2-bb09-234bc936cc57] Reports generated and saved.
+2026-02-12 23:04:18,490 - [INFO] - CyberSentinel - (worker.py:117) - [d2338bb9-e692-41d2-bb09-234bc936cc57] Scan processing finished and results saved.
+2026-02-12 23:23:23,083 - [INFO] - CyberSentinel - (main.py:24) - Shutting down CyberSentinel backend...
+2026-02-12 23:23:23,083 - [INFO] - CyberSentinel - (db_connect.py:39) - Closing database connection.
+2026-02-12 23:38:14,319 - [INFO] - CyberSentinel - (main.py:64) - Starting FastAPI server...
+2026-02-12 23:38:14,327 - [INFO] - CyberSentinel - (main.py:20) - Starting up CyberSentinel backend...
+2026-02-12 23:38:14,370 - [INFO] - CyberSentinel - (db_connect.py:29) - Initializing database and creating tables...
+2026-02-12 23:38:14,377 - [INFO] - CyberSentinel - (db_connect.py:33) - Database tables created successfully.
+2026-02-12 23:38:14,379 - [INFO] - CyberSentinel - (queue_manager.py:23) - Redis client connected successfully.
+2026-02-12 23:38:14,379 - [INFO] - CyberSentinel - (queue_manager.py:88) - Task queue initialized.
+2026-02-12 23:38:14,489 - [INFO] - CyberSentinel - (main.py:72) - Starting background worker...
+2026-02-12 23:38:14,511 - [INFO] - CyberSentinel - (queue_manager.py:23) - Redis client connected successfully.
+2026-02-12 23:38:14,511 - [INFO] - CyberSentinel - (queue_manager.py:88) - Task queue initialized.
+2026-02-12 23:38:14,511 - [INFO] - CyberSentinel - (worker.py:125) - Worker loop started. Waiting for tasks...
+2026-02-12 23:38:23,771 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 23:38:29,781 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-12 23:39:26,382 - [INFO] - CyberSentinel - (target_parser.py:57) - Resolved globaliraq.iq to 172.67.171.49
+2026-02-12 23:39:26,387 - [INFO] - CyberSentinel - (target_parser.py:57) - Resolved globaliraq.iq to 104.21.28.248
+2026-02-12 23:39:26,388 - [INFO] - CyberSentinel - (decision_engine.py:19) - Building tool pipeline for https://globaliraq.iq/ with tools: ['nmap_scan', 'ssl_scan', 'header_analysis', 'gobuster_scan', 'sqlmap_scan', 'xsser_scan', 'nikto_scan', 'sql_injection_test', 'xss_test']
+2026-02-12 23:39:26,388 - [WARNING] - CyberSentinel - (decision_engine.py:26) - No builder method found for tool: gobuster_scan
+2026-02-12 23:39:26,389 - [INFO] - CyberSentinel - (decision_engine.py:33) - Tool pipeline built: ['nmap_scan', 'ssl_scan', 'header_analysis', 'sqlmap_scan', 'xsser_scan', 'nikto_scan', 'sql_injection_test', 'xss_test', 'vulnerability_analysis']
+2026-02-12 23:39:26,403 - [INFO] - CyberSentinel - (queue_manager.py:37) - Enqueued task: 46762117-89bf-4d24-a1c1-8b2aa8278a63
+2026-02-12 23:39:26,404 - [INFO] - CyberSentinel - (routes_scan.py:81) - Scan 46762117-89bf-4d24-a1c1-8b2aa8278a63 for target 'https://globaliraq.iq/' has been queued.
+2026-02-12 23:39:29,578 - [INFO] - CyberSentinel - (queue_manager.py:53) - Dequeued task: 46762117-89bf-4d24-a1c1-8b2aa8278a63
+2026-02-12 23:39:29,578 - [INFO] - CyberSentinel - (worker.py:28) - [46762117-89bf-4d24-a1c1-8b2aa8278a63] Starting processing for target: https://globaliraq.iq/, db_id: 7
+2026-02-12 23:39:29,623 - [INFO] - CyberSentinel - (worker.py:36) - [46762117-89bf-4d24-a1c1-8b2aa8278a63] Scan record found. Current status: queued
+2026-02-12 23:39:29,642 - [INFO] - CyberSentinel - (tool_controller.py:61) - [46762117-89bf-4d24-a1c1-8b2aa8278a63] Starting tool pipeline execution with timeout 3600s.
+2026-02-12 23:39:29,644 - [INFO] - CyberSentinel - (tool_controller.py:81) - [46762117-89bf-4d24-a1c1-8b2aa8278a63] Running tool: nmap_scan with params: {'options': '-A -T4', 'target': '104.21.28.248'}
+2026-02-12 23:39:29,652 - [INFO] - CyberSentinel - (nmap_scanner.py:17) - Starting Nmap scan on 104.21.28.248 with options '-A -T4'
+2026-02-12 23:39:56,105 - [INFO] - CyberSentinel - (nmap_scanner.py:61) - Nmap scan finished for 104.21.28.248. Found 5 open ports.
+2026-02-12 23:39:56,106 - [INFO] - CyberSentinel - (tool_controller.py:81) - [46762117-89bf-4d24-a1c1-8b2aa8278a63] Running tool: ssl_scan with params: {'target': 'globaliraq.iq'}
+2026-02-12 23:39:56,106 - [INFO] - CyberSentinel - (ssl_scanner.py:17) - Starting SSL scan on globaliraq.iq
+2026-02-12 23:40:20,555 - [INFO] - CyberSentinel - (ssl_scanner.py:66) - SSL scan finished for globaliraq.iq.
+2026-02-12 23:40:20,557 - [INFO] - CyberSentinel - (tool_controller.py:81) - [46762117-89bf-4d24-a1c1-8b2aa8278a63] Running tool: header_analysis with params: {'url': 'https://globaliraq.iq/'}
+2026-02-12 23:40:20,557 - [INFO] - CyberSentinel - (header_analyzer.py:32) - Starting header analysis for https://globaliraq.iq/
+2026-02-12 23:40:21,089 - [INFO] - CyberSentinel - (header_analyzer.py:63) - Header analysis finished for https://globaliraq.iq/.
+2026-02-12 23:40:21,091 - [INFO] - CyberSentinel - (tool_controller.py:81) - [46762117-89bf-4d24-a1c1-8b2aa8278a63] Running tool: sqlmap_scan with params: {'aggressive': True, 'target': 'https://globaliraq.iq/'}
+2026-02-12 23:40:21,092 - [INFO] - CyberSentinel - (sqlmap_scanner.py:55) - Starting SQLMap scan on https://globaliraq.iq/
+2026-02-12 23:40:21,093 - [INFO] - CyberSentinel - (subprocess_stream.py:19) - Starting streamed command: sqlmap -u https://globaliraq.iq/ --batch --output-dir /tmp/sqlmap_iquna77l --dump-format=JSON --level=1 --risk=1 --all --random-agent --threads=10
+2026-02-12 23:40:21,229 - [WARNING] - CyberSentinel - (sqlmap_scanner.py:66) - SQLMap scan on https://globaliraq.iq/ finished, but no JSON output file was found.
+2026-02-12 23:40:21,230 - [INFO] - CyberSentinel - (tool_controller.py:81) - [46762117-89bf-4d24-a1c1-8b2aa8278a63] Running tool: xsser_scan with params: {'aggressive': True, 'target': 'https://globaliraq.iq/'}
+2026-02-12 23:40:21,231 - [INFO] - CyberSentinel - (xss_scanner.py:47) - Starting XSSer scan on https://globaliraq.iq/
+2026-02-12 23:40:21,231 - [INFO] - CyberSentinel - (subprocess_stream.py:19) - Starting streamed command: xsser -u https://globaliraq.iq/ --no-head --Crawl --depth=4 --Cw=2 --XSS --DS
+2026-02-12 23:40:21,313 - [INFO] - CyberSentinel - (xss_scanner.py:60) - XSSer scan completed. Found 0 potential vulnerabilities.
+2026-02-12 23:40:21,314 - [INFO] - CyberSentinel - (tool_controller.py:81) - [46762117-89bf-4d24-a1c1-8b2aa8278a63] Running tool: nikto_scan with params: {'target': 'https://globaliraq.iq/'}
+2026-02-12 23:40:21,314 - [INFO] - CyberSentinel - (subprocess_stream.py:19) - Starting streamed command: nikto -h https://globaliraq.iq/
+2026-02-12 23:40:21,348 - [INFO] - CyberSentinel - (tool_controller.py:81) - [46762117-89bf-4d24-a1c1-8b2aa8278a63] Running tool: sql_injection_test with params: {'url': 'https://globaliraq.iq/'}
+2026-02-12 23:40:21,349 - [INFO] - CyberSentinel - (sql_tester.py:26) - Starting SQL injection test for https://globaliraq.iq/
+2026-02-12 23:40:21,855 - [INFO] - CyberSentinel - (sql_tester.py:34) - Found 33 forms on https://globaliraq.iq/
+2026-02-12 23:41:02,965 - [INFO] - CyberSentinel - (tool_controller.py:81) - [46762117-89bf-4d24-a1c1-8b2aa8278a63] Running tool: xss_test with params: {'url': 'https://globaliraq.iq/'}
+2026-02-12 23:41:02,965 - [INFO] - CyberSentinel - (xss_tester.py:22) - Starting XSS test for https://globaliraq.iq/
+2026-02-12 23:41:03,427 - [INFO] - CyberSentinel - (xss_tester.py:35) - Found 33 forms to test for XSS on https://globaliraq.iq/
+2026-02-12 23:41:03,981 - [WARNING] - CyberSentinel - (xss_tester.py:106) - Reflected XSS detected in form input 'q' at https://globaliraq.iq/search
+2026-02-12 23:41:04,493 - [WARNING] - CyberSentinel - (xss_tester.py:106) - Reflected XSS detected in form input 'q' at https://globaliraq.iq/search
+2026-02-12 23:41:04,593 - [INFO] - CyberSentinel - (tool_controller.py:81) - [46762117-89bf-4d24-a1c1-8b2aa8278a63] Running tool: vulnerability_analysis with params: {}
+2026-02-12 23:41:04,594 - [INFO] - CyberSentinel - (vuln_analyzer.py:26) - Starting vulnerability analysis based on service versions.
+2026-02-12 23:41:04,594 - [INFO] - CyberSentinel - (vuln_analyzer.py:52) - Vulnerability analysis finished. Found 0 potential issues.
+2026-02-12 23:41:04,595 - [INFO] - CyberSentinel - (tool_controller.py:114) - [46762117-89bf-4d24-a1c1-8b2aa8278a63] Tool pipeline execution finished.
+2026-02-12 23:41:04,595 - [INFO] - CyberSentinel - (worker.py:47) - [46762117-89bf-4d24-a1c1-8b2aa8278a63] Tool pipeline completed. Results count: 9
+2026-02-12 23:41:04,596 - [INFO] - CyberSentinel - (worker.py:66) - [46762117-89bf-4d24-a1c1-8b2aa8278a63] Risk assessment complete. Score: 100 (Critical)
+2026-02-12 23:41:04,598 - [INFO] - CyberSentinel - (worker.py:86) - [46762117-89bf-4d24-a1c1-8b2aa8278a63] Scan results saved to database.
+2026-02-12 23:41:04,598 - [INFO] - CyberSentinel - (json_exporter.py:18) - Generating JSON report for scan ID: 46762117-89bf-4d24-a1c1-8b2aa8278a63
+2026-02-12 23:41:04,599 - [INFO] - CyberSentinel - (pdf_generator.py:116) - Generating PDF report for scan ID: 46762117-89bf-4d24-a1c1-8b2aa8278a63
+2026-02-12 23:41:05,028 - [INFO] - CyberSentinel - (worker.py:110) - [46762117-89bf-4d24-a1c1-8b2aa8278a63] Reports generated and saved.
+2026-02-12 23:41:05,052 - [INFO] - CyberSentinel - (worker.py:117) - [46762117-89bf-4d24-a1c1-8b2aa8278a63] Scan processing finished and results saved.
+2026-02-12 23:51:49,515 - [INFO] - CyberSentinel - (main.py:24) - Shutting down CyberSentinel backend...
+2026-02-12 23:51:49,515 - [INFO] - CyberSentinel - (db_connect.py:39) - Closing database connection.
+2026-02-13 07:27:52,961 - [INFO] - CyberSentinel - (main.py:72) - Starting background worker...
+2026-02-13 07:27:52,966 - [INFO] - CyberSentinel - (queue_manager.py:23) - Redis client connected successfully.
+2026-02-13 07:27:52,966 - [INFO] - CyberSentinel - (queue_manager.py:88) - Task queue initialized.
+2026-02-13 07:27:52,967 - [INFO] - CyberSentinel - (worker.py:125) - Worker loop started. Waiting for tasks...
+2026-02-13 07:27:52,977 - [INFO] - CyberSentinel - (main.py:64) - Starting FastAPI server...
+2026-02-13 07:27:52,987 - [INFO] - CyberSentinel - (main.py:20) - Starting up CyberSentinel backend...
+2026-02-13 07:27:53,033 - [INFO] - CyberSentinel - (db_connect.py:29) - Initializing database and creating tables...
+2026-02-13 07:27:53,050 - [INFO] - CyberSentinel - (db_connect.py:33) - Database tables created successfully.
+2026-02-13 07:27:53,054 - [INFO] - CyberSentinel - (queue_manager.py:23) - Redis client connected successfully.
+2026-02-13 07:27:53,054 - [INFO] - CyberSentinel - (queue_manager.py:88) - Task queue initialized.
+2026-02-13 07:29:13,195 - [INFO] - CyberSentinel - (main.py:24) - Shutting down CyberSentinel backend...
+2026-02-13 07:29:13,195 - [INFO] - CyberSentinel - (db_connect.py:39) - Closing database connection.
+2026-02-13 07:29:15,237 - [INFO] - CyberSentinel - (main.py:64) - Starting FastAPI server...
+2026-02-13 07:29:15,244 - [INFO] - CyberSentinel - (main.py:20) - Starting up CyberSentinel backend...
+2026-02-13 07:29:15,271 - [INFO] - CyberSentinel - (db_connect.py:29) - Initializing database and creating tables...
+2026-02-13 07:29:15,276 - [INFO] - CyberSentinel - (db_connect.py:33) - Database tables created successfully.
+2026-02-13 07:29:15,278 - [INFO] - CyberSentinel - (queue_manager.py:23) - Redis client connected successfully.
+2026-02-13 07:29:15,278 - [INFO] - CyberSentinel - (queue_manager.py:88) - Task queue initialized.
+2026-02-13 07:29:15,380 - [INFO] - CyberSentinel - (main.py:72) - Starting background worker...
+2026-02-13 07:29:15,397 - [INFO] - CyberSentinel - (queue_manager.py:23) - Redis client connected successfully.
+2026-02-13 07:29:15,397 - [INFO] - CyberSentinel - (queue_manager.py:88) - Task queue initialized.
+2026-02-13 07:29:15,398 - [INFO] - CyberSentinel - (worker.py:125) - Worker loop started. Waiting for tasks...
+2026-02-13 07:29:23,776 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-13 07:29:29,801 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-13 07:29:35,814 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-13 07:29:41,825 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-13 07:31:02,946 - [INFO] - CyberSentinel - (target_parser.py:57) - Resolved globaliraq.iq to 104.21.28.248
+2026-02-13 07:31:02,951 - [INFO] - CyberSentinel - (target_parser.py:57) - Resolved globaliraq.iq to 172.67.171.49
+2026-02-13 07:31:02,952 - [INFO] - CyberSentinel - (decision_engine.py:19) - Building tool pipeline for https://globaliraq.iq/ with tools: ['nmap_scan', 'ssl_scan', 'header_analysis', 'dir_discovery', 'sqlmap_scan', 'xsser_scan', 'nikto_scan', 'sql_injection_test', 'xss_test']
+2026-02-13 07:31:02,952 - [INFO] - CyberSentinel - (decision_engine.py:33) - Tool pipeline built: ['nmap_scan', 'ssl_scan', 'header_analysis', 'dir_discovery', 'sqlmap_scan', 'xsser_scan', 'nikto_scan', 'sql_injection_test', 'xss_test', 'vulnerability_analysis']
+2026-02-13 07:31:02,962 - [INFO] - CyberSentinel - (queue_manager.py:37) - Enqueued task: 087d226e-bf89-4318-8bd1-75439f3ac076
+2026-02-13 07:31:02,962 - [INFO] - CyberSentinel - (routes_scan.py:81) - Scan 087d226e-bf89-4318-8bd1-75439f3ac076 for target 'https://globaliraq.iq/' has been queued.
+2026-02-13 07:31:05,508 - [INFO] - CyberSentinel - (queue_manager.py:53) - Dequeued task: 087d226e-bf89-4318-8bd1-75439f3ac076
+2026-02-13 07:31:05,508 - [INFO] - CyberSentinel - (worker.py:28) - [087d226e-bf89-4318-8bd1-75439f3ac076] Starting processing for target: https://globaliraq.iq/, db_id: 8
+2026-02-13 07:31:05,559 - [INFO] - CyberSentinel - (worker.py:36) - [087d226e-bf89-4318-8bd1-75439f3ac076] Scan record found. Current status: queued
+2026-02-13 07:31:05,578 - [INFO] - CyberSentinel - (tool_controller.py:61) - [087d226e-bf89-4318-8bd1-75439f3ac076] Starting tool pipeline execution with timeout 3600s.
+2026-02-13 07:31:05,581 - [INFO] - CyberSentinel - (tool_controller.py:81) - [087d226e-bf89-4318-8bd1-75439f3ac076] Running tool: nmap_scan with params: {'options': '-A -T4', 'target': '172.67.171.49'}
+2026-02-13 07:31:05,601 - [INFO] - CyberSentinel - (nmap_scanner.py:17) - Starting Nmap scan on 172.67.171.49 with options '-A -T4'
+2026-02-13 07:31:33,218 - [INFO] - CyberSentinel - (nmap_scanner.py:61) - Nmap scan finished for 172.67.171.49. Found 4 open ports.
+2026-02-13 07:31:33,219 - [INFO] - CyberSentinel - (tool_controller.py:81) - [087d226e-bf89-4318-8bd1-75439f3ac076] Running tool: ssl_scan with params: {'target': 'globaliraq.iq'}
+2026-02-13 07:31:33,219 - [INFO] - CyberSentinel - (ssl_scanner.py:17) - Starting SSL scan on globaliraq.iq
+2026-02-13 07:31:53,662 - [INFO] - CyberSentinel - (ssl_scanner.py:66) - SSL scan finished for globaliraq.iq.
+2026-02-13 07:31:53,664 - [INFO] - CyberSentinel - (tool_controller.py:81) - [087d226e-bf89-4318-8bd1-75439f3ac076] Running tool: header_analysis with params: {'url': 'https://globaliraq.iq/'}
+2026-02-13 07:31:53,665 - [INFO] - CyberSentinel - (header_analyzer.py:32) - Starting header analysis for https://globaliraq.iq/
+2026-02-13 07:31:54,415 - [INFO] - CyberSentinel - (header_analyzer.py:63) - Header analysis finished for https://globaliraq.iq/.
+2026-02-13 07:31:54,417 - [INFO] - CyberSentinel - (tool_controller.py:81) - [087d226e-bf89-4318-8bd1-75439f3ac076] Running tool: dir_discovery with params: {'target': 'https://globaliraq.iq/'}
+2026-02-13 07:31:54,418 - [INFO] - CyberSentinel - (dir_discovery.py:30) - Starting directory discovery on https://globaliraq.iq/
+2026-02-13 07:31:54,418 - [WARNING] - CyberSentinel - (dir_discovery.py:24) - Wordlist not found at /usr/share/wordlists/dirb/common.txt. Dir discovery may fail.
+2026-02-13 07:31:54,419 - [INFO] - CyberSentinel - (tool_controller.py:81) - [087d226e-bf89-4318-8bd1-75439f3ac076] Running tool: sqlmap_scan with params: {'aggressive': True, 'target': 'https://globaliraq.iq/'}
+2026-02-13 07:31:54,421 - [INFO] - CyberSentinel - (sqlmap_scanner.py:55) - Starting SQLMap scan on https://globaliraq.iq/
+2026-02-13 07:31:54,422 - [INFO] - CyberSentinel - (subprocess_stream.py:19) - Starting streamed command: sqlmap -u https://globaliraq.iq/ --batch --output-dir /tmp/sqlmap_onssqy8y --dump-format=JSON --level=1 --risk=1 --all --random-agent --threads=10
+2026-02-13 07:31:54,684 - [WARNING] - CyberSentinel - (sqlmap_scanner.py:66) - SQLMap scan on https://globaliraq.iq/ finished, but no JSON output file was found.
+2026-02-13 07:31:54,685 - [INFO] - CyberSentinel - (tool_controller.py:81) - [087d226e-bf89-4318-8bd1-75439f3ac076] Running tool: xsser_scan with params: {'aggressive': True, 'target': 'https://globaliraq.iq/'}
+2026-02-13 07:31:54,685 - [INFO] - CyberSentinel - (xss_scanner.py:47) - Starting XSSer scan on https://globaliraq.iq/
+2026-02-13 07:31:54,686 - [INFO] - CyberSentinel - (subprocess_stream.py:19) - Starting streamed command: xsser -u https://globaliraq.iq/ --no-head --Crawl --depth=4 --Cw=2 --XSS --DS
+2026-02-13 07:31:54,794 - [INFO] - CyberSentinel - (xss_scanner.py:60) - XSSer scan completed. Found 0 potential vulnerabilities.
+2026-02-13 07:31:54,795 - [INFO] - CyberSentinel - (tool_controller.py:81) - [087d226e-bf89-4318-8bd1-75439f3ac076] Running tool: nikto_scan with params: {'target': 'https://globaliraq.iq/'}
+2026-02-13 07:31:54,795 - [INFO] - CyberSentinel - (subprocess_stream.py:19) - Starting streamed command: nikto -h https://globaliraq.iq/
+2026-02-13 07:31:54,853 - [INFO] - CyberSentinel - (tool_controller.py:81) - [087d226e-bf89-4318-8bd1-75439f3ac076] Running tool: sql_injection_test with params: {'url': 'https://globaliraq.iq/'}
+2026-02-13 07:31:54,853 - [INFO] - CyberSentinel - (sql_tester.py:26) - Starting SQL injection test for https://globaliraq.iq/
+2026-02-13 07:31:55,580 - [INFO] - CyberSentinel - (sql_tester.py:34) - Found 33 forms on https://globaliraq.iq/
+2026-02-13 07:32:17,294 - [INFO] - CyberSentinel - (main.py:24) - Shutting down CyberSentinel backend...
+2026-02-13 07:32:17,294 - [INFO] - CyberSentinel - (db_connect.py:39) - Closing database connection.
+2026-02-13 07:40:37,893 - [INFO] - CyberSentinel - (main.py:64) - Starting FastAPI server...
+2026-02-13 07:40:37,902 - [INFO] - CyberSentinel - (main.py:20) - Starting up CyberSentinel backend...
+2026-02-13 07:40:37,930 - [INFO] - CyberSentinel - (db_connect.py:29) - Initializing database and creating tables...
+2026-02-13 07:40:37,937 - [INFO] - CyberSentinel - (db_connect.py:33) - Database tables created successfully.
+2026-02-13 07:40:37,940 - [INFO] - CyberSentinel - (queue_manager.py:23) - Redis client connected successfully.
+2026-02-13 07:40:37,940 - [INFO] - CyberSentinel - (queue_manager.py:88) - Task queue initialized.
+2026-02-13 07:40:38,043 - [INFO] - CyberSentinel - (main.py:72) - Starting background worker...
+2026-02-13 07:40:38,061 - [INFO] - CyberSentinel - (queue_manager.py:23) - Redis client connected successfully.
+2026-02-13 07:40:38,061 - [INFO] - CyberSentinel - (queue_manager.py:88) - Task queue initialized.
+2026-02-13 07:40:38,061 - [INFO] - CyberSentinel - (worker.py:125) - Worker loop started. Waiting for tasks...
+2026-02-13 07:40:58,475 - [INFO] - CyberSentinel - (target_parser.py:57) - Resolved globaliraq.iq to 172.67.171.49
+2026-02-13 07:40:58,480 - [INFO] - CyberSentinel - (target_parser.py:57) - Resolved globaliraq.iq to 104.21.28.248
+2026-02-13 07:40:58,481 - [INFO] - CyberSentinel - (decision_engine.py:19) - Building tool pipeline for https://globaliraq.iq/ with tools: ['nmap_scan', 'ssl_scan', 'header_analysis', 'dir_discovery', 'sqlmap_scan', 'xsser_scan', 'nikto_scan', 'sql_injection_test', 'xss_test']
+2026-02-13 07:40:58,482 - [INFO] - CyberSentinel - (decision_engine.py:33) - Tool pipeline built: ['nmap_scan', 'ssl_scan', 'header_analysis', 'dir_discovery', 'sqlmap_scan', 'xsser_scan', 'nikto_scan', 'sql_injection_test', 'xss_test', 'vulnerability_analysis']
+2026-02-13 07:40:58,496 - [INFO] - CyberSentinel - (queue_manager.py:37) - Enqueued task: fe373eee-24f7-410d-b6d3-f1fe119ec4cd
+2026-02-13 07:40:58,496 - [INFO] - CyberSentinel - (routes_scan.py:82) - Scan fe373eee-24f7-410d-b6d3-f1fe119ec4cd for target 'https://globaliraq.iq/' has been queued.
+2026-02-13 07:41:03,086 - [INFO] - CyberSentinel - (queue_manager.py:53) - Dequeued task: fe373eee-24f7-410d-b6d3-f1fe119ec4cd
+2026-02-13 07:41:03,087 - [INFO] - CyberSentinel - (worker.py:28) - [fe373eee-24f7-410d-b6d3-f1fe119ec4cd] Starting processing for target: https://globaliraq.iq/, db_id: 9
+2026-02-13 07:41:03,139 - [INFO] - CyberSentinel - (worker.py:36) - [fe373eee-24f7-410d-b6d3-f1fe119ec4cd] Scan record found. Current status: queued
+2026-02-13 07:41:03,159 - [INFO] - CyberSentinel - (tool_controller.py:61) - [fe373eee-24f7-410d-b6d3-f1fe119ec4cd] Starting tool pipeline execution with timeout 3600s.
+2026-02-13 07:41:03,162 - [INFO] - CyberSentinel - (tool_controller.py:81) - [fe373eee-24f7-410d-b6d3-f1fe119ec4cd] Running tool: nmap_scan with params: {'options': '-A -T4', 'target': '104.21.28.248'}
+2026-02-13 07:41:03,175 - [INFO] - CyberSentinel - (nmap_scanner.py:17) - Starting Nmap scan on 104.21.28.248 with options '-A -T4'
+2026-02-13 07:41:37,007 - [INFO] - CyberSentinel - (nmap_scanner.py:61) - Nmap scan finished for 104.21.28.248. Found 5 open ports.
+2026-02-13 07:41:37,008 - [INFO] - CyberSentinel - (tool_controller.py:81) - [fe373eee-24f7-410d-b6d3-f1fe119ec4cd] Running tool: ssl_scan with params: {'target': 'globaliraq.iq'}
+2026-02-13 07:41:37,009 - [INFO] - CyberSentinel - (ssl_scanner.py:17) - Starting SSL scan on globaliraq.iq
+2026-02-13 07:41:58,269 - [INFO] - CyberSentinel - (ssl_scanner.py:66) - SSL scan finished for globaliraq.iq.
+2026-02-13 07:41:58,270 - [INFO] - CyberSentinel - (tool_controller.py:81) - [fe373eee-24f7-410d-b6d3-f1fe119ec4cd] Running tool: header_analysis with params: {'url': 'https://globaliraq.iq/'}
+2026-02-13 07:41:58,271 - [INFO] - CyberSentinel - (header_analyzer.py:32) - Starting header analysis for https://globaliraq.iq/
+2026-02-13 07:41:59,010 - [INFO] - CyberSentinel - (header_analyzer.py:63) - Header analysis finished for https://globaliraq.iq/.
+2026-02-13 07:41:59,012 - [INFO] - CyberSentinel - (tool_controller.py:81) - [fe373eee-24f7-410d-b6d3-f1fe119ec4cd] Running tool: dir_discovery with params: {'target': 'https://globaliraq.iq/'}
+2026-02-13 07:41:59,013 - [INFO] - CyberSentinel - (dir_discovery.py:30) - Starting directory discovery on https://globaliraq.iq/
+2026-02-13 07:41:59,014 - [WARNING] - CyberSentinel - (dir_discovery.py:24) - Wordlist not found at /usr/share/wordlists/dirb/common.txt. Dir discovery may fail.
+2026-02-13 07:41:59,015 - [INFO] - CyberSentinel - (tool_controller.py:81) - [fe373eee-24f7-410d-b6d3-f1fe119ec4cd] Running tool: sqlmap_scan with params: {'aggressive': True, 'target': 'https://globaliraq.iq/'}
+2026-02-13 07:41:59,017 - [INFO] - CyberSentinel - (sqlmap_scanner.py:55) - Starting SQLMap scan on https://globaliraq.iq/
+2026-02-13 07:41:59,018 - [INFO] - CyberSentinel - (subprocess_stream.py:19) - Starting streamed command: sqlmap -u https://globaliraq.iq/ --batch --output-dir /tmp/sqlmap_h7r36tcu --dump-format=JSON --level=1 --risk=1 --all --random-agent --threads=10
+2026-02-13 07:41:59,203 - [WARNING] - CyberSentinel - (sqlmap_scanner.py:66) - SQLMap scan on https://globaliraq.iq/ finished, but no JSON output file was found.
+2026-02-13 07:41:59,203 - [INFO] - CyberSentinel - (tool_controller.py:81) - [fe373eee-24f7-410d-b6d3-f1fe119ec4cd] Running tool: xsser_scan with params: {'aggressive': True, 'target': 'https://globaliraq.iq/'}
+2026-02-13 07:41:59,204 - [INFO] - CyberSentinel - (xss_scanner.py:47) - Starting XSSer scan on https://globaliraq.iq/
+2026-02-13 07:41:59,204 - [INFO] - CyberSentinel - (subprocess_stream.py:19) - Starting streamed command: xsser -u https://globaliraq.iq/ --no-head --Crawl --depth=4 --Cw=2 --XSS --DS
+2026-02-13 07:41:59,309 - [INFO] - CyberSentinel - (xss_scanner.py:60) - XSSer scan completed. Found 0 potential vulnerabilities.
+2026-02-13 07:41:59,310 - [INFO] - CyberSentinel - (tool_controller.py:81) - [fe373eee-24f7-410d-b6d3-f1fe119ec4cd] Running tool: nikto_scan with params: {'target': 'https://globaliraq.iq/'}
+2026-02-13 07:41:59,310 - [INFO] - CyberSentinel - (subprocess_stream.py:19) - Starting streamed command: nikto -h https://globaliraq.iq/
+2026-02-13 07:41:59,343 - [INFO] - CyberSentinel - (tool_controller.py:81) - [fe373eee-24f7-410d-b6d3-f1fe119ec4cd] Running tool: sql_injection_test with params: {'url': 'https://globaliraq.iq/'}
+2026-02-13 07:41:59,343 - [INFO] - CyberSentinel - (sql_tester.py:26) - Starting SQL injection test for https://globaliraq.iq/
+2026-02-13 07:41:59,874 - [INFO] - CyberSentinel - (sql_tester.py:34) - Found 33 forms on https://globaliraq.iq/
+2026-02-13 07:42:41,605 - [INFO] - CyberSentinel - (tool_controller.py:81) - [fe373eee-24f7-410d-b6d3-f1fe119ec4cd] Running tool: xss_test with params: {'url': 'https://globaliraq.iq/'}
+2026-02-13 07:42:41,605 - [INFO] - CyberSentinel - (xss_tester.py:22) - Starting XSS test for https://globaliraq.iq/
+2026-02-13 07:42:42,177 - [INFO] - CyberSentinel - (xss_tester.py:35) - Found 33 forms to test for XSS on https://globaliraq.iq/
+2026-02-13 07:42:42,615 - [WARNING] - CyberSentinel - (xss_tester.py:106) - Reflected XSS detected in form input 'q' at https://globaliraq.iq/search
+2026-02-13 07:42:43,123 - [WARNING] - CyberSentinel - (xss_tester.py:106) - Reflected XSS detected in form input 'q' at https://globaliraq.iq/search
+2026-02-13 07:42:43,324 - [INFO] - CyberSentinel - (tool_controller.py:81) - [fe373eee-24f7-410d-b6d3-f1fe119ec4cd] Running tool: vulnerability_analysis with params: {}
+2026-02-13 07:42:43,325 - [INFO] - CyberSentinel - (vuln_analyzer.py:26) - Starting vulnerability analysis based on service versions.
+2026-02-13 07:42:43,325 - [INFO] - CyberSentinel - (vuln_analyzer.py:52) - Vulnerability analysis finished. Found 0 potential issues.
+2026-02-13 07:42:43,327 - [INFO] - CyberSentinel - (tool_controller.py:114) - [fe373eee-24f7-410d-b6d3-f1fe119ec4cd] Tool pipeline execution finished.
+2026-02-13 07:42:43,328 - [INFO] - CyberSentinel - (worker.py:47) - [fe373eee-24f7-410d-b6d3-f1fe119ec4cd] Tool pipeline completed. Results count: 10
+2026-02-13 07:42:43,328 - [INFO] - CyberSentinel - (worker.py:66) - [fe373eee-24f7-410d-b6d3-f1fe119ec4cd] Risk assessment complete. Score: 100 (Critical)
+2026-02-13 07:42:43,331 - [INFO] - CyberSentinel - (worker.py:86) - [fe373eee-24f7-410d-b6d3-f1fe119ec4cd] Scan results saved to database.
+2026-02-13 07:42:43,332 - [INFO] - CyberSentinel - (json_exporter.py:18) - Generating JSON report for scan ID: fe373eee-24f7-410d-b6d3-f1fe119ec4cd
+2026-02-13 07:42:43,333 - [INFO] - CyberSentinel - (pdf_generator.py:116) - Generating PDF report for scan ID: fe373eee-24f7-410d-b6d3-f1fe119ec4cd
+2026-02-13 07:42:43,876 - [INFO] - CyberSentinel - (worker.py:110) - [fe373eee-24f7-410d-b6d3-f1fe119ec4cd] Reports generated and saved.
+2026-02-13 07:42:43,889 - [INFO] - CyberSentinel - (worker.py:117) - [fe373eee-24f7-410d-b6d3-f1fe119ec4cd] Scan processing finished and results saved.
+2026-02-13 07:43:19,851 - [INFO] - CyberSentinel - (main.py:24) - Shutting down CyberSentinel backend...
+2026-02-13 07:43:19,851 - [INFO] - CyberSentinel - (db_connect.py:39) - Closing database connection.
+2026-02-13 07:46:42,429 - [INFO] - CyberSentinel - (main.py:64) - Starting FastAPI server...
+2026-02-13 07:46:42,447 - [INFO] - CyberSentinel - (main.py:20) - Starting up CyberSentinel backend...
+2026-02-13 07:46:42,483 - [INFO] - CyberSentinel - (db_connect.py:29) - Initializing database and creating tables...
+2026-02-13 07:46:42,494 - [INFO] - CyberSentinel - (db_connect.py:33) - Database tables created successfully.
+2026-02-13 07:46:42,497 - [INFO] - CyberSentinel - (queue_manager.py:23) - Redis client connected successfully.
+2026-02-13 07:46:42,497 - [INFO] - CyberSentinel - (queue_manager.py:88) - Task queue initialized.
+2026-02-13 07:46:42,697 - [INFO] - CyberSentinel - (main.py:72) - Starting background worker...
+2026-02-13 07:46:42,715 - [INFO] - CyberSentinel - (queue_manager.py:23) - Redis client connected successfully.
+2026-02-13 07:46:42,715 - [INFO] - CyberSentinel - (queue_manager.py:88) - Task queue initialized.
+2026-02-13 07:46:42,715 - [INFO] - CyberSentinel - (worker.py:125) - Worker loop started. Waiting for tasks...
+2026-02-13 07:47:13,738 - [INFO] - CyberSentinel - (target_parser.py:57) - Resolved globaliraq.iq to 104.21.28.248
+2026-02-13 07:47:13,746 - [INFO] - CyberSentinel - (target_parser.py:57) - Resolved globaliraq.iq to 172.67.171.49
+2026-02-13 07:47:13,747 - [INFO] - CyberSentinel - (decision_engine.py:19) - Building tool pipeline for https://globaliraq.iq/ with tools: ['nmap_scan', 'ssl_scan', 'header_analysis', 'dir_discovery', 'sqlmap_scan', 'xsser_scan', 'nikto_scan', 'sql_injection_test', 'xss_test']
+2026-02-13 07:47:13,747 - [INFO] - CyberSentinel - (decision_engine.py:33) - Tool pipeline built: ['nmap_scan', 'ssl_scan', 'header_analysis', 'dir_discovery', 'sqlmap_scan', 'xsser_scan', 'nikto_scan', 'sql_injection_test', 'xss_test', 'vulnerability_analysis']
+2026-02-13 07:47:13,767 - [INFO] - CyberSentinel - (queue_manager.py:37) - Enqueued task: ccde151c-a31b-495b-ba81-626fd4747ba6
+2026-02-13 07:47:13,767 - [INFO] - CyberSentinel - (routes_scan.py:82) - Scan ccde151c-a31b-495b-ba81-626fd4747ba6 for target 'https://globaliraq.iq/' has been queued.
+2026-02-13 07:47:13,806 - [INFO] - CyberSentinel - (live_output.py:32) - Subscribed to Redis channel: scan_live_feed:ccde151c-a31b-495b-ba81-626fd4747ba6
+2026-02-13 07:47:17,744 - [INFO] - CyberSentinel - (queue_manager.py:53) - Dequeued task: ccde151c-a31b-495b-ba81-626fd4747ba6
+2026-02-13 07:47:17,744 - [INFO] - CyberSentinel - (worker.py:28) - [ccde151c-a31b-495b-ba81-626fd4747ba6] Starting processing for target: https://globaliraq.iq/, db_id: 10
+2026-02-13 07:47:17,784 - [INFO] - CyberSentinel - (worker.py:36) - [ccde151c-a31b-495b-ba81-626fd4747ba6] Scan record found. Current status: queued
+2026-02-13 07:47:17,802 - [INFO] - CyberSentinel - (tool_controller.py:61) - [ccde151c-a31b-495b-ba81-626fd4747ba6] Starting tool pipeline execution with timeout 3600s.
+2026-02-13 07:47:17,805 - [INFO] - CyberSentinel - (tool_controller.py:81) - [ccde151c-a31b-495b-ba81-626fd4747ba6] Running tool: nmap_scan with params: {'options': '-A -T4', 'target': '172.67.171.49'}
+2026-02-13 07:47:17,811 - [INFO] - CyberSentinel - (nmap_scanner.py:17) - Starting Nmap scan on 172.67.171.49 with options '-A -T4'
+2026-02-13 07:47:54,946 - [INFO] - CyberSentinel - (nmap_scanner.py:61) - Nmap scan finished for 172.67.171.49. Found 4 open ports.
+2026-02-13 07:47:54,947 - [INFO] - CyberSentinel - (tool_controller.py:81) - [ccde151c-a31b-495b-ba81-626fd4747ba6] Running tool: ssl_scan with params: {'target': 'globaliraq.iq'}
+2026-02-13 07:47:54,947 - [INFO] - CyberSentinel - (ssl_scanner.py:17) - Starting SSL scan on globaliraq.iq
+2026-02-13 07:48:16,107 - [INFO] - CyberSentinel - (ssl_scanner.py:66) - SSL scan finished for globaliraq.iq.
+2026-02-13 07:48:16,108 - [INFO] - CyberSentinel - (tool_controller.py:81) - [ccde151c-a31b-495b-ba81-626fd4747ba6] Running tool: header_analysis with params: {'url': 'https://globaliraq.iq/'}
+2026-02-13 07:48:16,108 - [INFO] - CyberSentinel - (header_analyzer.py:32) - Starting header analysis for https://globaliraq.iq/
+2026-02-13 07:48:16,718 - [INFO] - CyberSentinel - (header_analyzer.py:63) - Header analysis finished for https://globaliraq.iq/.
+2026-02-13 07:48:16,719 - [INFO] - CyberSentinel - (tool_controller.py:81) - [ccde151c-a31b-495b-ba81-626fd4747ba6] Running tool: dir_discovery with params: {'target': 'https://globaliraq.iq/'}
+2026-02-13 07:48:16,719 - [INFO] - CyberSentinel - (dir_discovery.py:30) - Starting directory discovery on https://globaliraq.iq/
+2026-02-13 07:48:16,720 - [WARNING] - CyberSentinel - (dir_discovery.py:24) - Wordlist not found at /usr/share/wordlists/dirb/common.txt. Dir discovery may fail.
+2026-02-13 07:48:16,720 - [INFO] - CyberSentinel - (tool_controller.py:81) - [ccde151c-a31b-495b-ba81-626fd4747ba6] Running tool: sqlmap_scan with params: {'aggressive': True, 'target': 'https://globaliraq.iq/'}
+2026-02-13 07:48:16,733 - [INFO] - CyberSentinel - (sqlmap_scanner.py:55) - Starting SQLMap scan on https://globaliraq.iq/
+2026-02-13 07:48:16,734 - [INFO] - CyberSentinel - (subprocess_stream.py:19) - Starting streamed command: sqlmap -u https://globaliraq.iq/ --batch --output-dir /tmp/sqlmap_aqntn69g --dump-format=JSON --level=1 --risk=1 --all --random-agent --threads=10
+2026-02-13 07:48:16,914 - [WARNING] - CyberSentinel - (sqlmap_scanner.py:66) - SQLMap scan on https://globaliraq.iq/ finished, but no JSON output file was found.
+2026-02-13 07:48:16,915 - [INFO] - CyberSentinel - (tool_controller.py:81) - [ccde151c-a31b-495b-ba81-626fd4747ba6] Running tool: xsser_scan with params: {'aggressive': True, 'target': 'https://globaliraq.iq/'}
+2026-02-13 07:48:16,915 - [INFO] - CyberSentinel - (xss_scanner.py:47) - Starting XSSer scan on https://globaliraq.iq/
+2026-02-13 07:48:16,915 - [INFO] - CyberSentinel - (subprocess_stream.py:19) - Starting streamed command: xsser -u https://globaliraq.iq/ --no-head --Crawl --depth=4 --Cw=2 --XSS --DS
+2026-02-13 07:48:17,023 - [INFO] - CyberSentinel - (xss_scanner.py:60) - XSSer scan completed. Found 0 potential vulnerabilities.
+2026-02-13 07:48:17,025 - [INFO] - CyberSentinel - (tool_controller.py:81) - [ccde151c-a31b-495b-ba81-626fd4747ba6] Running tool: nikto_scan with params: {'target': 'https://globaliraq.iq/'}
+2026-02-13 07:48:17,025 - [INFO] - CyberSentinel - (subprocess_stream.py:19) - Starting streamed command: nikto -h https://globaliraq.iq/
+2026-02-13 07:48:17,067 - [INFO] - CyberSentinel - (tool_controller.py:81) - [ccde151c-a31b-495b-ba81-626fd4747ba6] Running tool: sql_injection_test with params: {'url': 'https://globaliraq.iq/'}
+2026-02-13 07:48:17,067 - [INFO] - CyberSentinel - (sql_tester.py:26) - Starting SQL injection test for https://globaliraq.iq/
+2026-02-13 07:48:17,708 - [INFO] - CyberSentinel - (sql_tester.py:34) - Found 33 forms on https://globaliraq.iq/
+2026-02-13 07:48:53,022 - [INFO] - CyberSentinel - (tool_controller.py:81) - [ccde151c-a31b-495b-ba81-626fd4747ba6] Running tool: xss_test with params: {'url': 'https://globaliraq.iq/'}
+2026-02-13 07:48:53,022 - [INFO] - CyberSentinel - (xss_tester.py:22) - Starting XSS test for https://globaliraq.iq/
+2026-02-13 07:48:53,549 - [INFO] - CyberSentinel - (xss_tester.py:35) - Found 33 forms to test for XSS on https://globaliraq.iq/
+2026-02-13 07:48:53,993 - [WARNING] - CyberSentinel - (xss_tester.py:106) - Reflected XSS detected in form input 'q' at https://globaliraq.iq/search
+2026-02-13 07:48:54,198 - [WARNING] - CyberSentinel - (xss_tester.py:106) - Reflected XSS detected in form input 'q' at https://globaliraq.iq/search
+2026-02-13 07:48:54,298 - [INFO] - CyberSentinel - (tool_controller.py:81) - [ccde151c-a31b-495b-ba81-626fd4747ba6] Running tool: vulnerability_analysis with params: {}
+2026-02-13 07:48:54,299 - [INFO] - CyberSentinel - (vuln_analyzer.py:26) - Starting vulnerability analysis based on service versions.
+2026-02-13 07:48:54,299 - [INFO] - CyberSentinel - (vuln_analyzer.py:52) - Vulnerability analysis finished. Found 0 potential issues.
+2026-02-13 07:48:54,299 - [INFO] - CyberSentinel - (tool_controller.py:114) - [ccde151c-a31b-495b-ba81-626fd4747ba6] Tool pipeline execution finished.
+2026-02-13 07:48:54,299 - [INFO] - CyberSentinel - (worker.py:47) - [ccde151c-a31b-495b-ba81-626fd4747ba6] Tool pipeline completed. Results count: 10
+2026-02-13 07:48:54,299 - [INFO] - CyberSentinel - (worker.py:66) - [ccde151c-a31b-495b-ba81-626fd4747ba6] Risk assessment complete. Score: 100 (Critical)
+2026-02-13 07:48:54,303 - [INFO] - CyberSentinel - (worker.py:86) - [ccde151c-a31b-495b-ba81-626fd4747ba6] Scan results saved to database.
+2026-02-13 07:48:54,303 - [INFO] - CyberSentinel - (json_exporter.py:18) - Generating JSON report for scan ID: ccde151c-a31b-495b-ba81-626fd4747ba6
+2026-02-13 07:48:54,304 - [INFO] - CyberSentinel - (pdf_generator.py:116) - Generating PDF report for scan ID: ccde151c-a31b-495b-ba81-626fd4747ba6
+2026-02-13 07:48:54,812 - [INFO] - CyberSentinel - (worker.py:110) - [ccde151c-a31b-495b-ba81-626fd4747ba6] Reports generated and saved.
+2026-02-13 07:48:54,836 - [INFO] - CyberSentinel - (worker.py:117) - [ccde151c-a31b-495b-ba81-626fd4747ba6] Scan processing finished and results saved.
+2026-02-13 07:49:07,172 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-13 07:49:09,274 - [INFO] - CyberSentinel - (live_output.py:32) - Subscribed to Redis channel: scan_live_feed:ccde151c-a31b-495b-ba81-626fd4747ba6
+2026-02-13 08:00:22,384 - [INFO] - CyberSentinel - (main.py:72) - Starting background worker...
+2026-02-13 08:00:22,387 - [INFO] - CyberSentinel - (queue_manager.py:23) - Redis client connected successfully.
+2026-02-13 08:00:22,387 - [INFO] - CyberSentinel - (queue_manager.py:88) - Task queue initialized.
+2026-02-13 08:00:22,387 - [INFO] - CyberSentinel - (worker.py:125) - Worker loop started. Waiting for tasks...
+2026-02-13 08:01:33,448 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-13 08:01:39,462 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-13 08:01:45,472 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-13 08:01:51,484 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-13 08:02:11,556 - [INFO] - CyberSentinel - (target_parser.py:57) - Resolved globaliraq.iq to 104.21.28.248
+2026-02-13 08:02:11,562 - [INFO] - CyberSentinel - (target_parser.py:57) - Resolved globaliraq.iq to 172.67.171.49
+2026-02-13 08:02:11,563 - [INFO] - CyberSentinel - (decision_engine.py:19) - Building tool pipeline for https://globaliraq.iq/ with tools: ['nmap_scan', 'ssl_scan', 'header_analysis']
+2026-02-13 08:02:11,563 - [INFO] - CyberSentinel - (decision_engine.py:33) - Tool pipeline built: ['nmap_scan', 'ssl_scan', 'header_analysis', 'vulnerability_analysis']
+2026-02-13 08:02:11,571 - [INFO] - CyberSentinel - (queue_manager.py:37) - Enqueued task: 7e5dd523-707b-4abd-bbe3-eb60ff26b5a1
+2026-02-13 08:02:11,571 - [INFO] - CyberSentinel - (routes_scan.py:82) - Scan 7e5dd523-707b-4abd-bbe3-eb60ff26b5a1 for target 'https://globaliraq.iq/' has been queued.
+2026-02-13 08:02:11,619 - [INFO] - CyberSentinel - (live_output.py:32) - Subscribed to Redis channel: scan_live_feed:7e5dd523-707b-4abd-bbe3-eb60ff26b5a1
+2026-02-13 08:02:12,508 - [INFO] - CyberSentinel - (queue_manager.py:53) - Dequeued task: 7e5dd523-707b-4abd-bbe3-eb60ff26b5a1
+2026-02-13 08:02:12,508 - [INFO] - CyberSentinel - (worker.py:28) - [7e5dd523-707b-4abd-bbe3-eb60ff26b5a1] Starting processing for target: https://globaliraq.iq/, db_id: 11
+2026-02-13 08:02:12,556 - [INFO] - CyberSentinel - (worker.py:36) - [7e5dd523-707b-4abd-bbe3-eb60ff26b5a1] Scan record found. Current status: queued
+2026-02-13 08:02:12,573 - [INFO] - CyberSentinel - (tool_controller.py:61) - [7e5dd523-707b-4abd-bbe3-eb60ff26b5a1] Starting tool pipeline execution with timeout 3600s.
+2026-02-13 08:02:12,575 - [INFO] - CyberSentinel - (tool_controller.py:81) - [7e5dd523-707b-4abd-bbe3-eb60ff26b5a1] Running tool: nmap_scan with params: {'options': '-A -T4', 'target': '172.67.171.49'}
+2026-02-13 08:02:12,583 - [INFO] - CyberSentinel - (nmap_scanner.py:17) - Starting Nmap scan on 172.67.171.49 with options '-A -T4'
+2026-02-13 08:02:39,126 - [INFO] - CyberSentinel - (nmap_scanner.py:61) - Nmap scan finished for 172.67.171.49. Found 4 open ports.
+2026-02-13 08:02:39,127 - [INFO] - CyberSentinel - (tool_controller.py:81) - [7e5dd523-707b-4abd-bbe3-eb60ff26b5a1] Running tool: ssl_scan with params: {'target': 'globaliraq.iq'}
+2026-02-13 08:02:39,127 - [INFO] - CyberSentinel - (ssl_scanner.py:17) - Starting SSL scan on globaliraq.iq
+2026-02-13 08:03:02,557 - [INFO] - CyberSentinel - (ssl_scanner.py:66) - SSL scan finished for globaliraq.iq.
+2026-02-13 08:03:02,558 - [INFO] - CyberSentinel - (tool_controller.py:81) - [7e5dd523-707b-4abd-bbe3-eb60ff26b5a1] Running tool: header_analysis with params: {'url': 'https://globaliraq.iq/'}
+2026-02-13 08:03:02,559 - [INFO] - CyberSentinel - (header_analyzer.py:32) - Starting header analysis for https://globaliraq.iq/
+2026-02-13 08:03:02,996 - [INFO] - CyberSentinel - (header_analyzer.py:63) - Header analysis finished for https://globaliraq.iq/.
+2026-02-13 08:03:02,997 - [INFO] - CyberSentinel - (tool_controller.py:81) - [7e5dd523-707b-4abd-bbe3-eb60ff26b5a1] Running tool: vulnerability_analysis with params: {}
+2026-02-13 08:03:02,998 - [INFO] - CyberSentinel - (vuln_analyzer.py:26) - Starting vulnerability analysis based on service versions.
+2026-02-13 08:03:02,998 - [INFO] - CyberSentinel - (vuln_analyzer.py:52) - Vulnerability analysis finished. Found 0 potential issues.
+2026-02-13 08:03:02,998 - [INFO] - CyberSentinel - (tool_controller.py:114) - [7e5dd523-707b-4abd-bbe3-eb60ff26b5a1] Tool pipeline execution finished.
+2026-02-13 08:03:02,998 - [INFO] - CyberSentinel - (worker.py:47) - [7e5dd523-707b-4abd-bbe3-eb60ff26b5a1] Tool pipeline completed. Results count: 4
+2026-02-13 08:03:02,998 - [INFO] - CyberSentinel - (worker.py:66) - [7e5dd523-707b-4abd-bbe3-eb60ff26b5a1] Risk assessment complete. Score: 100 (Critical)
+2026-02-13 08:03:02,999 - [INFO] - CyberSentinel - (worker.py:86) - [7e5dd523-707b-4abd-bbe3-eb60ff26b5a1] Scan results saved to database.
+2026-02-13 08:03:02,999 - [INFO] - CyberSentinel - (json_exporter.py:18) - Generating JSON report for scan ID: 7e5dd523-707b-4abd-bbe3-eb60ff26b5a1
+2026-02-13 08:03:02,999 - [INFO] - CyberSentinel - (pdf_generator.py:116) - Generating PDF report for scan ID: 7e5dd523-707b-4abd-bbe3-eb60ff26b5a1
+2026-02-13 08:03:03,409 - [INFO] - CyberSentinel - (worker.py:110) - [7e5dd523-707b-4abd-bbe3-eb60ff26b5a1] Reports generated and saved.
+2026-02-13 08:03:03,427 - [INFO] - CyberSentinel - (worker.py:117) - [7e5dd523-707b-4abd-bbe3-eb60ff26b5a1] Scan processing finished and results saved.
+2026-02-13 08:04:00,408 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-13 08:04:06,418 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-13 08:04:12,429 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-13 08:04:18,441 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-13 08:04:24,451 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-13 08:04:30,462 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-13 08:04:36,473 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-13 08:04:42,485 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-13 08:04:48,495 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-13 08:04:54,506 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-13 08:05:00,518 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-13 08:05:06,528 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-13 08:05:12,539 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-13 08:05:18,549 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-13 08:05:24,561 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-13 08:05:30,573 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-13 08:05:36,584 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-13 08:05:42,596 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-13 08:05:48,606 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-13 08:06:27,988 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-13 08:06:33,998 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-13 08:06:40,009 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-13 08:06:46,020 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-13 08:06:52,031 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-13 08:07:01,755 - [INFO] - CyberSentinel - (target_parser.py:57) - Resolved globaliraq.iq to 104.21.28.248
+2026-02-13 08:07:01,761 - [INFO] - CyberSentinel - (target_parser.py:57) - Resolved globaliraq.iq to 172.67.171.49
+2026-02-13 08:07:01,761 - [INFO] - CyberSentinel - (decision_engine.py:19) - Building tool pipeline for https://globaliraq.iq/ with tools: ['nmap_scan', 'ssl_scan', 'header_analysis']
+2026-02-13 08:07:01,761 - [INFO] - CyberSentinel - (decision_engine.py:33) - Tool pipeline built: ['nmap_scan', 'ssl_scan', 'header_analysis', 'vulnerability_analysis']
+2026-02-13 08:07:01,767 - [INFO] - CyberSentinel - (queue_manager.py:37) - Enqueued task: 7ca77cc2-7ad3-4f36-a517-09ffb3f50a83
+2026-02-13 08:07:01,767 - [INFO] - CyberSentinel - (routes_scan.py:82) - Scan 7ca77cc2-7ad3-4f36-a517-09ffb3f50a83 for target 'https://globaliraq.iq/' has been queued.
+2026-02-13 08:07:01,791 - [INFO] - CyberSentinel - (live_output.py:32) - Subscribed to Redis channel: scan_live_feed:7ca77cc2-7ad3-4f36-a517-09ffb3f50a83
+2026-02-13 08:07:03,642 - [INFO] - CyberSentinel - (queue_manager.py:53) - Dequeued task: 7ca77cc2-7ad3-4f36-a517-09ffb3f50a83
+2026-02-13 08:07:03,642 - [INFO] - CyberSentinel - (worker.py:28) - [7ca77cc2-7ad3-4f36-a517-09ffb3f50a83] Starting processing for target: https://globaliraq.iq/, db_id: 12
+2026-02-13 08:07:03,644 - [INFO] - CyberSentinel - (worker.py:36) - [7ca77cc2-7ad3-4f36-a517-09ffb3f50a83] Scan record found. Current status: queued
+2026-02-13 08:07:03,659 - [INFO] - CyberSentinel - (tool_controller.py:61) - [7ca77cc2-7ad3-4f36-a517-09ffb3f50a83] Starting tool pipeline execution with timeout 3600s.
+2026-02-13 08:07:03,660 - [INFO] - CyberSentinel - (tool_controller.py:81) - [7ca77cc2-7ad3-4f36-a517-09ffb3f50a83] Running tool: nmap_scan with params: {'options': '-A -T4', 'target': '172.67.171.49'}
+2026-02-13 08:07:03,665 - [INFO] - CyberSentinel - (nmap_scanner.py:17) - Starting Nmap scan on 172.67.171.49 with options '-A -T4'
+2026-02-13 08:07:14,466 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-13 08:07:17,514 - [INFO] - CyberSentinel - (live_output.py:32) - Subscribed to Redis channel: scan_live_feed:7ca77cc2-7ad3-4f36-a517-09ffb3f50a83
+2026-02-13 08:07:29,925 - [INFO] - CyberSentinel - (nmap_scanner.py:61) - Nmap scan finished for 172.67.171.49. Found 4 open ports.
+2026-02-13 08:07:29,925 - [INFO] - CyberSentinel - (routes_scan.py:124) - WebSocket disconnected for scan ID: 7ca77cc2-7ad3-4f36-a517-09ffb3f50a83
+2026-02-13 08:07:29,926 - [INFO] - CyberSentinel - (tool_controller.py:81) - [7ca77cc2-7ad3-4f36-a517-09ffb3f50a83] Running tool: ssl_scan with params: {'target': 'globaliraq.iq'}
+2026-02-13 08:07:29,926 - [INFO] - CyberSentinel - (routes_scan.py:124) - WebSocket disconnected for scan ID: 7ca77cc2-7ad3-4f36-a517-09ffb3f50a83
+2026-02-13 08:07:29,926 - [INFO] - CyberSentinel - (ssl_scanner.py:17) - Starting SSL scan on globaliraq.iq
+2026-02-13 08:07:29,926 - [INFO] - CyberSentinel - (live_output.py:47) - Unsubscribed from Redis channel: scan_live_feed:7ca77cc2-7ad3-4f36-a517-09ffb3f50a83
+2026-02-13 08:07:29,927 - [INFO] - CyberSentinel - (live_output.py:47) - Unsubscribed from Redis channel: scan_live_feed:7ca77cc2-7ad3-4f36-a517-09ffb3f50a83
+2026-02-13 08:08:18,259 - [INFO] - CyberSentinel - (main.py:64) - Starting FastAPI server...
+2026-02-13 08:08:18,278 - [INFO] - CyberSentinel - (main.py:20) - Starting up CyberSentinel backend...
+2026-02-13 08:08:18,304 - [INFO] - CyberSentinel - (db_connect.py:29) - Initializing database and creating tables...
+2026-02-13 08:08:18,316 - [INFO] - CyberSentinel - (db_connect.py:33) - Database tables created successfully.
+2026-02-13 08:08:18,319 - [INFO] - CyberSentinel - (queue_manager.py:23) - Redis client connected successfully.
+2026-02-13 08:08:18,319 - [INFO] - CyberSentinel - (queue_manager.py:88) - Task queue initialized.
+2026-02-13 08:08:18,358 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-13 08:08:18,526 - [INFO] - CyberSentinel - (main.py:72) - Starting background worker...
+2026-02-13 08:08:18,529 - [INFO] - CyberSentinel - (queue_manager.py:23) - Redis client connected successfully.
+2026-02-13 08:08:18,529 - [INFO] - CyberSentinel - (queue_manager.py:88) - Task queue initialized.
+2026-02-13 08:08:18,530 - [INFO] - CyberSentinel - (worker.py:125) - Worker loop started. Waiting for tasks...
+2026-02-13 08:08:22,984 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-13 08:08:42,045 - [INFO] - CyberSentinel - (main.py:24) - Shutting down CyberSentinel backend...
+2026-02-13 08:08:42,045 - [INFO] - CyberSentinel - (db_connect.py:39) - Closing database connection.
+2026-02-13 08:16:57,682 - [INFO] - CyberSentinel - (main.py:64) - Starting FastAPI server...
+2026-02-13 08:16:57,696 - [INFO] - CyberSentinel - (main.py:20) - Starting up CyberSentinel backend...
+2026-02-13 08:16:57,728 - [INFO] - CyberSentinel - (db_connect.py:29) - Initializing database and creating tables...
+2026-02-13 08:16:57,735 - [INFO] - CyberSentinel - (db_connect.py:33) - Database tables created successfully.
+2026-02-13 08:16:57,737 - [INFO] - CyberSentinel - (queue_manager.py:23) - Redis client connected successfully.
+2026-02-13 08:16:57,737 - [INFO] - CyberSentinel - (queue_manager.py:88) - Task queue initialized.
+2026-02-13 08:16:57,892 - [INFO] - CyberSentinel - (main.py:72) - Starting background worker...
+2026-02-13 08:16:57,895 - [INFO] - CyberSentinel - (queue_manager.py:23) - Redis client connected successfully.
+2026-02-13 08:16:57,895 - [INFO] - CyberSentinel - (queue_manager.py:88) - Task queue initialized.
+2026-02-13 08:16:57,895 - [INFO] - CyberSentinel - (worker.py:125) - Worker loop started. Waiting for tasks...
+2026-02-13 08:17:04,462 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-13 08:17:10,476 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-13 08:17:16,487 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-13 08:17:22,500 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-13 08:17:28,513 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-13 08:17:34,526 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-13 08:17:40,546 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-13 08:17:46,557 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-13 08:17:52,567 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-13 08:17:58,579 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-13 08:18:04,591 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-13 08:18:10,602 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-13 08:18:16,613 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-13 08:18:22,624 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-13 08:18:28,635 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-13 08:18:34,647 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-13 08:18:40,658 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-13 08:18:46,668 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-13 08:18:52,679 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-13 08:18:58,690 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-13 08:19:04,700 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-13 08:19:10,711 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-13 08:19:16,722 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-13 08:19:22,733 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-13 08:19:28,744 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-13 08:19:34,755 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-13 08:19:40,765 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-13 08:19:46,775 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-13 08:19:52,787 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-13 08:19:58,798 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-13 08:20:04,811 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-13 08:20:10,823 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-13 08:20:16,833 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-13 08:20:22,845 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-13 08:20:28,856 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-13 08:20:34,867 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.
+2026-02-13 08:26:32,241 - [INFO] - CyberSentinel - (resource_monitor.py:62) - Gathering resource metrics.

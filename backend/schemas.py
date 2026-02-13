@@ -21,7 +21,8 @@ class Scan(ScanBase, table=True):
 
 # Properties to receive via API on creation
 class ScanCreate(ScanBase):
-    pass
+    aggressive: bool = False
+    tools: Optional[List[str]] = None
 
 # Properties to return via API
 class ScanRead(ScanBase):

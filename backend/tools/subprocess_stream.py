@@ -1,5 +1,5 @@
 import asyncio
-from typing import AsyncGenerator
+from typing import AsyncGenerator, List
 
 from utils.logger import logger
 
@@ -7,7 +7,7 @@ class SubprocessStreamer:
     """
     Manages running a subprocess and streaming its stdout and stderr.
     """
-    def __init__(self, command: str):
+    def __init__(self, command: List[str]):
         self.command = command
         self.process: asyncio.subprocess.Process | None = None
 
@@ -15,10 +15,12 @@ class SubprocessStreamer:
         """
         Starts the subprocess and yields its output line by line.
         """
-        logger.info(f"Starting streamed command: {self.command}")
+        cmd_str = " ".join(self.command)
+        logger.info(f"Starting streamed command: {cmd_str}")
         try:
-            self.process = await asyncio.create_subprocess_shell(
-                self.command,
+            # Using create_subprocess_exec to execute the command directly
+            self.process = await asyncio.create_subprocess_exec(
+                *self.command,
                 stdout=asyncio.subprocess.PIPE,
                 stderr=asyncio.subprocess.PIPE
             )
@@ -33,7 +35,7 @@ class SubprocessStreamer:
             await self.process.wait()
 
         except Exception as e:
-            error_msg = f"Error running streamed command '{self.command}': {e}"
+            error_msg = f"Error running streamed command '{cmd_str}': {e}"
             logger.error(error_msg)
             yield error_msg
 
@@ -61,7 +63,8 @@ class SubprocessStreamer:
         Terminates the running subprocess.
         """
         if self.process and self.process.returncode is None:
-            logger.info(f"Terminating process {self.process.pid} for command: {self.command}")
+            cmd_str = " ".join(self.command)
+            logger.info(f"Terminating process {self.process.pid} for command: {cmd_str}")
             try:
                 self.process.terminate()
                 await self.process.wait()
@@ -69,11 +72,3 @@ class SubprocessStreamer:
                 logger.warning(f"Process {self.process.pid} already terminated.")
             except Exception as e:
                 logger.error(f"Error terminating process {self.process.pid}: {e}")
-
-async def stream_command(command: str) -> AsyncGenerator[str, None]:
-    """
-    High-level function to execute a command and stream its output.
-    """
-    streamer = SubprocessStreamer(command)
-    async for output in streamer.start():
-        yield output
